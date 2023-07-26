@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>UI flows</title>
+</head>
+
+<body>
+    <h1>Flows</h1>
+    <ul>
+        {% for subdir, file_count in subdirs_and_filecounts %}
+        <li><a href="{{ url_for('read_subdir', flow_name=subdir) }}">{{ subdir }} ({{ file_count }})</a></li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

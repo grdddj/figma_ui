@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ flow_name }} Images</title>
+</head>
+
+<body>
+    <h1>{{ flow_name }}</h1>
+
+    <h3>Relevant tests</h3>
+    {% for test in unique_tests %}
+    <p>{{ test}}</p>
+    {% endfor %}
+
+    <hr>
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Image</th>
+            <th>Description</th>
+        </tr>
+        {% for image in image_data %}
+        <tr>
+            <td>{{ image.name}}</td>
+            <td><img id="{{ image.name}}" style="margin: 0 30px 0 30px;" width="256" src="{{ image.src }}"
+                    alt="{{ image.name }}">
+            </td>
+            <td>{{ image.description}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
