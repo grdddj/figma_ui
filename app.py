@@ -33,7 +33,7 @@ templates = Jinja2Templates(directory="templates")
 def get_subdirs_names() -> list[str]:
     """Get a list of subdirectories."""
     dir_path = HERE / static_dir
-    return [x.name for x in dir_path.iterdir() if x.is_dir()]
+    return sorted([x.name for x in dir_path.iterdir() if x.is_dir()])
 
 
 def get_dir_file_count(dir: Path) -> int:
@@ -43,6 +43,7 @@ def get_dir_file_count(dir: Path) -> int:
 
 @app.get("/", response_class=HTMLResponse)
 def read_root(request: Request):
+    logger.info("root")
     subdirs = get_subdirs_names()
     subdirs_and_filecounts: list[tuple[str, int]] = [
         (subdir, get_dir_file_count(HERE / static_dir / subdir)) for subdir in subdirs
@@ -55,6 +56,7 @@ def read_root(request: Request):
 
 @app.get("/flow/{flow_name}", response_class=HTMLResponse)
 def read_subdir(flow_name: str, request: Request):
+    logger.info(f"flow {flow_name}")
     if flow_name not in get_subdirs_names():
         raise HTTPException(status_code=404, detail="Directory not found")
 
