@@ -69,6 +69,9 @@ if __name__ == "__main__":
     for flow_name, flow_screens in get_screen_text_content().items():
         print(f"Getting screens for flow {flow_name}")
         for index, screen_info in enumerate(flow_screens, start=1):
+            if "missing" in screen_info:
+                print(f"Skipping missing screen {screen_info['screen_id']}")
+                continue
             screen_name = f"{flow_name}{index}"
             test_case = screen_info["test"]
             screen_id = screen_info["screen_id"]

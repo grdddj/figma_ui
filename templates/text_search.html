@@ -14,18 +14,15 @@
         <button type="submit">Search</button>
     </form>
 
-    {% if image_data %}
-
-    <br>
     <hr>
     <br>
     <div>
         Found {{ image_data|length }} images
     </div>
     <br>
+
+    {% if image_data %}
     <hr>
-
-
     <table>
         <tr>
             <th>Id</th>

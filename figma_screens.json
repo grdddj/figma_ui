@@ -465,22 +465,23 @@
         {
             "description": "SUCCESS. The entered recovery seed is valid and matches the one in the device.",
             "test": "TR-device_tests-reset_recovery-test_recovery_bip39_dryrun.py::test_dry_run",
-            "screen_id": 23
+            "screen_id": 19
         },
         {
             "description": "The entered recovery seed is valid but does not match the one in the device.",
             "test": "TR-device_tests-reset_recovery-test_recovery_bip39_dryrun.py::test_seed_mismatch",
-            "screen_id": 23
+            "screen_id": 19
         },
         {
             "description": "Invalid recovery seed entered. Please try again.",
             "test": "TR-device_tests-reset_recovery-test_recovery_bip39_dryrun.py::test_invalid_seed_core",
-            "screen_id": 24
+            "screen_id": 19
         },
         {
             "description": "ABORT BACKUP CHECK. Do you really want to abort the backup check?",
             "test": "TR-device_tests-reset_recovery-test_recovery_bip39_dryrun.py::test_invalid_seed_core",
-            "screen_id": 28
+            "screen_id": 28,
+            "missing": "TODO: missing screen"
         },
         {
             "description": "BACKUP CHECK. 1 of 2 shares entered successfully. 1 more share needed.",
@@ -490,12 +491,12 @@
         {
             "description": "SUCCESS. The entered recovery shares are valid and match what is currently in the device.",
             "test": "TR-device_tests-reset_recovery-test_recovery_slip39_basic_dryrun.py::test_2of3_dryrun",
-            "screen_id": 52
+            "screen_id": 48
         },
         {
             "description": "SUCCESS. The entered recovery shares are valid but do not match what is currently in the device.",
             "test": "TR-device_tests-reset_recovery-test_recovery_slip39_advanced_dryrun.py::test_2of3_invalid_seed_dryrun",
-            "screen_id": 97
+            "screen_id": 93
         }
     ],
     "Recovery": [
@@ -562,7 +563,7 @@
         {
             "description": "Invalid recovery seed entered. Please try again.",
             "test": "TR-device_tests-reset_recovery-test_recovery_bip39_dryrun.py::test_invalid_seed_core",
-            "screen_id": 24
+            "screen_id": 19
         },
         {
             "description": "SUCCESS. Wallet recovered successfully.",

@@ -49,7 +49,7 @@ def catch_log_raise_exception():
 @app.get("/", response_class=HTMLResponse)
 def read_root(request: Request):
     with catch_log_raise_exception():
-        logger.info("root")
+        logger.info("Root")
         subdirs = get_subdirs_names()
         subdirs_and_filecounts: list[tuple[str, int]] = [
             (subdir, get_dir_file_count(FIGMA_DIR / subdir)) for subdir in subdirs
@@ -63,7 +63,7 @@ def read_root(request: Request):
 @app.get("/flow/{flow_name}", response_class=HTMLResponse)
 def read_subdir(flow_name: str, request: Request):
     with catch_log_raise_exception():
-        logger.info(f"flow {flow_name}")
+        logger.info(f"Flow: {flow_name}")
         if flow_name not in get_subdirs_names():
             raise HTTPException(status_code=404, detail="Directory not found")
 
@@ -101,31 +101,33 @@ def read_subdir(flow_name: str, request: Request):
 
 @app.get("/text")
 def text_search(request: Request, text: str = ""):
-    if not text:
-        image_data = []
-    else:
-        screens_content = get_screen_text_content()
-        image_data: list[dict[str, str]] = []
+    with catch_log_raise_exception():
+        logger.info(f"Text search: {text}")
+        if not text:
+            image_data = []
+        else:
+            screens_content = get_screen_text_content()
+            image_data: list[dict[str, str]] = []
 
-        for flow_name, flow_data in screens_content.items():
-            for index, screen_info in enumerate(flow_data, start=1):
-                img_name = f"{flow_name}{index}"
-                img_src = f"/static/{flow_name}/{img_name}.png"
-                description = screen_info["description"]
-                if text.lower() in description.lower():
-                    image_data.append(
-                        {
-                            "name": img_name,
-                            "src": img_src,
-                            "description": description,
-                        }
-                    )
+            for flow_name, flow_data in screens_content.items():
+                for index, screen_info in enumerate(flow_data, start=1):
+                    img_name = f"{flow_name}{index}"
+                    img_src = f"/static/{flow_name}/{img_name}.png"
+                    description = screen_info["description"]
+                    if text.lower() in description.lower():
+                        image_data.append(
+                            {
+                                "name": img_name,
+                                "src": img_src,
+                                "description": description,
+                            }
+                        )
 
-    return templates.TemplateResponse(
-        "text_search.html",
-        {
-            "request": request,
-            "text": text,
-            "image_data": image_data,
-        },
-    )
+        return templates.TemplateResponse(
+            "text_search.html",
+            {
+                "request": request,
+                "text": text,
+                "image_data": image_data,
+            },
+        )
