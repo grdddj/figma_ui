@@ -9,8 +9,10 @@
     <h1>{{ flow_name }}</h1>
 
     <h3>Relevant tests</h3>
-    {% for test in unique_tests %}
-    <p>{{ test}}</p>
+    {% for test, link in unique_tests_and_links.items() %}
+    <a href="{{ link }}" target="_blank">
+        <p>{{ test}}</p>
+    </a>
     {% endfor %}
 
     <hr>

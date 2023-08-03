@@ -34,10 +34,10 @@ ensure:
 
 style_check:
 	@echo "Checking the code style..."
-	python3 -m isort --check-only .
+	python3 -m isort --check-only *.py
 	python3 -m black --check .
 
 style:
 	@echo "Applying the code style..."
-	python3 -m isort .
+	python3 -m isort *.py
 	python3 -m black .

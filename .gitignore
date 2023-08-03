@@ -1,4 +1,6 @@
 __pycache__
 static
+backup
 *.log
 *.out
+job_id_mapping.json
