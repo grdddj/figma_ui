@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import json
 from contextlib import contextmanager
 from pathlib import Path
 
@@ -9,7 +8,12 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
-from common import FIGMA_DIR, SCREENS_FILE, get_logger, get_latest_test_report_url
+from common import (
+    FIGMA_DIR,
+    get_latest_test_report_url,
+    get_logger,
+    get_screen_text_content,
+)
 
 HERE = Path(__file__).parent
 
@@ -63,7 +67,7 @@ def read_subdir(flow_name: str, request: Request):
         if flow_name not in get_subdirs_names():
             raise HTTPException(status_code=404, detail="Directory not found")
 
-        screens_content = json.loads(SCREENS_FILE.read_text())
+        screens_content = get_screen_text_content()
         flow_data: list[dict[str, str]] = screens_content[flow_name]
         image_data: list[dict[str, str]] = []
 
@@ -93,3 +97,35 @@ def read_subdir(flow_name: str, request: Request):
                 "unique_tests_and_links": unique_tests_and_links,
             },
         )
+
+
+@app.get("/text")
+def text_search(request: Request, text: str = ""):
+    if not text:
+        image_data = []
+    else:
+        screens_content = get_screen_text_content()
+        image_data: list[dict[str, str]] = []
+
+        for flow_name, flow_data in screens_content.items():
+            for index, screen_info in enumerate(flow_data, start=1):
+                img_name = f"{flow_name}{index}"
+                img_src = f"/static/{flow_name}/{img_name}.png"
+                description = screen_info["description"]
+                if text.lower() in description.lower():
+                    image_data.append(
+                        {
+                            "name": img_name,
+                            "src": img_src,
+                            "description": description,
+                        }
+                    )
+
+    return templates.TemplateResponse(
+        "text_search.html",
+        {
+            "request": request,
+            "text": text,
+            "image_data": image_data,
+        },
+    )

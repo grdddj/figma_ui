@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Text search</title>
+</head>
+
+<body>
+    <h1>Text search</h1>
+
+    <form method="get">
+        <label for="text">Enter text:</label>
+        <input type="text" id="text" name="text" value="{{ text }}" placeholder="Text to find on screen">
+        <button type="submit">Search</button>
+    </form>
+
+    {% if image_data %}
+
+    <br>
+    <hr>
+    <br>
+    <div>
+        Found {{ image_data|length }} images
+    </div>
+    <br>
+    <hr>
+
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Image</th>
+            <th>Description</th>
+        </tr>
+        {% for image in image_data %}
+        <tr>
+            <td>{{ image.name}}</td>
+            <td><img id="{{ image.name}}" style="margin: 0 30px 0 30px;" width="256" src="{{ image.src }}"
+                    alt="{{ image.name }}">
+            </td>
+            <td>{{ image.description}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+</body>
+
+</html>
