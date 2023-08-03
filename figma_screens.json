@@ -436,13 +436,6 @@
             "screen_id": 12
         }
     ],
-    "DeviceName": [
-        {
-            "description": "DEVICE NAME. Change device name to <new_label>?",
-            "test": "TR-device_tests-test_msg_applysettings.py::test_apply_settings",
-            "screen_id": 4
-        }
-    ],
     "BackupCheck": [
         {
             "description": "BACKUP CHECK. Do you really want to check the recovery seed?",
@@ -517,11 +510,6 @@
             "screen_id": 3
         },
         {
-            "description": "RECOVER WALLET. It is safe to eject your Trezor anytime and continue later.",
-            "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
-            "screen_id": 5
-        },
-        {
             "description": "RECOVER WALLET. Select the number of words in your backup.",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
             "screen_id": 9
@@ -580,6 +568,395 @@
             "description": "SUCCESS. Wallet recovered successfully.",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
             "screen_id": 688
+        },
+        {
+            "description": "ABORT RECOVERY. Do you really want to abort the recovery process?",
+            "test": "TR-device_tests-reset_recovery-test_recovery_slip39_basic.py::test_abort",
+            "screen_id": 7
+        },
+        {
+            "description": "ABORT RECOVERY. All progress will be lost.",
+            "test": "TR-device_tests-reset_recovery-test_recovery_slip39_basic.py::test_abort",
+            "screen_id": 9
+        }
+    ],
+    "RecoveryShamir": [
+        {
+            "description": "RECOVER WALLET. By continuing you agree to Trezor Company's terms and conditions.",
+            "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
+            "screen_id": 215
+        },
+        {
+            "description": "RECOVER WALLET. More info at trezor.io/tos.",
+            "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
+            "screen_id": 217
+        },
+        {
+            "description": "RECOVER WALLET. Select the number of words in your backup.",
+            "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
+            "screen_id": 221
+        },
+        {
+            "description": "NUMBER OF WORDS. <number_choice>",
+            "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
+            "screen_id": 222
+        },
+        {
+            "description": "RECOVER WALLET. Enter your backup. (20 words)",
+            "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
+            "screen_id": 223
+        },
+        {
+            "description": "RECOVER WALLET. You'll only have to select the first 2-3 letters for each word.",
+            "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
+            "screen_id": 225
+        },
+        {
+            "description": "RECOVER WALLET. Position of the cursor will change between entries for enhanced security.",
+            "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
+            "screen_id": 227
+        },
+        {
+            "description": "WORD 1 OF 20. <letter_choice>",
+            "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
+            "screen_id": 228
+        },
+        {
+            "description": "RECOVER WALLET. 1 of 3 shares entered successfully. 2 more shares needed.",
+            "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
+            "screen_id": 248
+        },
+        {
+            "description": "RECOVER WALLET. 2 of 3 shares entered successfully. 1 more share needed.",
+            "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
+            "screen_id": 269
+        },
+        {
+            "description": "SUCCESS. Wallet recovered successfully.",
+            "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
+            "screen_id": 290
+        },
+        {
+            "description": "Share already entered Please enter a different share.",
+            "test": "TR-device_tests-reset_recovery-test_recovery_slip39_basic.py::test_same_share",
+            "screen_id": 39
+        },
+        {
+            "description": "You have entered a share from another Shamir Backup.",
+            "test": "TR-device_tests-reset_recovery-test_recovery_slip39_basic.py::test_wrong_nth_word[0]",
+            "screen_id": 36
+        }
+    ],
+    "SendBTC": [
+        {
+            "description": "RECIPIENT #1. <btc_address>",
+            "test": "TR-device_tests-bitcoin-test_signtx.py::test_one_three_fee",
+            "screen_id": 2
+        },
+        {
+            "description": "AMOUNT #1. <btc_amount>",
+            "test": "TR-device_tests-bitcoin-test_signtx.py::test_one_three_fee",
+            "screen_id": 4
+        },
+        {
+            "description": "RECIPIENT #2. <account_name> <btc_address>",
+            "test": "TR-device_tests-bitcoin-test_signtx_segwit.py::test_attack_change_input_address",
+            "screen_id": 6
+        },
+        {
+            "description": "AMOUNT #2. <btc_amount>",
+            "test": "TR-device_tests-bitcoin-test_signtx_segwit.py::test_attack_change_input_address",
+            "screen_id": 8
+        },
+        {
+            "description": "Total amount: <btc_amount> Including fee: <btc_amount>",
+            "test": "TR-device_tests-bitcoin-test_signtx.py::test_one_three_fee",
+            "screen_id": 10
+        },
+        {
+            "description": "FEE INFORMATION. Fee rate: <fee_rate>",
+            "test": "TR-device_tests-bitcoin-test_signtx.py::test_one_three_fee",
+            "screen_id": 12
+        },
+        {
+            "description": "SENDING FROM. Account: <account_name>",
+            "test": "TR-device_tests-bitcoin-test_signtx.py::test_one_three_fee",
+            "screen_id": 14
+        },
+        {
+            "description": "A lot of change outputs. <x> outputs",
+            "test": "TR-device_tests-bitcoin-test_signtx.py::test_lots_of_change",
+            "screen_id": 6
+        },
+        {
+            "description": "Unusually high fee. <btc_amount>",
+            "test": "TR-device_tests-bitcoin-test_signtx_segwit.py::test_attack_mixed_inputs",
+            "screen_id": 6
+        },
+        {
+            "description": "SENDING FROM. Account: Multiple accounts",
+            "test": "TR-device_tests-bitcoin-test_signtx_segwit.py::test_attack_mixed_inputs",
+            "screen_id": 12
+        },
+        {
+            "description": "The transaction contains unverified external inputs. Continue anyway?",
+            "test": "TR-device_tests-bitcoin-test_signtx_external.py::test_p2tr_external_unverified",
+            "screen_id": 12
+        },
+        {
+            "description": "UNKNOWN PATH. <path>",
+            "test": "TR-device_tests-bitcoin-test_multisig.py::test_attack_change_input",
+            "screen_id": 2
+        },
+        {
+            "description": "JOINT TRANSACTION. You are contributing: <amount>",
+            "test": "TR-device_tests-bitcoin-test_signtx_external.py::test_p2tr_external_presigned",
+            "screen_id": 6
+        },
+        {
+            "description": "JOINT TRANSACTION. To the total amount: <amount>",
+            "test": "TR-device_tests-bitcoin-test_signtx_external.py::test_p2tr_external_presigned",
+            "screen_id": 8
+        },
+        {
+            "description": "CONFIRM SENDING. <amount> to <recipient>",
+            "test": "TR-device_tests-bitcoin-test_signtx_payreq.py::test_payment_request[out01]",
+            "screen_id": 2
+        },
+        {
+            "description": "Loading transaction...",
+            "test": "TR-device_tests-bitcoin-test_multisig.py::test_attack_change_input",
+            "screen_id": 23
+        },
+        {
+            "description": "Signing transaction...",
+            "test": "TR-device_tests-bitcoin-test_signtx.py::test_one_three_fee",
+            "screen_id": 15
+        }
+    ],
+    "SendETH": [
+        {
+            "description": "RECIPIENT. <eth_address>",
+            "test": "TR-device_tests-ethereum-test_signtx.py::test_signtx[Ethereum]",
+            "screen_id": 2
+        },
+        {
+            "description": "AMOUNT. <eth_amount>",
+            "test": "TR-device_tests-ethereum-test_signtx.py::test_signtx[Ethereum]",
+            "screen_id": 4
+        },
+        {
+            "description": "CONFIRM FEE. Gas price: <eth_gas_price>",
+            "test": "TR-device_tests-ethereum-test_signtx.py::test_signtx[Ethereum]",
+            "screen_id": 5
+        },
+        {
+            "description": "Amount sent: <eth_amount> Maximum fee: <eth_amount>",
+            "test": "TR-device_tests-ethereum-test_signtx.py::test_signtx[Ethereum]",
+            "screen_id": 6
+        },
+        {
+            "description": "RECIPIENT. new contract?",
+            "test": "TR-device_tests-ethereum-test_signtx.py::test_signtx[newcontract]",
+            "screen_id": 2
+        },
+        {
+            "description": "CONFIRM DATA. Size: <data_size> <data>",
+            "test": "TR-device_tests-ethereum-test_signtx.py::test_signtx[newcontract]",
+            "screen_id": 5
+        },
+        {
+            "description": "CONFIRM DATA. <data>",
+            "test": "TR-device_tests-ethereum-test_signtx.py::test_signtx[newcontract]",
+            "screen_id": 65
+        }
+    ],
+    "Receive": [
+        {
+            "description": "RECEIVE ADDRESS. <taproot_address>",
+            "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_cancel[m-86h-0h-12h-0-0-InputScriptType.SPENDTAP-4c5b2b38",
+            "screen_id": 1
+        },
+        {
+            "description": "RECEIVE ADDRESS. <segwit_address>",
+            "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_cancel[m-84h-0h-12h-0-0-InputScriptType.SPENDWIT-d6991e22",
+            "screen_id": 1
+        },
+        {
+            "description": "<QR code taproot address>",
+            "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_cancel[m-86h-0h-12h-0-0-InputScriptType.SPENDTAP-4c5b2b38",
+            "screen_id": 3
+        },
+        {
+            "description": "<QR code segwit address>",
+            "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_cancel[m-84h-0h-12h-0-0-InputScriptType.SPENDWIT-d6991e22",
+            "screen_id": 3
+        },
+        {
+            "description": "Account: <account> Derivation path: <derivation_path>",
+            "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_cancel[m-84h-0h-12h-0-0-InputScriptType.SPENDWIT-d6991e22",
+            "screen_id": 5
+        },
+        {
+            "description": "ADDRESS MISMATCH? Please contact Trezor support at trezor.io/support",
+            "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_cancel[m-84h-0h-12h-0-0-InputScriptType.SPENDWIT-d6991e22",
+            "screen_id": 11
+        },
+        {
+            "description": "RECEIVE ADDRESS (MULTISIG). <multisig_address>",
+            "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_multisig_xpubs[InputScriptType.SPENDWITNESS-2-bc-e70b56ea",
+            "screen_id": 1
+        },
+        {
+            "description": "Account: <multisig_account> Derivation path: <derivation_path>",
+            "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_multisig_xpubs[InputScriptType.SPENDWITNESS-2-bc-e70b56ea",
+            "screen_id": 5
+        },
+        {
+            "description": "MULTISIG XPUB #1 (YOURS)",
+            "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_multisig_xpubs[InputScriptType.SPENDWITNESS-2-bc-e70b56ea",
+            "screen_id": 7
+        },
+        {
+            "description": "MULTISIG XPUB #1 (YOURS)",
+            "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_multisig_xpubs[InputScriptType.SPENDWITNESS-2-bc-e70b56ea",
+            "screen_id": 10
+        },
+        {
+            "description": "MULTISIG XPUB #2 (COSIGNER)",
+            "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_multisig_xpubs[InputScriptType.SPENDWITNESS-2-bc-e70b56ea",
+            "screen_id": 14
+        }
+    ],
+    "Passphrase": [
+        {
+            "description": "PASSPHRASE SETTINGS. Turn on passphrase protection?",
+            "test": "TR-device_tests-test_msg_applysettings.py::test_apply_settings_passphrase",
+            "screen_id": 4
+        },
+        {
+            "description": "ENTER PASSPHRASE <passphrase_keyboard>",
+            "test": "TR-click_tests-test_passphrase_tr.py::test_passphrase_input[abc 123-mvqzZUb9NaUc62Buk9WCP4L7hunsXFyamT]",
+            "screen_id": 2
+        },
+        {
+            "description": "ENTER PASSPHRASE <passphrase_keyboard>",
+            "test": "TR-click_tests-test_passphrase_tr.py::test_passphrase_input[abc 123-mvqzZUb9NaUc62Buk9WCP4L7hunsXFyamT]",
+            "screen_id": 30
+        },
+        {
+            "description": "ENTER PASSPHRASE <passphrase_keyboard>",
+            "test": "TR-click_tests-test_passphrase_tr.py::test_passphrase_input[abc 123-mvqzZUb9NaUc62Buk9WCP4L7hunsXFyamT]",
+            "screen_id": 37
+        },
+        {
+            "description": "Please enter your passphrase.",
+            "test": "TR-device_tests-test_protection_levels.py::test_passphrase_cached",
+            "screen_id": 1
+        },
+        {
+            "description": "HIDDEN WALLET. Next screen will show the passphrase.",
+            "test": "TR-device_tests-test_session_id_and_passphrase.py::test_hide_passphrase_from_host",
+            "screen_id": 14
+        },
+        {
+            "description": "CONFIRM PASSPHRASE. <passphrase>",
+            "test": "TR-device_tests-test_session_id_and_passphrase.py::test_hide_passphrase_from_host",
+            "screen_id": 15
+        },
+        {
+            "description": "PASSPHRASE SETTINGS. Turn off passphrase protection?",
+            "test": "TR-device_tests-test_msg_applysettings.py::test_apply_settings_passphrase",
+            "screen_id": 6
+        },
+        {
+            "description": "PASSPHRASE SOURCE. Do you really want to enter passphrase always on device?",
+            "test": "TR-device_tests-test_msg_applysettings.py::test_apply_settings_passphrase_on_device",
+            "screen_id": 3
+        },
+        {
+            "description": "HIDE PASSPHRASE. Hide passphrase coming from host?",
+            "test": "TR-device_tests-test_session_id_and_passphrase.py::test_hide_passphrase_from_host",
+            "screen_id": 5
+        },
+        {
+            "description": "HIDDEN WALLET. Access hidden wallet? Passphrase provided by host will be used but will not be displayed...",
+            "test": "TR-device_tests-test_session_id_and_passphrase.py::test_hide_passphrase_from_host",
+            "screen_id": 8
+        },
+        {
+            "description": "HIDDEN WALLET. ...due to the device settings.",
+            "test": "TR-device_tests-test_session_id_and_passphrase.py::test_hide_passphrase_from_host",
+            "screen_id": 10
+        }
+    ],
+    "CoinJoin": [
+        {
+            "description": "COINJOIN. Access your coinjoin account?",
+            "test": "TR-device_tests-bitcoin-test_authorize_coinjoin.py::test_get_address",
+            "screen_id": 1
+        },
+        {
+            "description": "AUTHORIZE COINJOIN. Max rounds: <max_rounds> Max mining fee: <max_miming>",
+            "test": "TR-device_tests-bitcoin-test_authorize_coinjoin.py::test_cancel_authorization",
+            "screen_id": 1
+        },
+        {
+            "description": "COINJOIN AUTHORIZED <HOMESCREEN>",
+            "test": "TR-device_tests-bitcoin-test_authorize_coinjoin.py::test_cancel_authorization",
+            "screen_id": 2
+        },
+        {
+            "description": "COINJOIN IN PROGRESS. Waiting for others Do not disconnect your Trezor!",
+            "test": "TR-device_tests-test_busy_state.py::test_busy_expiry",
+            "screen_id": 1
+        },
+        {
+            "description": "<loader> Loading transaction...  Do not disconnect your Trezor!",
+            "test": "TR-device_tests-bitcoin-test_authorize_coinjoin.py::test_sign_tx",
+            "screen_id": 7
+        },
+        {
+            "description": "<loader> Signing transaction...  Do not disconnect your Trezor!",
+            "test": "TR-device_tests-bitcoin-test_authorize_coinjoin.py::test_sign_tx",
+            "screen_id": 8
+        }
+    ],
+    "Homescreen": [
+        {
+            "description": "<Homescreen default>",
+            "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_good",
+            "screen_id": 7
+        },
+        {
+            "description": "<Homescreen custom>",
+            "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_good",
+            "screen_id": 5
+        },
+        {
+            "description": "<Notification banner> <Homescreen default>",
+            "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_with_notification",
+            "screen_id": 1
+        },
+        {
+            "description": "<Notification banner> <Homescreen custom>",
+            "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_with_notification",
+            "screen_id": 2
+        },
+        {
+            "description": "Click to unlock <Lockscreen>",
+            "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_good",
+            "screen_id": 0
+        },
+        {
+            "description": "SET HOMESCREEN. Do you really want to set new homescreen image?",
+            "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_good",
+            "screen_id": 4
+        },
+        {
+            "description": "SET HOMESCREEN. Do you really want to set default homescreen image?",
+            "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_good",
+            "screen_id": 6
         }
     ],
     "Locktime": [
@@ -602,6 +979,11 @@
             "description": "CONFIRM LOCKTIME. <date>?",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_lock_time_datetime[2048-08-16 22:14:00]",
             "screen_id": 8
+        },
+        {
+            "description": "Locktime is set but will have no effect. Procceed anyway?",
+            "test": "TR-device_tests-bitcoin-test_signtx.py::test_lock_time[1-4294967295]",
+            "screen_id": 6
         }
     ],
     "RBF": [
@@ -735,11 +1117,183 @@
             "screen_id": 7
         }
     ],
+    "ETH_EIP712": [
+        {
+            "description": "CONFIRM DOMAIN. Name and version <name> <version>",
+            "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data_show_more_button",
+            "screen_id": 1
+        },
+        {
+            "description": "CONFIRM MESSAGE. <message struct>",
+            "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data_show_more_button",
+            "screen_id": 2
+        },
+        {
+            "description": "CONFIRM MESSAGE. <message struct>",
+            "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data[injective_testcase]",
+            "screen_id": 3
+        },
+        {
+            "description": "CONFIRM MESSAGE. No message field",
+            "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data[full_domain_empty_message]",
+            "screen_id": 3
+        },
+        {
+            "description": "<struct details>",
+            "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data_show_more_button",
+            "screen_id": 4
+        },
+        {
+            "description": "<string details>",
+            "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data_show_more_button",
+            "screen_id": 6
+        },
+        {
+            "description": "CONFIRM TYPED DATA. Really sign EIP-712 typed data?",
+            "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data_show_more_button",
+            "screen_id": 7
+        }
+    ],
+    "WipeDevice": [
+        {
+            "description": "WIPE DEVICE. Do you really want to wipe the device?",
+            "test": "TR-device_tests-test_msg_wipedevice.py::test_wipe_device",
+            "screen_id": 1
+        },
+        {
+            "description": "WIPE DEVICE. All data will be erased.",
+            "test": "TR-device_tests-test_msg_wipedevice.py::test_wipe_device",
+            "screen_id": 3
+        }
+    ],
+    "Loaders": [
+        {
+            "description": "PROCESSING. <loader> <x> seconds left",
+            "test": "TR-device_tests-test_msg_wipedevice.py::test_wipe_device",
+            "screen_id": 4
+        },
+        {
+            "description": "PROCESSING. <loader> Done",
+            "test": "TR-device_tests-test_msg_wipedevice.py::test_wipe_device",
+            "screen_id": 5
+        }
+    ],
+    "Entropy": [
+        {
+            "description": "CONFIRM ENTROPY. Do you really want to send entropy? Continue only if you...",
+            "test": "TR-device_tests-misc-test_msg_getentropy.py::test_entropy[1]",
+            "screen_id": 1
+        },
+        {
+            "description": "CONFIRM ENTROPY. ...know what you are doing!",
+            "test": "TR-device_tests-misc-test_msg_getentropy.py::test_entropy[1]",
+            "screen_id": 3
+        }
+    ],
+    "CoSi": [
+        {
+            "description": "COSI KEYS <key_name> <path>",
+            "test": "TR-device_tests-misc-test_cosi.py::test_cosi_sign1",
+            "screen_id": 1
+        },
+        {
+            "description": "COSI DATA. <data>",
+            "test": "TR-device_tests-misc-test_cosi.py::test_cosi_sign1",
+            "screen_id": 2
+        }
+    ],
+    "SignIndentity": [
+        {
+            "description": "SIGN HTTPS <date> <identity>",
+            "test": "TR-device_tests-misc-test_msg_signidentity.py::test_sign",
+            "screen_id": 1
+        },
+        {
+            "description": "SIGN FTP <date> <identity>",
+            "test": "TR-device_tests-misc-test_msg_signidentity.py::test_sign",
+            "screen_id": 3
+        },
+        {
+            "description": "SIGN SSH <date> <identity>",
+            "test": "TR-device_tests-misc-test_msg_signidentity.py::test_sign",
+            "screen_id": 5
+        },
+        {
+            "description": "SIGN GPG <date> <identity>",
+            "test": "TR-device_tests-misc-test_msg_signidentity.py::test_sign",
+            "screen_id": 9
+        },
+        {
+            "description": "SIGN SINGIFY <date> <identity>",
+            "test": "TR-device_tests-misc-test_msg_signidentity.py::test_sign",
+            "screen_id": 9
+        }
+    ],
+    "LoadDevice": [
+        {
+            "description": "LOADING SEED. Loading private seed is not recommended.",
+            "test": "TR-device_tests-test_msg_loaddevice.py::test_load_device_1",
+            "screen_id": 1
+        },
+        {
+            "description": "LOADING SEED. Continue only if you know what you are doing!",
+            "test": "TR-device_tests-test_msg_loaddevice.py::test_load_device_1",
+            "screen_id": 3
+        }
+    ],
+    "Rotation": [
+        {
+            "description": "CHANGE ROTATION. Do you want to change device rotation to west?",
+            "test": "TR-device_tests-test_msg_applysettings.py::test_apply_settings_rotation",
+            "screen_id": 4
+        }
+    ],
+    "DeviceName": [
+        {
+            "description": "DEVICE NAME. Change device name to <new_label>?",
+            "test": "TR-device_tests-test_msg_applysettings.py::test_apply_settings",
+            "screen_id": 4
+        }
+    ],
     "Autolock": [
         {
             "description": "AUTO-LOCK DELAY. Auto-lock your Trezor after 2 minutes of inactivity?",
             "test": "TR-device_tests-test_autolock.py::test_apply_auto_lock_delay_valid[123]",
             "screen_id": 4
+        }
+    ],
+    "ExperimentalFeatures": [
+        {
+            "description": "EXPERIMENTAL MODE. Enable experimental features? Only for...",
+            "test": "TR-device_tests-test_msg_applysettings.py::test_experimental_features",
+            "screen_id": 7
+        },
+        {
+            "description": "EXPERIMENTAL MODE. ...development and beta testing!",
+            "test": "TR-device_tests-test_msg_applysettings.py::test_experimental_features",
+            "screen_id": 8
+        },
+        {
+            "description": "EXPERIMENTAL MODE <homescreen>",
+            "test": "TR-device_tests-test_msg_applysettings.py::test_experimental_features",
+            "screen_id": 9
+        }
+    ],
+    "SafetyChecks": [
+        {
+            "description": "SAFETY OVERRIDE. Trezor will allow you to approve some actions which might be unsafe.",
+            "test": "TR-device_tests-test_msg_applysettings.py::test_safety_checks",
+            "screen_id": 1
+        },
+        {
+            "description": "SAFETY OVERRIDE. Are you sure?",
+            "test": "TR-device_tests-test_msg_applysettings.py::test_safety_checks",
+            "screen_id": 3
+        },
+        {
+            "description": "SAFETY CHECKS. Do you really want to enforce strict safety checks (recommended)?",
+            "test": "TR-device_tests-test_msg_applysettings.py::test_safety_checks",
+            "screen_id": 8
         }
     ]
 }
