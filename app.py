@@ -37,6 +37,41 @@ def get_dir_file_count(dir: Path) -> int:
     return len([x for x in dir.iterdir() if x.is_file()])
 
 
+def get_relevant_screens(
+    filter_flow: str | None = None, filter_text: str | None = None
+) -> list[dict[str, str]]:
+    screens_content = get_screen_text_content()
+    image_data: list[dict[str, str]] = []
+
+    for flow_name, flow_data in screens_content.items():
+        if filter_flow and flow_name != filter_flow:
+            continue  # filter by flow
+        for index, screen_info in enumerate(flow_data, start=1):
+            img_name = f"{flow_name}{index}"
+            img_src = f"/static/{flow_name}/{img_name}.png"
+            description = screen_info["description"]
+            if filter_text and filter_text.lower() not in description.lower():
+                continue  # filter by text
+            image_data.append(
+                {
+                    "name": img_name,
+                    "src": img_src,
+                    "description": description,
+                }
+            )
+
+    return image_data
+
+
+def get_unique_tests_and_links(flow_name: str) -> dict[str, str]:
+    screens_content = get_screen_text_content()
+    flow_data: list[dict[str, str]] = screens_content[flow_name]
+    return {
+        screen_info["test"]: get_latest_test_report_url(screen_info["test"])
+        for screen_info in flow_data
+    }
+
+
 @contextmanager
 def catch_log_raise_exception():
     try:
@@ -60,6 +95,20 @@ def read_root(request: Request):
         )
 
 
+@app.get("/all_screens", response_class=HTMLResponse)
+def all_screens(request: Request):
+    with catch_log_raise_exception():
+        logger.info("All screens")
+        image_data = get_relevant_screens()
+        return templates.TemplateResponse(
+            "all_screens.html",
+            {
+                "request": request,
+                "image_data": image_data,
+            },
+        )
+
+
 @app.get("/flow/{flow_name}", response_class=HTMLResponse)
 def read_subdir(flow_name: str, request: Request):
     with catch_log_raise_exception():
@@ -67,26 +116,8 @@ def read_subdir(flow_name: str, request: Request):
         if flow_name not in get_subdirs_names():
             raise HTTPException(status_code=404, detail="Directory not found")
 
-        screens_content = get_screen_text_content()
-        flow_data: list[dict[str, str]] = screens_content[flow_name]
-        image_data: list[dict[str, str]] = []
-
-        for index, screen_info in enumerate(flow_data, start=1):
-            img_name = f"{flow_name}{index}"
-            img_src = f"/static/{flow_name}/{img_name}.png"
-            description = screen_info["description"]
-            image_data.append(
-                {
-                    "name": img_name,
-                    "src": img_src,
-                    "description": description,
-                }
-            )
-
-        unique_tests_and_links: dict[str, str] = {
-            screen_info["test"]: get_latest_test_report_url(screen_info["test"])
-            for screen_info in flow_data
-        }
+        image_data = get_relevant_screens(filter_flow=flow_name)
+        unique_tests_and_links = get_unique_tests_and_links(flow_name)
 
         return templates.TemplateResponse(
             "subdir.html",
@@ -103,26 +134,7 @@ def read_subdir(flow_name: str, request: Request):
 def text_search(request: Request, text: str = ""):
     with catch_log_raise_exception():
         logger.info(f"Text search: {text}")
-        if not text:
-            image_data = []
-        else:
-            screens_content = get_screen_text_content()
-            image_data: list[dict[str, str]] = []
-
-            for flow_name, flow_data in screens_content.items():
-                for index, screen_info in enumerate(flow_data, start=1):
-                    img_name = f"{flow_name}{index}"
-                    img_src = f"/static/{flow_name}/{img_name}.png"
-                    description = screen_info["description"]
-                    if text.lower() in description.lower():
-                        image_data.append(
-                            {
-                                "name": img_name,
-                                "src": img_src,
-                                "description": description,
-                            }
-                        )
-
+        image_data = get_relevant_screens(filter_text=text) if text else []
         return templates.TemplateResponse(
             "text_search.html",
             {

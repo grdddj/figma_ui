@@ -12,6 +12,11 @@
         <input type="text" id="text" name="text" value="{{ text }}" placeholder="Text to find on screen">
         <button type="submit">Search</button>
     </form>
+    <hr>
+    <a href="./all_screens">
+        <h1>All screens</h1>
+    </a>
+    <hr>
     <h1>Flows</h1>
     <ul>
         {% for subdir, file_count in subdirs_and_filecounts %}
