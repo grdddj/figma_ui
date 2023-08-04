@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+import sys
 from functools import lru_cache
 from urllib.parse import urljoin
 
@@ -61,6 +62,9 @@ def download_img(flow_name: str, screen_name: str, img_url: str) -> None:
 
 
 if __name__ == "__main__":
+    if len(sys.argv) > 1 and sys.argv[1] == "--update":
+        OVERWRITE = True  # type: ignore
+
     branch = "master"
 
     jobs_id_mapping = get_branch_job_ids(branch)

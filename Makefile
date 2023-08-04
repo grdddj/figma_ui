@@ -41,3 +41,6 @@ style:
 	@echo "Applying the code style..."
 	python3 -m isort *.py
 	python3 -m black .
+
+update:
+	python get_screens.py --update
