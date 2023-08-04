@@ -44,4 +44,4 @@ style:
 
 update:
 	./backup.sh
-	python get_screens.py
+	python3 get_screens.py
