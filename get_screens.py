@@ -73,6 +73,8 @@ if __name__ == "__main__":
     failed_to_download: list[str] = []
 
     for flow_name, flow_screens in get_screen_text_content().items():
+        # if flow_name != "Recovery":
+        #     continue
         print(f"Getting screens for flow {flow_name}")
         for index, screen_info in enumerate(flow_screens, start=1):
             if "missing" in screen_info:
@@ -82,11 +84,11 @@ if __name__ == "__main__":
             test_case = screen_info["test"]
             screen_id = screen_info["screen_id"]
             print(f"Getting image {test_case}#{screen_id}")
-            img_url = get_img_url_from_last_test(test_case, screen_id)
             try:
+                img_url = get_img_url_from_last_test(test_case, screen_id)
                 download_img(flow_name, screen_name, img_url)
             except Exception as e:
-                print(f"Failed to download - {img_url} - {e}")
+                print(f"Failed to download - {e}")
                 failed_to_download.append(f"{flow_name}#{screen_name}: {e}")
 
     if failed_to_download:

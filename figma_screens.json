@@ -367,7 +367,7 @@
             "description": "Entered PINs do not match! Please check again. || <CHECK AGAIN>",
             "test": "TR-device_tests-test_msg_changepin_t2.py::test_set_failed",
             "screen_id": 8,
-            "comment": "Remote the newline between paragraphs?"
+            "comment": "Remove the newline between paragraphs?"
         },
         {
             "description": "SUCCESS || PIN protection turned on. || <CONTINUE>",
@@ -538,52 +538,52 @@
         {
             "description": "RECOVER WALLET || Select the number of words in your backup. || <cancel> <CONTINUE>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
-            "screen_id": 9
+            "screen_id": 7
         },
         {
             "description": "NUMBER OF WORDS || [number_choice] || <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
-            "screen_id": 11
+            "screen_id": 9
         },
         {
             "description": "RECOVER WALLET || Enter your backup. (12 words) || <cancel> <arrow_down_wide>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
-            "screen_id": 13
+            "screen_id": 11
         },
         {
             "description": "RECOVER WALLET || You'll only have to select the first 2-3 letters for each word. || <arrow_up> <arrow_down_wide>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
-            "screen_id": 15
+            "screen_id": 13
         },
         {
             "description": "RECOVER WALLET || Position of the cursor will change between entries for enhanced security. || <arrow_up> <CONTINUE>",
+            "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
+            "screen_id": 15
+        },
+        {
+            "description": "WORD 1 OF 12 || [letter_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
             "screen_id": 17
         },
         {
             "description": "WORD 1 OF 12 || [letter_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
-            "screen_id": 19
+            "screen_id": 33
         },
         {
             "description": "WORD 1 OF 12 || [letter_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
-            "screen_id": 35
+            "screen_id": 34
         },
         {
             "description": "WORD 1 OF 12 || [letter_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
-            "screen_id": 36
+            "screen_id": 72
         },
         {
             "description": "WORD 1 OF 12 || [letter_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
-            "screen_id": 75
-        },
-        {
-            "description": "WORD 1 OF 12 || [letter_choice] || <arrow_left> <SELECT> <arrow_right>",
-            "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
-            "screen_id": 76
+            "screen_id": 74
         },
         {
             "description": "Invalid recovery seed entered. Please try again. || <TRY AGAIN>",
@@ -593,7 +593,7 @@
         {
             "description": "SUCCESS || Wallet recovered successfully. || <CONTINUE>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
-            "screen_id": 688
+            "screen_id": 686
         },
         {
             "description": "ABORT RECOVERY || Do you really want to abort the recovery process? || <cancel> <arrow_down_wide>",
@@ -605,7 +605,7 @@
             "description": "ABORT RECOVERY || All progress will be lost. || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-reset_recovery-test_recovery_slip39_basic.py::test_abort",
             "screen_id": 9,
-            "comment": "TODO: CHANGE - not showing this"
+            "comment": "TODO: CHANGE - not showing this?"
         }
     ],
     "RecoveryShamir": [
