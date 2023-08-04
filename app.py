@@ -47,16 +47,18 @@ def get_relevant_screens(
         if filter_flow and flow_name != filter_flow:
             continue  # filter by flow
         for index, screen_info in enumerate(flow_data, start=1):
-            img_name = f"{flow_name}{index}"
-            img_src = f"/static/{flow_name}/{img_name}.png"
             description = screen_info["description"]
             if filter_text and filter_text.lower() not in description.lower():
                 continue  # filter by text
+            comment = screen_info.get("comment", "")
+            img_name = f"{flow_name}{index}"
+            img_src = f"/static/{flow_name}/{img_name}.png"
             image_data.append(
                 {
                     "name": img_name,
                     "src": img_src,
                     "description": description,
+                    "comment": comment,
                 }
             )
 

@@ -27,7 +27,8 @@
         <tr>
             <th>Id</th>
             <th>Image</th>
-            <th>Description</th>
+            <th>Screen text</th>
+            <th>Comment</th>
         </tr>
         {% for image in image_data %}
         <tr>
@@ -36,6 +37,7 @@
                     alt="{{ image.name }}">
             </td>
             <td>{{ image.description}}</td>
+            <td>{{ image.comment}}</td>
         </tr>
         {% endfor %}
     </table>
