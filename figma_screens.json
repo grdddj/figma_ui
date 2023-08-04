@@ -118,6 +118,12 @@
             "screen_id": 28
         },
         {
+            "description": "CHECK AGAIN || Wrong word selected! || <PLEASE CHECK AGAIN>",
+            "test": "TR-device_tests-reset_recovery-test_reset_bip39_t2.py::test_reset_failed_check",
+            "screen_id": 28,
+            "comment": "TODO: completely change, differs from Figma"
+        },
+        {
             "description": "SUCCESS || You have finished verifying your recovery seed. || <CONTINUE>",
             "test": "TR-click_tests-test_reset_bip39.py::test_reset_bip39",
             "screen_id": 33
@@ -126,12 +132,6 @@
             "description": "BACKUP IS DONE || Keep it safe! || <CONTINUE>",
             "test": "TR-click_tests-test_reset_bip39.py::test_reset_bip39",
             "screen_id": 35
-        },
-        {
-            "description": "CHECK AGAIN || Wrong word selected! || <PLEASE CHECK AGAIN>",
-            "test": "TR-device_tests-reset_recovery-test_reset_bip39_t2.py::test_reset_failed_check",
-            "screen_id": 28,
-            "comment": "Replace title and button text"
         }
     ],
     "WalletCreationShamir": [
@@ -163,12 +163,14 @@
         {
             "description": "Number of shares. Set threshold. Write down and check all shares. || <cancel> <CONTINUE>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
-            "screen_id": 12
+            "screen_id": 12,
+            "comment": "FIX 'treshold' in Figma in at least 4 screens"
         },
         {
             "description": "NUMBER OF SHARES || = total number of unique word lists used for wallet backup. || <CONTINUE>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
-            "screen_id": 14
+            "screen_id": 14,
+            "comment": "should the title be CAPITAL or not?"
         },
         {
             "description": "NUMBER OF SHARES || [number_choice] || <arrow_left> <SELECT> <arrow_right>",
@@ -181,9 +183,10 @@
             "screen_id": 26
         },
         {
-            "description": "THRESHOLD || = minimum number of unique word lists used for recovery. || <CONTINUE>",
+            "description": "THRESHOLD || = minimum number of unique words used for recovery. || <CONTINUE>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
-            "screen_id": 28
+            "screen_id": 28,
+            "comment": "TODO: seems we have a bad text here - 'words' instead of 'word lists'. Also - CAPITAL title or not?"
         },
         {
             "description": "THRESHOLD || [number_choice] || <SELECT>",
@@ -198,7 +201,8 @@
         {
             "description": "REMEMBER || Never make a digital copy of your backup or upload it online! || <OK, I UNDERSTAND>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
-            "screen_id": 34
+            "screen_id": 34,
+            "comment": "DIFF: make it left-aligned or centered?"
         },
         {
             "description": "SHARE #1 || Write down all 20 words in order. || <SHOW WORDS>",
@@ -228,7 +232,8 @@
         {
             "description": "Recovery share #1 checked successfully. Continue with share #2. || <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_basic.py::test_reset_device_slip39_basic",
-            "screen_id": 35
+            "screen_id": 35,
+            "comment": "TODO: add newline between paragraphs"
         },
         {
             "description": "SUCCESS || You have finished verifying your recovery shares. || <CONTINUE>",
@@ -245,58 +250,68 @@
         {
             "description": "Number of groups. Number of shares. Set sizes and thresholds. || <cancel> <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
-            "screen_id": 6
+            "screen_id": 6,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "NUMBER OF GROUPS. [number_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
-            "screen_id": 7
+            "screen_id": 7,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "Number of groups. Number of shares. Set sizes and thresholds. || <cancel> <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
-            "screen_id": 8
+            "screen_id": 8,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "GROUP THRESHOLD || [number_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
-            "screen_id": 9
+            "screen_id": 9,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "Number of groups. Number of shares. Set sizes and thresholds. || <cancel> <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
-            "screen_id": 10
+            "screen_id": 10,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "# SHARES - GROUP 1 || [number_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
-            "screen_id": 12
+            "screen_id": 12,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "THRESHOLD - GROUP 1 || [number_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
-            "screen_id": 14
+            "screen_id": 14,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "G1 - SHARE 1 || Write down all 20 words in order. || <SHOW WORDS>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
             "screen_id": 32,
-            "comment": "Change G1 to Group 1"
+            "comment": "MISSING in Figma ... Change G1 to Group 1"
         },
         {
             "description": "GROUP 1 - SHARE 1 || Select the correct word for each position. || <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
-            "screen_id": 48
+            "screen_id": 48,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "Group 1 - Share 1 checked successfully. Continue with the next share. || <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
-            "screen_id": 53
+            "screen_id": 53,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "SUCCESS || You have finished verifying your recovery shares for group 1. || <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
-            "screen_id": 141
+            "screen_id": 141,
+            "comment": "MISSING in Figma"
         }
     ],
     "PIN": [
@@ -306,19 +321,21 @@
             "screen_id": 1
         },
         {
-            "description": "PIN SETTINGS || PIN will be required to access this device. || <arrow_up> <TURN ON>",
+            "description": "PIN will be required to access this device. || <arrow_up> <TURN ON>",
             "test": "TR-device_tests-test_msg_changepin_t2.py::test_set_pin",
-            "screen_id": 3
+            "screen_id": 3,
+            "comment": "TODO: not showing PIN SETTINGS header - should we?"
         },
         {
-            "description": "PIN SETTINGS || PIN should be 4-50 digit long. || <cancel> <arrow_down_wide>",
+            "description": "PIN SETTINGS || PIN should be 4-50 digits long. || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-test_msg_changepin_t2.py::test_set_pin",
             "screen_id": 4
         },
         {
-            "description": "PIN SETTINGS || Position of the cursor will change between entries for enhanced security. || <arrow_up> <CONTINUE>",
+            "description": "Position of the cursor will change between entries for enhanced security. || <arrow_up> <CONTINUE>",
             "test": "TR-device_tests-test_msg_changepin_t2.py::test_set_pin",
-            "screen_id": 6
+            "screen_id": 6,
+            "comment": "TODO: not showing PIN SETTINGS header - should we?"
         },
         {
             "description": "ENTER NEW PIN || [pin_choice] || <arrow_left> <SELECT> <arrow_right>",
@@ -326,12 +343,12 @@
             "screen_id": 7
         },
         {
-            "description": "ENTER NEW PIN || [pin_choice] || <arrow_left> <SELECT> <arrow_right>",
+            "description": "ENTER PIN || [pin_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_pin.py::test_pin_short",
             "screen_id": 22
         },
         {
-            "description": "WRONG PIN || 15 tries left [pin_choice] || <arrow_left> <SELECT> <arrow_right>",
+            "description": "ENTER PIN || 15 tries left [pin_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-test_pin.py::test_exponential_backoff_t2",
             "screen_id": 4
         },
@@ -343,12 +360,14 @@
         {
             "description": "RE-ENTER NEW PIN || [pin_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-test_msg_changepin_t2.py::test_set_pin",
-            "screen_id": 9
+            "screen_id": 9,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "Entered PINs do not match! Please check again. || <CHECK AGAIN>",
             "test": "TR-device_tests-test_msg_changepin_t2.py::test_set_failed",
-            "screen_id": 8
+            "screen_id": 8,
+            "comment": "Remote the newline between paragraphs?"
         },
         {
             "description": "SUCCESS || PIN protection turned on. || <CONTINUE>",
@@ -373,12 +392,14 @@
         {
             "description": "WRONG PIN || The PIN you have entered is not valid. || <CLOSE>",
             "test": "TR-device_tests-test_msg_changepin_t2.py::test_change_invalid_current",
-            "screen_id": 10
+            "screen_id": 10,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "INVALID PIN || The new PIN must be different from your wipe code. || <CLOSE>",
             "test": "TR-device_tests-test_msg_change_wipe_code_t2.py::test_set_remove_wipe_code",
-            "screen_id": 27
+            "screen_id": 27,
+            "comment": "MISSING in Figma"
         }
     ],
     "WipeCode": [
@@ -390,28 +411,32 @@
         {
             "description": "Wipe code can be used to erase all data from this device. || <arrow_up> <TURN ON>",
             "test": "TR-device_tests-test_msg_change_wipe_code_t2.py::test_set_remove_wipe_code",
-            "screen_id": 7
+            "screen_id": 7,
+            "comment": "MISSING in Figma... Should we show this explanation at all?"
         },
         {
             "description": "ENTER NEW WIPE CODE || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-test_msg_change_wipe_code_t2.py::test_set_remove_wipe_code",
-            "screen_id": 11
+            "screen_id": 11,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "CHECK WIPE CODE || Please re-enter wipe code to confirm. || <cancel> <CONTINUE>",
             "test": "TR-device_tests-test_msg_change_wipe_code_t2.py::test_set_remove_wipe_code",
             "screen_id": 12,
-            "comment": "Delete the left cancel button"
+            "comment": "MISSING in Figma. Delete the left cancel button."
         },
         {
             "description": "RE-ENTER WIPE CODE || [wipe_code_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-test_msg_change_wipe_code_t2.py::test_set_remove_wipe_code",
-            "screen_id": 13
+            "screen_id": 13,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "SUCCESS || Wipe code enabled. || <CONTINUE>",
             "test": "TR-device_tests-test_msg_change_wipe_code_t2.py::test_set_remove_wipe_code",
-            "screen_id": 16
+            "screen_id": 16,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "WIPE CODE SETTINGS || Change wipe code? || <cancel> <CHANGE>",
@@ -421,7 +446,8 @@
         {
             "description": "SUCCESS || Wipe code changed. || <CONTINUE>",
             "test": "TR-device_tests-test_msg_change_wipe_code_t2.py::test_set_remove_wipe_code",
-            "screen_id": 38
+            "screen_id": 38,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "WIPE CODE SETTINGS || Turn off wipe code protection? || <cancel> <TURN OFF>",
@@ -431,19 +457,22 @@
         {
             "description": "SUCCESS || Wipe code disabled. || <CONTINUE>",
             "test": "TR-device_tests-test_msg_change_wipe_code_t2.py::test_set_remove_wipe_code",
-            "screen_id": 55
+            "screen_id": 55,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "INVALID WIPE CODE || The wipe code must be different from your PIN. Please try again. || <TRY AGAIN>",
             "test": "TR-device_tests-test_msg_change_wipe_code_t2.py::test_set_wipe_code_to_pin",
-            "screen_id": 12
+            "screen_id": 12,
+            "comment": "MISSING in Figma"
         }
     ],
     "BackupCheck": [
         {
             "description": "BACKUP CHECK || Do you really want to check the recovery seed? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-reset_recovery-test_recovery_bip39_dryrun.py::test_dry_run",
-            "screen_id": 1
+            "screen_id": 1,
+            "comment": "DIFF - shorter sentence, different button text"
         },
         {
             "description": "BACKUP CHECK || Select the number of words in your backup. || <cancel> <CONTINUE>",
@@ -456,16 +485,6 @@
             "screen_id": 6
         },
         {
-            "description": "BACKUP CHECK || You'll only have to select the first 2-3 letters for each word. || <arrow_up> <arrow_down_wide>",
-            "test": "TR-device_tests-reset_recovery-test_recovery_bip39_dryrun.py::test_dry_run",
-            "screen_id": 8
-        },
-        {
-            "description": "BACKUP CHECK || Position of the cursor will change between entries for enhanced security. || <arrow_up> <CONTINUE>",
-            "test": "TR-device_tests-reset_recovery-test_recovery_bip39_dryrun.py::test_dry_run",
-            "screen_id": 10
-        },
-        {
             "description": "SUCCESS || The entered recovery seed is valid and matches the one in the device. || <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_recovery_bip39_dryrun.py::test_dry_run",
             "screen_id": 19
@@ -473,7 +492,8 @@
         {
             "description": "The entered recovery seed is valid but does not match the one in the device. || <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_recovery_bip39_dryrun.py::test_seed_mismatch",
-            "screen_id": 19
+            "screen_id": 19,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "Invalid recovery seed entered. Please try again. || <TRY AGAIN>",
@@ -484,7 +504,8 @@
             "description": "ABORT BACKUP CHECK || Do you really want to abort the backup check? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-reset_recovery-test_recovery_bip39_dryrun.py::test_invalid_seed_core",
             "screen_id": 28,
-            "missing": "TODO: missing screen"
+            "missing": "TODO: missing screen - is not in tests",
+            "comment": "TODO: CHANGE - cancel instead of abort, new button"
         },
         {
             "description": "BACKUP CHECK || 1 of 2 shares entered successfully. 1 more share needed. || <cancel> <ENTER SHARE>",
@@ -499,7 +520,8 @@
         {
             "description": "SUCCESS || The entered recovery shares are valid but do not match what is currently in the device. || <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_recovery_slip39_advanced_dryrun.py::test_2of3_invalid_seed_dryrun",
-            "screen_id": 93
+            "screen_id": 93,
+            "comment": "DIFF: Figma has WARNING title and paginates on two pages. Also - move it from WordEntry to BackupCheck"
         }
     ],
     "Recovery": [
@@ -576,12 +598,14 @@
         {
             "description": "ABORT RECOVERY || Do you really want to abort the recovery process? || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-reset_recovery-test_recovery_slip39_basic.py::test_abort",
-            "screen_id": 7
+            "screen_id": 7,
+            "comment": "TODO: CHANGE - cancel instead of abort, new button"
         },
         {
             "description": "ABORT RECOVERY || All progress will be lost. || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-reset_recovery-test_recovery_slip39_basic.py::test_abort",
-            "screen_id": 9
+            "screen_id": 9,
+            "comment": "TODO: CHANGE - not showing this"
         }
     ],
     "RecoveryShamir": [
@@ -653,7 +677,7 @@
     ],
     "SendBTC": [
         {
-            "description": "RECIPIENT #1 || {btc_address} || <cancel> <CONTINUE>",
+            "description": "RECIPIENT #1 || {address} || <cancel> <CONTINUE>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_one_three_fee",
             "screen_id": 2
         },
@@ -663,7 +687,7 @@
             "screen_id": 4
         },
         {
-            "description": "RECIPIENT #2 || {account_name} {btc_address} || <cancel> <CONTINUE>",
+            "description": "RECIPIENT #2 || {account_name} {address} || <cancel> <CONTINUE>",
             "test": "TR-device_tests-bitcoin-test_signtx_segwit.py::test_attack_change_input_address",
             "screen_id": 6
         },
@@ -690,43 +714,50 @@
         {
             "description": "SENDING FROM || Account: Multiple accounts || <arrow_left>",
             "test": "TR-device_tests-bitcoin-test_signtx_segwit.py::test_attack_mixed_inputs",
-            "screen_id": 12
+            "screen_id": 12,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "A lot of change outputs. {x} outputs || <CONTINUE>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_lots_of_change",
-            "screen_id": 6
+            "screen_id": 6,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "Unusually high fee. {amount} || <CONTINUE>",
             "test": "TR-device_tests-bitcoin-test_signtx_segwit.py::test_attack_mixed_inputs",
-            "screen_id": 6
+            "screen_id": 6,
+            "comment": "MISSING in Figma"
         },
         {
-            "description": "The transaction contains unverified external inputs. Continue anyway? || <arrow_up> <arrow_up>",
+            "description": "The transaction contains unverified external inputs. Proceed anyway? || <PROCEED>",
             "test": "TR-device_tests-bitcoin-test_signtx_external.py::test_p2tr_external_unverified",
-            "screen_id": 12
+            "screen_id": 12,
+            "comment": "MISSING in Figma. Change proceed to continue"
         },
         {
             "description": "UNKNOWN PATH || {path} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_multisig.py::test_attack_change_input",
-            "screen_id": 2
+            "screen_id": 2,
+            "comment": "MISSING in Figma. Change proceed to continue"
         },
         {
             "description": "JOINT TRANSACTION || You are contributing: {amount} || <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signtx_external.py::test_p2tr_external_presigned",
             "screen_id": 6,
-            "comment": "Add the cancel button to the left?"
+            "comment": "MISSING in Figma. Add the cancel button to the left?"
         },
         {
             "description": "JOINT TRANSACTION || To the total amount: {amount} || <arrow_up> <HOLD TO CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signtx_external.py::test_p2tr_external_presigned",
-            "screen_id": 8
+            "screen_id": 8,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "CONFIRM SENDING || {amount} to {recipient} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signtx_payreq.py::test_payment_request[out01]",
-            "screen_id": 2
+            "screen_id": 2,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "[loader] Loading transaction...",
@@ -795,6 +826,11 @@
             "screen_id": 1
         },
         {
+            "description": "ADDRESS MISMATCH? || Please contact Trezor support at trezor.io/support || <arrow_left> <QUIT>",
+            "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_cancel[m-84h-0h-12h-0-0-InputScriptType.SPENDWIT-d6991e22",
+            "screen_id": 11
+        },
+        {
             "description": "{QR_code_taproot_address} || <arrow_left> <arrow_right>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_cancel[m-86h-0h-12h-0-0-InputScriptType.SPENDTAP-4c5b2b38",
             "screen_id": 3
@@ -805,24 +841,22 @@
             "screen_id": 3
         },
         {
-            "description": "Account: {account} Derivation path: [derivat{on_path} || <arrow_left>",
+            "description": "Account: {account} Derivation path: {derivation_path} || <arrow_left>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_cancel[m-84h-0h-12h-0-0-InputScriptType.SPENDWIT-d6991e22",
-            "screen_id": 5
-        },
-        {
-            "description": "ADDRESS MISMATCH? || Please contact Trezor support at trezor.io/support || <arrow_left> <QUIT>",
-            "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_cancel[m-84h-0h-12h-0-0-InputScriptType.SPENDWIT-d6991e22",
-            "screen_id": 11
+            "screen_id": 5,
+            "comment": "DIFF: we do not have the HIDEN WALLET #X header"
         },
         {
             "description": "RECEIVE ADDRESS (MULTISIG) || {multisig_address} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_multisig_xpubs[InputScriptType.SPENDWITNESS-2-bc-e70b56ea",
-            "screen_id": 1
+            "screen_id": 1,
+            "comment": "MISSING in Figma"
         },
         {
-            "description": "Account: [multisig{account} Derivation path: [derivat{on_path} || <arrow_left> <arrow_right>",
+            "description": "Account: {multisig_account} Derivation path: {derivation_path} || <arrow_left> <arrow_right>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_multisig_xpubs[InputScriptType.SPENDWITNESS-2-bc-e70b56ea",
-            "screen_id": 5
+            "screen_id": 5,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "MULTISIG XPUB #1 (YOURS) || {xpub} || <arrow_left> <VIEW FULL> <arrow_right>",
@@ -837,7 +871,8 @@
         {
             "description": "MULTISIG XPUB #2 (COSIGNER) || {xpub} || <arrow_left> <VIEW FULL> <arrow_right>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_multisig_xpubs[InputScriptType.SPENDWITNESS-2-bc-e70b56ea",
-            "screen_id": 14
+            "screen_id": 14,
+            "comment": "MISSING in Figma (COSIGNED word)"
         }
     ],
     "Passphrase": [
@@ -847,24 +882,28 @@
             "screen_id": 4
         },
         {
-            "description": "ENTER PASSPHRASE || {passphrase_keyboard} || <arrow_left> <SELECT> <arrow_right>",
+            "description": "ENTER PASSPHRASE || [passphrase_keyboard] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_passphrase_tr.py::test_passphrase_input[abc 123-mvqzZUb9NaUc62Buk9WCP4L7hunsXFyamT]",
-            "screen_id": 2
+            "screen_id": 2,
+            "comment": "DIFF - not showing the underscore cursor"
         },
         {
-            "description": "ENTER PASSPHRASE || {passphrase_keyboard} || <arrow_left> <SELECT> <arrow_right>",
+            "description": "ENTER PASSPHRASE || [passphrase_keyboard] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_passphrase_tr.py::test_passphrase_input[abc 123-mvqzZUb9NaUc62Buk9WCP4L7hunsXFyamT]",
-            "screen_id": 30
+            "screen_id": 30,
+            "comment": "TODO: show the last character in plain text after being selected?"
         },
         {
-            "description": "ENTER PASSPHRASE || {passphrase_keyboard} || <arrow_left> <RETURN> <arrow_right>",
+            "description": "ENTER PASSPHRASE || [passphrase_keyboard] || <arrow_left> <RETURN> <arrow_right>",
             "test": "TR-click_tests-test_passphrase_tr.py::test_passphrase_input[abc 123-mvqzZUb9NaUc62Buk9WCP4L7hunsXFyamT]",
-            "screen_id": 37
+            "screen_id": 37,
+            "comment": "DIFF - SELECT vs RETURN middle button"
         },
         {
             "description": "Please enter your passphrase.",
             "test": "TR-device_tests-test_protection_levels.py::test_passphrase_cached",
-            "screen_id": 1
+            "screen_id": 1,
+            "comment": "Delete the button in Figma, it cannot be done (right now)"
         },
         {
             "description": "HIDDEN WALLET || Next screen will show the passphrase. || <cancel> <CONTINUE>",
@@ -874,32 +913,38 @@
         {
             "description": "CONFIRM PASSPHRASE || {passphrase} || <CONFIRM>",
             "test": "TR-device_tests-test_session_id_and_passphrase.py::test_hide_passphrase_from_host",
-            "screen_id": 15
+            "screen_id": 15,
+            "comment": "TODO: add cancel button"
         },
         {
             "description": "PASSPHRASE SETTINGS || Turn off passphrase protection? || <cancel> <TURN OFF>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_settings_passphrase",
-            "screen_id": 6
+            "screen_id": 6,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "PASSPHRASE SOURCE || Do you really want to enter passphrase always on device? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_settings_passphrase_on_device",
-            "screen_id": 3
+            "screen_id": 3,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "HIDE PASSPHRASE || Hide passphrase coming from host? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-test_session_id_and_passphrase.py::test_hide_passphrase_from_host",
-            "screen_id": 5
+            "screen_id": 5,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "HIDDEN WALLET || Access hidden wallet? Passphrase provided by host will be used but will not be displayed... || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-test_session_id_and_passphrase.py::test_hide_passphrase_from_host",
-            "screen_id": 8
+            "screen_id": 8,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "HIDDEN WALLET || ...due to the device settings. || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-test_session_id_and_passphrase.py::test_hide_passphrase_from_host",
-            "screen_id": 10
+            "screen_id": 10,
+            "comment": "MISSING in Figma"
         }
     ],
     "CoinJoin": [
@@ -941,19 +986,9 @@
             "screen_id": 7
         },
         {
-            "description": "[homescreen_custom]",
-            "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_good",
-            "screen_id": 5
-        },
-        {
             "description": "[notification_banner] [homescreen_default]",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_with_notification",
-            "screen_id": 1
-        },
-        {
-            "description": "[notification_banner] [homescreen_custom]",
-            "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_with_notification",
-            "screen_id": 2
+            "screen_id": 0
         },
         {
             "description": "Click to unlock [lockscreen]",
@@ -961,14 +996,26 @@
             "screen_id": 0
         },
         {
+            "description": "[homescreen_custom]",
+            "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_good",
+            "screen_id": 5
+        },
+        {
+            "description": "[notification_banner] [homescreen_custom]",
+            "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_with_notification",
+            "screen_id": 2
+        },
+        {
             "description": "SET HOMESCREEN || Do you really want to set new homescreen image? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_good",
-            "screen_id": 4
+            "screen_id": 4,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "SET HOMESCREEN || Do you really want to set default homescreen image? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_good",
-            "screen_id": 6
+            "screen_id": 6,
+            "comment": "MISSING in Figma"
         }
     ],
     "Locktime": [
@@ -976,21 +1023,22 @@
             "description": "CONFIRM LOCKTIME || Locktime for this transaction is set to blockheight: || <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_lock_time_blockheight",
             "screen_id": 6,
-            "comment": "Add the cancel button to the left?"
+            "comment": "MISSING in Figma. Add the cancel button to the left + shorten the sentence 'Locktime set to blockheight:'"
         },
         {
             "description": "CONFIRM LOCKTIME || {block_height}? || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_lock_time_blockheight",
-            "screen_id": 8
+            "screen_id": 8,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "CONFIRM LOCKTIME || Locktime for this transaction is set to: || <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_lock_time_datetime[2048-08-16 22:14:00]",
             "screen_id": 6,
-            "comment": "Add the cancel button to the left?"
+            "comment": "DIFF - shorten the sentence, add cancel button to left"
         },
         {
-            "description": "CONFIRM LOCKTIME || {date}? || <arrow_up> <CONFIRM>",
+            "description": "CONFIRM LOCKTIME || {date} || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_lock_time_datetime[2048-08-16 22:14:00]",
             "screen_id": 8
         },
@@ -998,49 +1046,51 @@
             "description": "Locktime is set but will have no effect. Procceed anyway? || <PROCEED>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_lock_time[1-4294967295]",
             "screen_id": 6,
-            "comment": "Change text and button to CONTINUE?"
+            "comment": "MISSING in Figma. Change text and button to CONTINUE?"
         }
     ],
     "RBF": [
         {
-            "description": "UPDATE TRANSACTION || Confirm transaction ID{ [tx_id} || <arrow_down_wide>",
+            "description": "UPDATE TRANSACTION || Confirm transaction ID: {tx_id} || <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
             "screen_id": 2,
-            "comment": "Add the cancel button to the left?"
+            "comment": "DIFF: remove the 'Confirm' from the sentence, add left cancel btn"
         },
         {
-            "description": "UPDATE TRANSACTION || <tx_id> || <arrow_up> <CONFIRM>",
+            "description": "UPDATE TRANSACTION || {tx_id} || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
-            "screen_id": 4
+            "screen_id": 4,
+            "comment": "DIFF: change the btn to CONTINUE"
         },
         {
             "description": "MODIFY AMOUNT || Address: {address} || <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
-            "screen_id": 7
+            "screen_id": 7,
+            "comment": "MISSING in Figma. Add the cancel button to the left?"
         },
         {
-            "description": "MODIFY AMOUNT || Decrease amount by:{[amount} || <arrow_up> <arrow_down_wide>",
+            "description": "MODIFY AMOUNT || Decrease amount by: {amount} || <arrow_up> <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
-            "screen_id": 9,
-            "comment": "Add the cancel button to the left?"
+            "screen_id": 9
         },
         {
-            "description": "MODIFY AMOUNT || New amount:{[amount} || <arrow_up> <CONFIRM>",
+            "description": "MODIFY AMOUNT || New amount: {amount} || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
             "screen_id": 11
         },
         {
-            "description": "MODIFY FEE || Increase fee {y: [fee} || <cancel> <arrow_down_wide>",
+            "description": "MODIFY FEE || Increase fee {fee} || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
-            "screen_id": 14
+            "screen_id": 14,
+            "comment": "DIFF - new designs, TODO: create issue for this"
         },
         {
-            "description": "MODIFY FEE || Transaction f{e: [fee} || <arrow_up> <arrow_down_wide>",
+            "description": "MODIFY FEE || Transaction fee: {fee} || <arrow_up> <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
             "screen_id": 16
         },
         {
-            "description": "MODIFY FEE || Fee ra{e: [fee} || <arrow_up> <CONFIRM>",
+            "description": "MODIFY FEE || Fee rate: {fee_rate} || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
             "screen_id": 18
         }
@@ -1049,27 +1099,32 @@
         {
             "description": "GET NEXT U2F COUNTER || Do you really want to increase and retrieve the next U2F counter? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-webauthn-test_u2f_counter.py::test_u2f_counter",
-            "screen_id": 1
+            "screen_id": 1,
+            "comment": "DIFF - shorten the header and text"
         },
         {
             "description": "SET U2F COUNTER || Do you really want to set the U2F counter to <value>? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-webauthn-test_u2f_counter.py::test_u2f_counter",
-            "screen_id": 5
+            "screen_id": 5,
+            "comment": "DIFF - shorten the text and change button text TODO: change SET text in Figma to Set"
         },
         {
             "description": "LIST CREDENTIALS || Do you want to export information about the resident credentials stored on this device? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-webauthn-test_msg_webauthn.py::test_add_remove",
-            "screen_id": 1
+            "screen_id": 1,
+            "comment": "DIFF - shorten the text and change button text"
         },
         {
             "description": "IMPORT CREDENTIAL || {fido_credentials} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-webauthn-test_msg_webauthn.py::test_add_remove",
-            "screen_id": 3
+            "screen_id": 3,
+            "comment": "DIFF - change button text"
         },
         {
             "description": "ERROR || The credential you are trying to import does not belong to this authenticator. || <CLOSE>",
             "test": "TR-device_tests-webauthn-test_msg_webauthn.py::test_add_remove",
-            "screen_id": 11
+            "screen_id": 11,
+            "comment": "DIFF - change design - no header, all centered"
         }
     ],
     "SignMessage": [
@@ -1143,56 +1198,65 @@
             "description": "SUCCESS || The signature is valid. || <CONTINUE>",
             "test": "TR-device_tests-ethereum-test_sign_verify_message.py::test_verify[parameters0-result0]",
             "screen_id": 7,
-            "comment": "Open issue #3167"
+            "comment": "MISSING in Figma - the whole VERIFY flow - TODO: add it"
         }
     ],
     "ETH_EIP712": [
         {
             "description": "CONFIRM DOMAIN || Name and version {name} {version} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data_show_more_button",
-            "screen_id": 1
+            "screen_id": 1,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "CONFIRM MESSAGE || {message_struct} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data_show_more_button",
-            "screen_id": 2
+            "screen_id": 2,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "CONFIRM MESSAGE || {message_struct} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data[injective_testcase]",
-            "screen_id": 3
+            "screen_id": 3,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "CONFIRM MESSAGE || No message field || <cancel> <CONFIRM>",
             "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data[full_domain_empty_message]",
-            "screen_id": 3
+            "screen_id": 3,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "{struct_details} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data_show_more_button",
-            "screen_id": 4
+            "screen_id": 4,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "{string_details} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data_show_more_button",
-            "screen_id": 6
+            "screen_id": 6,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "CONFIRM TYPED DATA || Really sign EIP-712 typed data? || <cancel> <HOLD TO CONFIRM>",
             "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data_show_more_button",
-            "screen_id": 7
+            "screen_id": 7,
+            "comment": "MISSING in Figma"
         }
     ],
     "WipeDevice": [
         {
             "description": "WIPE DEVICE || Do you really want to wipe the device? || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-test_msg_wipedevice.py::test_wipe_device",
-            "screen_id": 1
+            "screen_id": 1,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "WIPE DEVICE || All data will be erased. || <arrow_up> <HOLD TO CONFIRM>",
             "test": "TR-device_tests-test_msg_wipedevice.py::test_wipe_device",
-            "screen_id": 3
+            "screen_id": 3,
+            "comment": "MISSING in Figma"
         }
     ],
     "Loaders": [
@@ -1211,77 +1275,90 @@
         {
             "description": "CONFIRM ENTROPY || Do you really want to send entropy? Continue only if you... || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-misc-test_msg_getentropy.py::test_entropy[1]",
-            "screen_id": 1
+            "screen_id": 1,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "CONFIRM ENTROPY || ...know what you are doing! || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-misc-test_msg_getentropy.py::test_entropy[1]",
-            "screen_id": 3
+            "screen_id": 3,
+            "comment": "MISSING in Figma"
         }
     ],
     "CoSi": [
         {
             "description": "COSI KEYS || {key_name} {path} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-misc-test_cosi.py::test_cosi_sign1",
-            "screen_id": 1
+            "screen_id": 1,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "COSI DATA || {data} || <CONFIRM>",
             "test": "TR-device_tests-misc-test_cosi.py::test_cosi_sign1",
-            "screen_id": 2
+            "screen_id": 2,
+            "comment": "MISSING in Figma"
         }
     ],
     "SignIndentity": [
         {
             "description": "SIGN HTTPS || {date} {identity} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-misc-test_msg_signidentity.py::test_sign",
-            "screen_id": 1
+            "screen_id": 1,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "SIGN FTP || {date} {identity} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-misc-test_msg_signidentity.py::test_sign",
-            "screen_id": 3
+            "screen_id": 3,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "SIGN SSH || {date} {identity} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-misc-test_msg_signidentity.py::test_sign",
-            "screen_id": 5
+            "screen_id": 5,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "SIGN GPG || {date} {identity} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-misc-test_msg_signidentity.py::test_sign",
-            "screen_id": 9
+            "screen_id": 9,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "SIGN SINGIFY || {date} {identity} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-misc-test_msg_signidentity.py::test_sign",
-            "screen_id": 11
+            "screen_id": 11,
+            "comment": "MISSING in Figma"
         }
     ],
     "LoadDevice": [
         {
             "description": "LOADING SEED || Loading private seed is not recommended. || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-test_msg_loaddevice.py::test_load_device_1",
-            "screen_id": 1
+            "screen_id": 1,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "LOADING SEED || Continue only if you know what you are doing! || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-test_msg_loaddevice.py::test_load_device_1",
-            "screen_id": 3
+            "screen_id": 3,
+            "comment": "MISSING in Figma"
         }
     ],
     "Rotation": [
         {
             "description": "CHANGE ROTATION || Do you want to change device rotation to west? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_settings_rotation",
-            "screen_id": 4
+            "screen_id": 4,
+            "comment": "MISSING in Figma"
         }
     ],
     "DeviceName": [
         {
             "description": "DEVICE NAME || Change device name to <new_label>? || <cancel> <CHANGE>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_settings",
-            "screen_id": 4
+            "screen_id": 4,
+            "comment": "DIFF: make tne new name bold"
         }
     ],
     "Autolock": [
@@ -1295,34 +1372,40 @@
         {
             "description": "EXPERIMENTAL MODE || Enable experimental features? Only for... || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_experimental_features",
-            "screen_id": 7
+            "screen_id": 7,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "EXPERIMENTAL MODE || ...development and beta testing! || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_experimental_features",
-            "screen_id": 8
+            "screen_id": 8,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "EXPERIMENTAL MODE || [homescreen]",
             "test": "TR-device_tests-test_msg_applysettings.py::test_experimental_features",
-            "screen_id": 9
+            "screen_id": 9,
+            "comment": "MISSING in Figma"
         }
     ],
     "SafetyChecks": [
         {
             "description": "SAFETY OVERRIDE || Trezor will allow you to approve some actions which might be unsafe. || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_safety_checks",
-            "screen_id": 1
+            "screen_id": 1,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "SAFETY OVERRIDE || Are you sure? || <arrow_up> <HOLD TO CONFIRM>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_safety_checks",
-            "screen_id": 3
+            "screen_id": 3,
+            "comment": "MISSING in Figma"
         },
         {
             "description": "SAFETY CHECKS || Do you really want to enforce strict safety checks (recommended)? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_safety_checks",
-            "screen_id": 8
+            "screen_id": 8,
+            "comment": "MISSING in Figma"
         }
     ]
 }
