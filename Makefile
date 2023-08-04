@@ -43,4 +43,5 @@ style:
 	python3 -m black .
 
 update:
-	python get_screens.py --update
+	./backup.sh
+	python get_screens.py
