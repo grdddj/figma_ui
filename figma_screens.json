@@ -43,7 +43,7 @@
     ],
     "WalletCreation": [
         {
-            "description": "BACKUP NEEDED || <homescreen>",
+            "description": "BACKUP NEEDED || [homescreen]",
             "test": "TR-device_tests-reset_recovery-test_reset_backup.py::test_skip_backup_manual[BackupType.Bip39-backup_flow_bip39]",
             "screen_id": 11
         },
@@ -83,17 +83,17 @@
             "screen_id": 14
         },
         {
-            "description": "<mnemonic words 1-3> || <arrow_up> <arrow_down_wide>",
+            "description": "[mnemonic_words] || <arrow_up> <arrow_down_wide>",
             "test": "TR-click_tests-test_reset_bip39.py::test_reset_bip39",
             "screen_id": 16
         },
         {
-            "description": "<mnemonic words 7-9> || <arrow_up> <arrow_down_wide>",
+            "description": "[mnemonic_words] || <arrow_up> <arrow_down_wide>",
             "test": "TR-click_tests-test_reset_bip39.py::test_reset_bip39",
             "screen_id": 20
         },
         {
-            "description": "<mnemonic words 10-12> || <arrow_up> <arrow_down_wide>",
+            "description": "[mnemonic_words] || <arrow_up> <arrow_down_wide>",
             "test": "TR-click_tests-test_reset_bip39.py::test_reset_bip39",
             "screen_id": 22
         },
@@ -108,12 +108,12 @@
             "screen_id": 25
         },
         {
-            "description": "SELECT 3RD WORD || <word_choice> || <SELECT> <arrow_right>",
+            "description": "SELECT 3RD WORD || [word_choice] || <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_reset_bip39.py::test_reset_bip39",
             "screen_id": 27
         },
         {
-            "description": "SELECT 3RD WORD || <word_choice> || <SELECT> <arrow_right>",
+            "description": "SELECT 3RD WORD || [word_choice] || <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_reset_bip39.py::test_reset_bip39",
             "screen_id": 28
         },
@@ -171,7 +171,7 @@
             "screen_id": 14
         },
         {
-            "description": "NUMBER OF SHARES || <number_select> || <arrow_left> <SELECT> <arrow_right>",
+            "description": "NUMBER OF SHARES || [number_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
             "screen_id": 16
         },
@@ -186,7 +186,7 @@
             "screen_id": 28
         },
         {
-            "description": "THRESHOLD || <number_select> || <SELECT>",
+            "description": "THRESHOLD || [number_choice] || <SELECT>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
             "screen_id": 30
         },
@@ -206,7 +206,7 @@
             "screen_id": 36
         },
         {
-            "description": "<mnemonic words 1-3> || <arrow_up> <arrow_down_wide>",
+            "description": "[mnemonic_words] || <arrow_up> <arrow_down_wide>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
             "screen_id": 38
         },
@@ -221,7 +221,7 @@
             "screen_id": 53
         },
         {
-            "description": "SELECT 6TH WORD <word_choice> || <SELECT> <arrow_right>",
+            "description": "SELECT 6TH WORD [word_choice] || <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
             "screen_id": 55
         },
@@ -248,7 +248,7 @@
             "screen_id": 6
         },
         {
-            "description": "NUMBER OF GROUPS. <number_choice> || <arrow_left> <SELECT> <arrow_right>",
+            "description": "NUMBER OF GROUPS. [number_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
             "screen_id": 7
         },
@@ -258,7 +258,7 @@
             "screen_id": 8
         },
         {
-            "description": "GROUP THRESHOLD || <number_choice> || <arrow_left> <SELECT> <arrow_right>",
+            "description": "GROUP THRESHOLD || [number_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
             "screen_id": 9
         },
@@ -268,12 +268,12 @@
             "screen_id": 10
         },
         {
-            "description": "# SHARES - GROUP 1 || <number_choice> || <arrow_left> <SELECT> <arrow_right>",
+            "description": "# SHARES - GROUP 1 || [number_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
             "screen_id": 12
         },
         {
-            "description": "THRESHOLD - GROUP 1 || <number_choice> || <arrow_left> <SELECT> <arrow_right>",
+            "description": "THRESHOLD - GROUP 1 || [number_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
             "screen_id": 14
         },
@@ -321,17 +321,17 @@
             "screen_id": 6
         },
         {
-            "description": "ENTER NEW PIN || <pin_choice> || <arrow_left> <SELECT> <arrow_right>",
+            "description": "ENTER NEW PIN || [pin_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-test_msg_changepin_t2.py::test_set_pin",
             "screen_id": 7
         },
         {
-            "description": "ENTER NEW PIN || <pin_choice> || <arrow_left> <SELECT> <arrow_right>",
+            "description": "ENTER NEW PIN || [pin_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_pin.py::test_pin_short",
             "screen_id": 22
         },
         {
-            "description": "WRONG PIN || 15 tries left <pin_choice> || <arrow_left> <SELECT> <arrow_right>",
+            "description": "WRONG PIN || 15 tries left [pin_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-test_pin.py::test_exponential_backoff_t2",
             "screen_id": 4
         },
@@ -341,7 +341,7 @@
             "screen_id": 8
         },
         {
-            "description": "RE-ENTER NEW PIN || <pin_choice> || <arrow_left> <SELECT> <arrow_right>",
+            "description": "RE-ENTER NEW PIN || [pin_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-test_msg_changepin_t2.py::test_set_pin",
             "screen_id": 9
         },
@@ -404,7 +404,7 @@
             "comment": "Delete the left cancel button"
         },
         {
-            "description": "RE-ENTER WIPE CODE || <wipe_code_choice> || <arrow_left> <SELECT> <arrow_right>",
+            "description": "RE-ENTER WIPE CODE || [wipe_code_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-test_msg_change_wipe_code_t2.py::test_set_remove_wipe_code",
             "screen_id": 13
         },
@@ -519,7 +519,7 @@
             "screen_id": 9
         },
         {
-            "description": "NUMBER OF WORDS || <number_choice> || <SELECT> <arrow_right>",
+            "description": "NUMBER OF WORDS || [number_choice] || <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
             "screen_id": 11
         },
@@ -539,27 +539,27 @@
             "screen_id": 17
         },
         {
-            "description": "WORD 1 OF 12 || <letter_choice> || <arrow_left> <SELECT> <arrow_right>",
+            "description": "WORD 1 OF 12 || [letter_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
             "screen_id": 19
         },
         {
-            "description": "WORD 1 OF 12 || <letter_choice> || <arrow_left> <SELECT> <arrow_right>",
+            "description": "WORD 1 OF 12 || [letter_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
             "screen_id": 35
         },
         {
-            "description": "WORD 1 OF 12 || <letter_choice> || <arrow_left> <SELECT> <arrow_right>",
+            "description": "WORD 1 OF 12 || [letter_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
             "screen_id": 36
         },
         {
-            "description": "WORD 1 OF 12 || <letter_choice> || <arrow_left> <SELECT> <arrow_right>",
+            "description": "WORD 1 OF 12 || [letter_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
             "screen_id": 75
         },
         {
-            "description": "WORD 1 OF 12 || <letter_choice> || <arrow_left> <SELECT> <arrow_right>",
+            "description": "WORD 1 OF 12 || [letter_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
             "screen_id": 76
         },
@@ -601,7 +601,7 @@
             "screen_id": 221
         },
         {
-            "description": "NUMBER OF WORDS || <number_choice> || <SELECT> <arrow_right>",
+            "description": "NUMBER OF WORDS || [number_choice] || <SELECT> <arrow_right>",
             "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
             "screen_id": 222
         },
@@ -621,7 +621,7 @@
             "screen_id": 227
         },
         {
-            "description": "WORD 1 OF 20 || <letter_choice> || <arrow_left> <SELECT> <arrow_right>",
+            "description": "WORD 1 OF 20 || [letter_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
             "screen_id": 228
         },
@@ -653,37 +653,37 @@
     ],
     "SendBTC": [
         {
-            "description": "RECIPIENT #1 || <btc_address> || <cancel> <CONTINUE>",
+            "description": "RECIPIENT #1 || {btc_address} || <cancel> <CONTINUE>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_one_three_fee",
             "screen_id": 2
         },
         {
-            "description": "AMOUNT #1 || <btc_amount> || <arrow_up> <CONFIRM>",
+            "description": "AMOUNT #1 || {amount} || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_one_three_fee",
             "screen_id": 4
         },
         {
-            "description": "RECIPIENT #2 || <account_name> <btc_address> || <cancel> <CONTINUE>",
+            "description": "RECIPIENT #2 || {account_name} {btc_address} || <cancel> <CONTINUE>",
             "test": "TR-device_tests-bitcoin-test_signtx_segwit.py::test_attack_change_input_address",
             "screen_id": 6
         },
         {
-            "description": "AMOUNT #2 || <btc_amount> || <arrow_up> <CONFIRM>",
+            "description": "AMOUNT #2 || {amount} || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signtx_segwit.py::test_attack_change_input_address",
             "screen_id": 8
         },
         {
-            "description": "Total amount: <btc_amount> Including fee: <btc_amount> || <cancel> <CONFIRM> <i>",
+            "description": "Total amount: {amount} Including fee: {amount} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_one_three_fee",
             "screen_id": 10
         },
         {
-            "description": "FEE INFORMATION || Fee rate: <fee_rate> || <arrow_left> <arrow_right>",
+            "description": "FEE INFORMATION || Fee rate: {fee_rate} || <arrow_left> <arrow_right>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_one_three_fee",
             "screen_id": 12
         },
         {
-            "description": "SENDING FROM || Account: <account_name> || <arrow_left>",
+            "description": "SENDING FROM || Account: {account_name} || <arrow_left>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_one_three_fee",
             "screen_id": 14
         },
@@ -693,12 +693,12 @@
             "screen_id": 12
         },
         {
-            "description": "A lot of change outputs. <x> outputs || <CONTINUE>",
+            "description": "A lot of change outputs. {x} outputs || <CONTINUE>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_lots_of_change",
             "screen_id": 6
         },
         {
-            "description": "Unusually high fee. <btc_amount> || <CONTINUE>",
+            "description": "Unusually high fee. {amount} || <CONTINUE>",
             "test": "TR-device_tests-bitcoin-test_signtx_segwit.py::test_attack_mixed_inputs",
             "screen_id": 6
         },
@@ -708,58 +708,58 @@
             "screen_id": 12
         },
         {
-            "description": "UNKNOWN PATH || <path> || <cancel> <CONFIRM>",
+            "description": "UNKNOWN PATH || {path} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_multisig.py::test_attack_change_input",
             "screen_id": 2
         },
         {
-            "description": "JOINT TRANSACTION || You are contributing: <amount> || <arrow_down_wide>",
+            "description": "JOINT TRANSACTION || You are contributing: {amount} || <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signtx_external.py::test_p2tr_external_presigned",
             "screen_id": 6,
             "comment": "Add the cancel button to the left?"
         },
         {
-            "description": "JOINT TRANSACTION || To the total amount: <amount> || <arrow_up> <HOLD TO CONFIRM>",
+            "description": "JOINT TRANSACTION || To the total amount: {amount} || <arrow_up> <HOLD TO CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signtx_external.py::test_p2tr_external_presigned",
             "screen_id": 8
         },
         {
-            "description": "CONFIRM SENDING || <amount> to <recipient> || <cancel> <CONFIRM>",
+            "description": "CONFIRM SENDING || {amount} to {recipient} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signtx_payreq.py::test_payment_request[out01]",
             "screen_id": 2
         },
         {
-            "description": "<loader> Loading transaction...",
+            "description": "[loader] Loading transaction...",
             "test": "TR-device_tests-bitcoin-test_multisig.py::test_attack_change_input",
             "screen_id": 23
         },
         {
-            "description": "<loader> Signing transaction...",
+            "description": "[loader] Signing transaction...",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_one_three_fee",
             "screen_id": 15
         }
     ],
     "SendETH": [
         {
-            "description": "RECIPIENT || <eth_address> || <cancel> <CONTINUE>",
+            "description": "RECIPIENT || {eth_address} || <cancel> <CONTINUE>",
             "test": "TR-device_tests-ethereum-test_signtx.py::test_signtx[Ethereum]",
             "screen_id": 2,
             "comment": "Open PR #3188"
         },
         {
-            "description": "AMOUNT || <eth_amount> || <arrow_up> <CONFIRM>",
+            "description": "AMOUNT || {eth_amount} || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-ethereum-test_signtx.py::test_signtx[Ethereum]",
             "screen_id": 4,
             "comment": "Open PR #3188"
         },
         {
-            "description": "CONFIRM FEE || Gas price: <eth_gas_price> || <CONFIRM>",
+            "description": "CONFIRM FEE || Gas price: {eth_gas_price} || <CONFIRM>",
             "test": "TR-device_tests-ethereum-test_signtx.py::test_signtx[Ethereum]",
             "screen_id": 5,
             "comment": "Open PR #3188"
         },
         {
-            "description": "Amount sent: <eth_amount> Maximum fee: <eth_amount> || <cancel> <CONFIRM> <i>",
+            "description": "Amount sent: {eth_amount} Maximum fee: {eth_amount} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-ethereum-test_signtx.py::test_signtx[Ethereum]",
             "screen_id": 6,
             "comment": "Open PR #3188"
@@ -771,13 +771,13 @@
             "comment": "Open PR #3188"
         },
         {
-            "description": "CONFIRM DATA || Size: <data_size> <data> || <arrow_down_wide>",
+            "description": "CONFIRM DATA || Size: {data_size} {data} || <arrow_down_wide>",
             "test": "TR-device_tests-ethereum-test_signtx.py::test_signtx[newcontract]",
             "screen_id": 5,
             "comment": "Open PR #3188"
         },
         {
-            "description": "CONFIRM DATA || <data> || <arrow_up> <CONFIRM>",
+            "description": "CONFIRM DATA || {data} || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-ethereum-test_signtx.py::test_signtx[newcontract]",
             "screen_id": 65,
             "comment": "Open PR #3188"
@@ -785,27 +785,27 @@
     ],
     "Receive": [
         {
-            "description": "RECEIVE ADDRESS || <taproot_address> || <cancel> <CONFIRM> <i>",
+            "description": "RECEIVE ADDRESS || {taproot_address} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_cancel[m-86h-0h-12h-0-0-InputScriptType.SPENDTAP-4c5b2b38",
             "screen_id": 1
         },
         {
-            "description": "RECEIVE ADDRESS || <segwit_address> || <cancel> <CONFIRM> <i>",
+            "description": "RECEIVE ADDRESS || {segwit_address} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_cancel[m-84h-0h-12h-0-0-InputScriptType.SPENDWIT-d6991e22",
             "screen_id": 1
         },
         {
-            "description": "<QR code taproot address> || <arrow_left> <arrow_right>",
+            "description": "{QR_code_taproot_address} || <arrow_left> <arrow_right>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_cancel[m-86h-0h-12h-0-0-InputScriptType.SPENDTAP-4c5b2b38",
             "screen_id": 3
         },
         {
-            "description": "<QR code segwit address> || <arrow_left> <arrow_right>",
+            "description": "{QR_code_segwit_address} || <arrow_left> <arrow_right>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_cancel[m-84h-0h-12h-0-0-InputScriptType.SPENDWIT-d6991e22",
             "screen_id": 3
         },
         {
-            "description": "Account: <account> Derivation path: <derivation_path> || <arrow_left>",
+            "description": "Account: {account} Derivation path: [derivat{on_path} || <arrow_left>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_cancel[m-84h-0h-12h-0-0-InputScriptType.SPENDWIT-d6991e22",
             "screen_id": 5
         },
@@ -815,27 +815,27 @@
             "screen_id": 11
         },
         {
-            "description": "RECEIVE ADDRESS (MULTISIG) || <multisig_address> || <cancel> <CONFIRM> <i>",
+            "description": "RECEIVE ADDRESS (MULTISIG) || {multisig_address} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_multisig_xpubs[InputScriptType.SPENDWITNESS-2-bc-e70b56ea",
             "screen_id": 1
         },
         {
-            "description": "Account: <multisig_account> Derivation path: <derivation_path> || <arrow_left> <arrow_right>",
+            "description": "Account: [multisig{account} Derivation path: [derivat{on_path} || <arrow_left> <arrow_right>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_multisig_xpubs[InputScriptType.SPENDWITNESS-2-bc-e70b56ea",
             "screen_id": 5
         },
         {
-            "description": "MULTISIG XPUB #1 (YOURS) || <xpub> || <arrow_left> <VIEW FULL> <arrow_right>",
+            "description": "MULTISIG XPUB #1 (YOURS) || {xpub} || <arrow_left> <VIEW FULL> <arrow_right>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_multisig_xpubs[InputScriptType.SPENDWITNESS-2-bc-e70b56ea",
             "screen_id": 7
         },
         {
-            "description": "MULTISIG XPUB #1 (YOURS) || <xpub> || <arrow_up_wide>",
+            "description": "MULTISIG XPUB #1 (YOURS) || {xpub} || <arrow_up_wide>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_multisig_xpubs[InputScriptType.SPENDWITNESS-2-bc-e70b56ea",
             "screen_id": 10
         },
         {
-            "description": "MULTISIG XPUB #2 (COSIGNER) || <xpub> || <arrow_left> <VIEW FULL> <arrow_right>",
+            "description": "MULTISIG XPUB #2 (COSIGNER) || {xpub} || <arrow_left> <VIEW FULL> <arrow_right>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_multisig_xpubs[InputScriptType.SPENDWITNESS-2-bc-e70b56ea",
             "screen_id": 14
         }
@@ -847,17 +847,17 @@
             "screen_id": 4
         },
         {
-            "description": "ENTER PASSPHRASE || <passphrase_keyboard> || <arrow_left> <SELECT> <arrow_right>",
+            "description": "ENTER PASSPHRASE || {passphrase_keyboard} || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_passphrase_tr.py::test_passphrase_input[abc 123-mvqzZUb9NaUc62Buk9WCP4L7hunsXFyamT]",
             "screen_id": 2
         },
         {
-            "description": "ENTER PASSPHRASE || <passphrase_keyboard> || <arrow_left> <SELECT> <arrow_right>",
+            "description": "ENTER PASSPHRASE || {passphrase_keyboard} || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_passphrase_tr.py::test_passphrase_input[abc 123-mvqzZUb9NaUc62Buk9WCP4L7hunsXFyamT]",
             "screen_id": 30
         },
         {
-            "description": "ENTER PASSPHRASE || <passphrase_keyboard> || <arrow_left> <RETURN> <arrow_right>",
+            "description": "ENTER PASSPHRASE || {passphrase_keyboard} || <arrow_left> <RETURN> <arrow_right>",
             "test": "TR-click_tests-test_passphrase_tr.py::test_passphrase_input[abc 123-mvqzZUb9NaUc62Buk9WCP4L7hunsXFyamT]",
             "screen_id": 37
         },
@@ -872,7 +872,7 @@
             "screen_id": 14
         },
         {
-            "description": "CONFIRM PASSPHRASE || <passphrase> || <CONFIRM>",
+            "description": "CONFIRM PASSPHRASE || {passphrase} || <CONFIRM>",
             "test": "TR-device_tests-test_session_id_and_passphrase.py::test_hide_passphrase_from_host",
             "screen_id": 15
         },
@@ -909,54 +909,54 @@
             "screen_id": 1
         },
         {
-            "description": "AUTHORIZE COINJOIN || Max rounds: <max_rounds> Max mining fee: <max_miming> || <HOLD TO CONFIRM>",
+            "description": "AUTHORIZE COINJOIN || Max rounds: {max_rounds} Max mining fee: {max_fee} || <HOLD TO CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_authorize_coinjoin.py::test_cancel_authorization",
             "screen_id": 1
         },
         {
-            "description": "COINJOIN AUTHORIZED || <homescreen>",
+            "description": "COINJOIN AUTHORIZED || [homescreen]",
             "test": "TR-device_tests-bitcoin-test_authorize_coinjoin.py::test_cancel_authorization",
             "screen_id": 2
         },
         {
-            "description": "COINJOIN IN PROGRESS || <loader> Waiting for others Do not disconnect your Trezor!",
+            "description": "COINJOIN IN PROGRESS || [loader] Waiting for others Do not disconnect your Trezor!",
             "test": "TR-device_tests-test_busy_state.py::test_busy_expiry",
             "screen_id": 1
         },
         {
-            "description": "<loader> Loading transaction...  Do not disconnect your Trezor!",
+            "description": "[loader] Loading transaction...  Do not disconnect your Trezor!",
             "test": "TR-device_tests-bitcoin-test_authorize_coinjoin.py::test_sign_tx",
             "screen_id": 7
         },
         {
-            "description": "<loader> Signing transaction...  Do not disconnect your Trezor!",
+            "description": "[loader] Signing transaction...  Do not disconnect your Trezor!",
             "test": "TR-device_tests-bitcoin-test_authorize_coinjoin.py::test_sign_tx",
             "screen_id": 8
         }
     ],
     "Homescreen": [
         {
-            "description": "<Homescreen default>",
+            "description": "[homescreen_default]",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_good",
             "screen_id": 7
         },
         {
-            "description": "<Homescreen custom>",
+            "description": "[homescreen_custom]",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_good",
             "screen_id": 5
         },
         {
-            "description": "<Notification banner> <Homescreen default>",
+            "description": "[notification_banner] [homescreen_default]",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_with_notification",
             "screen_id": 1
         },
         {
-            "description": "<Notification banner> <Homescreen custom>",
+            "description": "[notification_banner] [homescreen_custom]",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_with_notification",
             "screen_id": 2
         },
         {
-            "description": "Click to unlock <Lockscreen>",
+            "description": "Click to unlock [lockscreen]",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_good",
             "screen_id": 0
         },
@@ -979,7 +979,7 @@
             "comment": "Add the cancel button to the left?"
         },
         {
-            "description": "CONFIRM LOCKTIME || <block_height>? || <arrow_up> <CONFIRM>",
+            "description": "CONFIRM LOCKTIME || {block_height}? || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_lock_time_blockheight",
             "screen_id": 8
         },
@@ -990,7 +990,7 @@
             "comment": "Add the cancel button to the left?"
         },
         {
-            "description": "CONFIRM LOCKTIME || <date>? || <arrow_up> <CONFIRM>",
+            "description": "CONFIRM LOCKTIME || {date}? || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_lock_time_datetime[2048-08-16 22:14:00]",
             "screen_id": 8
         },
@@ -1003,7 +1003,7 @@
     ],
     "RBF": [
         {
-            "description": "UPDATE TRANSACTION || Confirm transaction ID: <tx_id> || <arrow_down_wide>",
+            "description": "UPDATE TRANSACTION || Confirm transaction ID{ [tx_id} || <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
             "screen_id": 2,
             "comment": "Add the cancel button to the left?"
@@ -1014,33 +1014,33 @@
             "screen_id": 4
         },
         {
-            "description": "MODIFY AMOUNT || Address: <address> || <arrow_down_wide>",
+            "description": "MODIFY AMOUNT || Address: {address} || <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
             "screen_id": 7
         },
         {
-            "description": "MODIFY AMOUNT || Decrease amount by: <amount> || <arrow_up> <arrow_down_wide>",
+            "description": "MODIFY AMOUNT || Decrease amount by:{[amount} || <arrow_up> <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
             "screen_id": 9,
             "comment": "Add the cancel button to the left?"
         },
         {
-            "description": "MODIFY AMOUNT || New amount: <amount> || <arrow_up> <CONFIRM>",
+            "description": "MODIFY AMOUNT || New amount:{[amount} || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
             "screen_id": 11
         },
         {
-            "description": "MODIFY FEE || Increase fee by: <fee> || <cancel> <arrow_down_wide>",
+            "description": "MODIFY FEE || Increase fee {y: [fee} || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
             "screen_id": 14
         },
         {
-            "description": "MODIFY FEE || Transaction fee: <fee> || <arrow_up> <arrow_down_wide>",
+            "description": "MODIFY FEE || Transaction f{e: [fee} || <arrow_up> <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
             "screen_id": 16
         },
         {
-            "description": "MODIFY FEE || Fee rate: <fee> || <arrow_up> <CONFIRM>",
+            "description": "MODIFY FEE || Fee ra{e: [fee} || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
             "screen_id": 18
         }
@@ -1062,7 +1062,7 @@
             "screen_id": 1
         },
         {
-            "description": "IMPORT CREDENTIAL || <fido_credentials> || <cancel> <CONFIRM>",
+            "description": "IMPORT CREDENTIAL || {fido_credentials} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-webauthn-test_msg_webauthn.py::test_add_remove",
             "screen_id": 3
         },
@@ -1074,67 +1074,67 @@
     ],
     "SignMessage": [
         {
-            "description": "SIGN BTC MESSAGE || Confirm address: <address> || <CONFIRM>",
+            "description": "SIGN BTC MESSAGE || Confirm address: {address} || <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signmessage.py::test_signmessage_pagination[normal_text]",
             "screen_id": 1,
             "comment": "Open issue #3167"
         },
         {
-            "description": "SIGN BTC MESSAGE || Confirm message: <message> || <arrow_down_wide>",
+            "description": "SIGN BTC MESSAGE || Confirm message: {message} || <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signmessage.py::test_signmessage_pagination[normal_text]",
             "screen_id": 2,
             "comment": "Open issue #3167"
         },
         {
-            "description": "SIGN BTC MESSAGE || <message> || <arrow_up> <CONFIRM>",
+            "description": "SIGN BTC MESSAGE || {message} || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signmessage.py::test_signmessage_pagination[normal_text]",
             "screen_id": 1,
             "comment": "Open issue #3167"
         },
         {
-            "description": "SIGN ETH MESSAGE || Confirm address: <address> || <arrow_down_wide>",
+            "description": "SIGN ETH MESSAGE || Confirm address: {address} || <arrow_down_wide>",
             "test": "TR-device_tests-ethereum-test_sign_verify_message.py::test_signmessage[parameters0-result0]",
             "screen_id": 2,
             "comment": "Open issue #3167"
         },
         {
-            "description": "SIGN ETH MESSAGE || <address> || <arrow_up> <CONFIRM>",
+            "description": "SIGN ETH MESSAGE || {address} || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-ethereum-test_sign_verify_message.py::test_signmessage[parameters0-result0]",
             "screen_id": 4,
             "comment": "Open issue #3167"
         },
         {
-            "description": "SIGN ETH MESSAGE || Confirm message: <message> || <arrow_down_wide>",
+            "description": "SIGN ETH MESSAGE || Confirm message: {message} || <arrow_down_wide>",
             "test": "TR-device_tests-ethereum-test_sign_verify_message.py::test_signmessage[parameters0-result0]",
             "screen_id": 5,
             "comment": "Open issue #3167"
         },
         {
-            "description": "SIGN ETH MESSAGE || <message> || <CONFIRM>",
+            "description": "SIGN ETH MESSAGE || {message} || <CONFIRM>",
             "test": "TR-device_tests-ethereum-test_sign_verify_message.py::test_signmessage[parameters0-result0]",
             "screen_id": 7,
             "comment": "Open issue #3167"
         },
         {
-            "description": "VERIFY ETH MESSAGE || Confirm address: <address> || <arrow_down_wide>",
+            "description": "VERIFY ETH MESSAGE || Confirm address: {address} || <arrow_down_wide>",
             "test": "TR-device_tests-ethereum-test_sign_verify_message.py::test_verify[parameters0-result0]",
             "screen_id": 1,
             "comment": "Open issue #3167"
         },
         {
-            "description": "VERIFY ETH MESSAGE || <address> || <CONFIRM>",
+            "description": "VERIFY ETH MESSAGE || {address} || <CONFIRM>",
             "test": "TR-device_tests-ethereum-test_sign_verify_message.py::test_verify[parameters0-result0]",
             "screen_id": 3,
             "comment": "Open issue #3167"
         },
         {
-            "description": "VERIFY ETH MESSAGE || Confirm message: <message> || <arrow_down_wide>",
+            "description": "VERIFY ETH MESSAGE || Confirm message: {message} || <arrow_down_wide>",
             "test": "TR-device_tests-ethereum-test_sign_verify_message.py::test_verify[parameters0-result0]",
             "screen_id": 4,
             "comment": "Open issue #3167"
         },
         {
-            "description": "VERIFY ETH MESSAGE || <message> || <CONFIRM>",
+            "description": "VERIFY ETH MESSAGE || {message} || <CONFIRM>",
             "test": "TR-device_tests-ethereum-test_sign_verify_message.py::test_verify[parameters0-result0]",
             "screen_id": 6,
             "comment": "Open issue #3167"
@@ -1148,17 +1148,17 @@
     ],
     "ETH_EIP712": [
         {
-            "description": "CONFIRM DOMAIN || Name and version <name> <version> || <cancel> <CONFIRM> <i>",
+            "description": "CONFIRM DOMAIN || Name and version {name} {version} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data_show_more_button",
             "screen_id": 1
         },
         {
-            "description": "CONFIRM MESSAGE || <message struct> || <cancel> <CONFIRM> <i>",
+            "description": "CONFIRM MESSAGE || {message_struct} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data_show_more_button",
             "screen_id": 2
         },
         {
-            "description": "CONFIRM MESSAGE || <message struct> || <cancel> <CONFIRM> <i>",
+            "description": "CONFIRM MESSAGE || {message_struct} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data[injective_testcase]",
             "screen_id": 3
         },
@@ -1168,12 +1168,12 @@
             "screen_id": 3
         },
         {
-            "description": "<struct details> || <cancel> <CONFIRM> <i>",
+            "description": "{struct_details} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data_show_more_button",
             "screen_id": 4
         },
         {
-            "description": "<string details> || <cancel> <CONFIRM>",
+            "description": "{string_details} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data_show_more_button",
             "screen_id": 6
         },
@@ -1197,12 +1197,12 @@
     ],
     "Loaders": [
         {
-            "description": "PROCESSING || <loader> <x> seconds left",
+            "description": "PROCESSING || [loader] {x} seconds left",
             "test": "TR-device_tests-test_msg_wipedevice.py::test_wipe_device",
             "screen_id": 4
         },
         {
-            "description": "PROCESSING || <loader> Done",
+            "description": "PROCESSING || [loader] Done",
             "test": "TR-device_tests-test_msg_wipedevice.py::test_wipe_device",
             "screen_id": 5
         }
@@ -1221,39 +1221,39 @@
     ],
     "CoSi": [
         {
-            "description": "COSI KEYS || <key_name> <path> || <cancel> <CONFIRM>",
+            "description": "COSI KEYS || {key_name} {path} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-misc-test_cosi.py::test_cosi_sign1",
             "screen_id": 1
         },
         {
-            "description": "COSI DATA || <data> || <CONFIRM>",
+            "description": "COSI DATA || {data} || <CONFIRM>",
             "test": "TR-device_tests-misc-test_cosi.py::test_cosi_sign1",
             "screen_id": 2
         }
     ],
     "SignIndentity": [
         {
-            "description": "SIGN HTTPS || <date> <identity> || <cancel> <CONFIRM>",
+            "description": "SIGN HTTPS || {date} {identity} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-misc-test_msg_signidentity.py::test_sign",
             "screen_id": 1
         },
         {
-            "description": "SIGN FTP || <date> <identity> || <cancel> <CONFIRM>",
+            "description": "SIGN FTP || {date} {identity} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-misc-test_msg_signidentity.py::test_sign",
             "screen_id": 3
         },
         {
-            "description": "SIGN SSH || <date> <identity> || <cancel> <CONFIRM>",
+            "description": "SIGN SSH || {date} {identity} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-misc-test_msg_signidentity.py::test_sign",
             "screen_id": 5
         },
         {
-            "description": "SIGN GPG || <date> <identity> || <cancel> <CONFIRM>",
+            "description": "SIGN GPG || {date} {identity} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-misc-test_msg_signidentity.py::test_sign",
             "screen_id": 9
         },
         {
-            "description": "SIGN SINGIFY || <date> <identity> || <cancel> <CONFIRM>",
+            "description": "SIGN SINGIFY || {date} {identity} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-misc-test_msg_signidentity.py::test_sign",
             "screen_id": 11
         }
@@ -1303,7 +1303,7 @@
             "screen_id": 8
         },
         {
-            "description": "EXPERIMENTAL MODE || <homescreen>",
+            "description": "EXPERIMENTAL MODE || [homescreen]",
             "test": "TR-device_tests-test_msg_applysettings.py::test_experimental_features",
             "screen_id": 9
         }
