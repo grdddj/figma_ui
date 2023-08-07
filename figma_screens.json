@@ -511,7 +511,7 @@
         {
             "description": "BACKUP CHECK || 1 of 2 shares entered successfully. 1 more share needed. || <cancel> <ENTER SHARE>",
             "test": "TR-device_tests-reset_recovery-test_recovery_slip39_basic_dryrun.py::test_2of3_dryrun",
-            "screen_id": 31
+            "screen_id": 27
         },
         {
             "description": "SUCCESS || The entered recovery shares are valid and match what is currently in the device. || <CONTINUE>",
@@ -668,12 +668,12 @@
         {
             "description": "Share already entered Please enter a different share. || <TRY AGAIN>",
             "test": "TR-device_tests-reset_recovery-test_recovery_slip39_basic.py::test_same_share",
-            "screen_id": 39
+            "screen_id": 38
         },
         {
             "description": "You have entered a share from another Shamir Backup. || <TRY AGAIN>",
             "test": "TR-device_tests-reset_recovery-test_recovery_slip39_basic.py::test_wrong_nth_word[0]",
-            "screen_id": 36
+            "screen_id": 35
         }
     ],
     "SendBTC": [
