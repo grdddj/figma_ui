@@ -121,7 +121,7 @@
             "description": "CHECK AGAIN || Wrong word selected! || <PLEASE CHECK AGAIN>",
             "test": "TR-device_tests-reset_recovery-test_reset_bip39_t2.py::test_reset_failed_check",
             "screen_id": 28,
-            "comment": "TODO: completely change, differs from Figma"
+            "comment": "Changed in Figma PR"
         },
         {
             "description": "SUCCESS || You have finished verifying your recovery seed. || <CONTINUE>",
@@ -186,7 +186,7 @@
             "description": "THRESHOLD || = minimum number of unique words used for recovery. || <CONTINUE>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
             "screen_id": 28,
-            "comment": "TODO: seems we have a bad text here - 'words' instead of 'word lists'. Also - CAPITAL title or not?"
+            "comment": "TODO: seems we have a bad text here - 'words' instead of 'word lists'. Also - CAPITAL title or not? Changed in Figma PR"
         },
         {
             "description": "THRESHOLD || [number_choice] || <SELECT>",
@@ -233,7 +233,7 @@
             "description": "Recovery share #1 checked successfully. Continue with share #2. || <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_basic.py::test_reset_device_slip39_basic",
             "screen_id": 35,
-            "comment": "TODO: add newline between paragraphs"
+            "comment": "TODO: add newline between paragraphs. Changed in Figma PR"
         },
         {
             "description": "SUCCESS || You have finished verifying your recovery shares. || <CONTINUE>",
@@ -293,7 +293,7 @@
             "description": "G1 - SHARE 1 || Write down all 20 words in order. || <SHOW WORDS>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
             "screen_id": 32,
-            "comment": "MISSING in Figma ... Change G1 to Group 1"
+            "comment": "MISSING in Figma ... Change G1 to Group 1. Changed in Figma PR"
         },
         {
             "description": "GROUP 1 - SHARE 1 || Select the correct word for each position. || <CONTINUE>",
@@ -355,7 +355,8 @@
         {
             "description": "CHECK PIN || Please re-enter PIN to confirm. || <cancel> <CONTINUE>",
             "test": "TR-device_tests-test_msg_changepin_t2.py::test_set_pin",
-            "screen_id": 8
+            "screen_id": 8,
+            "comment": "Delete the left cancel button. Changed in Figma PR."
         },
         {
             "description": "RE-ENTER NEW PIN || [pin_choice] || <arrow_left> <SELECT> <arrow_right>",
@@ -424,7 +425,7 @@
             "description": "CHECK WIPE CODE || Please re-enter wipe code to confirm. || <cancel> <CONTINUE>",
             "test": "TR-device_tests-test_msg_change_wipe_code_t2.py::test_set_remove_wipe_code",
             "screen_id": 12,
-            "comment": "MISSING in Figma. Delete the left cancel button."
+            "comment": "MISSING in Figma. Delete the left cancel button. Changed in Figma PR."
         },
         {
             "description": "RE-ENTER WIPE CODE || [wipe_code_choice] || <arrow_left> <SELECT> <arrow_right>",
@@ -472,7 +473,7 @@
             "description": "BACKUP CHECK || Do you really want to check the recovery seed? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-reset_recovery-test_recovery_bip39_dryrun.py::test_dry_run",
             "screen_id": 1,
-            "comment": "DIFF - shorter sentence, different button text"
+            "comment": "DIFF - shorter sentence, different button text. Changed in Figma PR"
         },
         {
             "description": "BACKUP CHECK || Select the number of words in your backup. || <cancel> <CONTINUE>",
@@ -505,7 +506,7 @@
             "test": "TR-device_tests-reset_recovery-test_recovery_bip39_dryrun.py::test_invalid_seed_core",
             "screen_id": 28,
             "missing": "TODO: missing screen - is not in tests",
-            "comment": "TODO: CHANGE - cancel instead of abort, new button"
+            "comment": "TODO: CHANGE - cancel instead of abort, new button. Changed in Figma PR"
         },
         {
             "description": "BACKUP CHECK || 1 of 2 shares entered successfully. 1 more share needed. || <cancel> <ENTER SHARE>",
@@ -599,7 +600,7 @@
             "description": "ABORT RECOVERY || Do you really want to abort the recovery process? || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-reset_recovery-test_recovery_slip39_basic.py::test_abort",
             "screen_id": 7,
-            "comment": "TODO: CHANGE - cancel instead of abort, new button"
+            "comment": "TODO: CHANGE - cancel instead of abort, new button. Changed in Figma PR"
         },
         {
             "description": "ABORT RECOVERY || All progress will be lost. || <arrow_up> <CONFIRM>",
@@ -738,14 +739,13 @@
         {
             "description": "UNKNOWN PATH || {path} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_multisig.py::test_attack_change_input",
-            "screen_id": 2,
-            "comment": "MISSING in Figma. Change proceed to continue"
+            "screen_id": 2
         },
         {
             "description": "JOINT TRANSACTION || You are contributing: {amount} || <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signtx_external.py::test_p2tr_external_presigned",
             "screen_id": 6,
-            "comment": "MISSING in Figma. Add the cancel button to the left?"
+            "comment": "MISSING in Figma. Add the cancel button to the left? Changed in Figma PR"
         },
         {
             "description": "JOINT TRANSACTION || To the total amount: {amount} || <arrow_up> <HOLD TO CONFIRM>",
@@ -914,7 +914,7 @@
             "description": "CONFIRM PASSPHRASE || {passphrase} || <CONFIRM>",
             "test": "TR-device_tests-test_session_id_and_passphrase.py::test_hide_passphrase_from_host",
             "screen_id": 15,
-            "comment": "TODO: add cancel button"
+            "comment": "TODO: add cancel button. Changed in Figma PR"
         },
         {
             "description": "PASSPHRASE SETTINGS || Turn off passphrase protection? || <cancel> <TURN OFF>",
@@ -1023,7 +1023,7 @@
             "description": "CONFIRM LOCKTIME || Locktime for this transaction is set to blockheight: || <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_lock_time_blockheight",
             "screen_id": 6,
-            "comment": "MISSING in Figma. Add the cancel button to the left + shorten the sentence 'Locktime set to blockheight:'"
+            "comment": "MISSING in Figma. Add the cancel button to the left + shorten the sentence 'Locktime set to blockheight:' Changed in Figma PR"
         },
         {
             "description": "CONFIRM LOCKTIME || {block_height}? || <arrow_up> <CONFIRM>",
@@ -1035,7 +1035,7 @@
             "description": "CONFIRM LOCKTIME || Locktime for this transaction is set to: || <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_lock_time_datetime[2048-08-16 22:14:00]",
             "screen_id": 6,
-            "comment": "DIFF - shorten the sentence, add cancel button to left"
+            "comment": "DIFF - shorten the sentence, add cancel button to left. Changed in Figma PR"
         },
         {
             "description": "CONFIRM LOCKTIME || {date} || <arrow_up> <CONFIRM>",
@@ -1046,7 +1046,7 @@
             "description": "Locktime is set but will have no effect. Procceed anyway? || <PROCEED>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_lock_time[1-4294967295]",
             "screen_id": 6,
-            "comment": "MISSING in Figma. Change text and button to CONTINUE?"
+            "comment": "MISSING in Figma. Change text and button to CONTINUE? Changed in Figma PR"
         }
     ],
     "RBF": [
@@ -1054,19 +1054,19 @@
             "description": "UPDATE TRANSACTION || Confirm transaction ID: {tx_id} || <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
             "screen_id": 2,
-            "comment": "DIFF: remove the 'Confirm' from the sentence, add left cancel btn"
+            "comment": "DIFF: remove the 'Confirm' from the sentence, add left cancel btn. Changed in Figma PR"
         },
         {
             "description": "UPDATE TRANSACTION || {tx_id} || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
             "screen_id": 4,
-            "comment": "DIFF: change the btn to CONTINUE"
+            "comment": "DIFF: change the btn to CONTINUE. Changed in Figma PR"
         },
         {
             "description": "MODIFY AMOUNT || Address: {address} || <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
             "screen_id": 7,
-            "comment": "MISSING in Figma. Add the cancel button to the left?"
+            "comment": "MISSING in Figma. Add the cancel button to the left? Changed in Figma PR"
         },
         {
             "description": "MODIFY AMOUNT || Decrease amount by: {amount} || <arrow_up> <arrow_down_wide>",
@@ -1100,19 +1100,19 @@
             "description": "GET NEXT U2F COUNTER || Do you really want to increase and retrieve the next U2F counter? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-webauthn-test_u2f_counter.py::test_u2f_counter",
             "screen_id": 1,
-            "comment": "DIFF - shorten the header and text"
+            "comment": "DIFF - shorten the header and text. Changed in Figma PR"
         },
         {
             "description": "SET U2F COUNTER || Do you really want to set the U2F counter to <value>? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-webauthn-test_u2f_counter.py::test_u2f_counter",
             "screen_id": 5,
-            "comment": "DIFF - shorten the text and change button text TODO: change SET text in Figma to Set"
+            "comment": "DIFF - shorten the text and change button text TODO: change SET text in Figma to Set. Changed in Figma PR"
         },
         {
             "description": "LIST CREDENTIALS || Do you want to export information about the resident credentials stored on this device? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-webauthn-test_msg_webauthn.py::test_add_remove",
             "screen_id": 1,
-            "comment": "DIFF - shorten the text and change button text"
+            "comment": "DIFF - shorten the text and change button text. Changed in Figma PR"
         },
         {
             "description": "IMPORT CREDENTIAL || {fido_credentials} || <cancel> <CONFIRM>",
