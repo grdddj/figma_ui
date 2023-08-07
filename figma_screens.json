@@ -481,7 +481,7 @@
             "screen_id": 4
         },
         {
-            "description": "BACKUP CHECK || Enter your backup. (12 words) || <cancel> <arrow_down_wide>",
+            "description": "BACKUP CHECK || Enter your backup. (12 words) || <cancel> <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_recovery_bip39_dryrun.py::test_dry_run",
             "screen_id": 6
         },
@@ -613,57 +613,57 @@
         {
             "description": "RECOVER WALLET || By continuing you agree to Trezor Company's terms and conditions. || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
-            "screen_id": 215
+            "screen_id": 214
         },
         {
             "description": "RECOVER WALLET || More info at trezor.io/tos. || <arrow_up> <RECOVER WALLET>",
             "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
-            "screen_id": 217
+            "screen_id": 216
         },
         {
             "description": "RECOVER WALLET || Select the number of words in your backup. || <cancel> <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
-            "screen_id": 221
+            "screen_id": 219
         },
         {
             "description": "NUMBER OF WORDS || [number_choice] || <SELECT> <arrow_right>",
             "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
-            "screen_id": 222
+            "screen_id": 220
         },
         {
             "description": "RECOVER WALLET || Enter any share. (20 words) || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
-            "screen_id": 223
+            "screen_id": 221
         },
         {
             "description": "RECOVER WALLET || You'll only have to select the first 2-3 letters for each word. || <arrow_up> <arrow_down_wide>",
             "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
-            "screen_id": 225
+            "screen_id": 223
         },
         {
             "description": "RECOVER WALLET || Position of the cursor will change between entries for enhanced security. || <arrow_up> <ENTER SHARE>",
             "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
-            "screen_id": 227
+            "screen_id": 225
         },
         {
             "description": "WORD 1 OF 20 || [letter_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
-            "screen_id": 228
+            "screen_id": 226
         },
         {
             "description": "RECOVER WALLET || 1 of 3 shares entered successfully. 2 more shares needed. || <cancel> <ENTER SHARE>",
             "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
-            "screen_id": 248
+            "screen_id": 246
         },
         {
             "description": "RECOVER WALLET || 2 of 3 shares entered successfully. 1 more share needed. || <cancel> <ENTER SHARE>",
             "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
-            "screen_id": 269
+            "screen_id": 267
         },
         {
             "description": "SUCCESS || Wallet recovered successfully. || <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
-            "screen_id": 290
+            "screen_id": 288
         },
         {
             "description": "Share already entered Please enter a different share. || <TRY AGAIN>",
@@ -1372,7 +1372,7 @@
         {
             "description": "EXPERIMENTAL MODE || Enable experimental features? Only for... || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_experimental_features",
-            "screen_id": 7,
+            "screen_id": 6,
             "comment": "MISSING in Figma"
         },
         {
