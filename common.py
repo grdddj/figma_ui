@@ -7,6 +7,7 @@ HERE = Path(__file__).parent
 SCREENS_FILE = HERE / "figma_screens.json"
 JOB_ID_MAPPING_FILE = HERE / "job_id_mapping.json"
 FIGMA_DIR = HERE / "static"
+OCR_RESULTS_FILE = HERE / "ocr_results.json"
 
 
 TEST_CASE_MAPPING = {
@@ -15,6 +16,13 @@ TEST_CASE_MAPPING = {
     "TT-click_tests": "core click test",
     "TT-device_tests": "core device test",
 }
+
+
+def get_ocr_results() -> dict[str, dict[str, int]]:
+    if not OCR_RESULTS_FILE.exists():
+        return {}
+    with open(OCR_RESULTS_FILE) as f:
+        return json.load(f)
 
 
 def get_screen_text_content() -> dict[str, list[dict[str, str]]]:

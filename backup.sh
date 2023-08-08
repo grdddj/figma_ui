@@ -13,6 +13,9 @@ mkdir -p "$new_dir"
 
 cp -r "$data_dir/." "$new_dir"
 
+cp figma_screens.json "$new_dir"
+cp ocr_results.json "$new_dir"
+
 # find $data_dir -type f -name "*.png" -exec rm -f {} \;
 # find $data_dir -type f -name "*.png"
 find $data_dir -type f ! -name 'styles.css' -exec rm -f {} \;

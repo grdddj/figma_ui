@@ -24,6 +24,7 @@
             <th>Image</th>
             <th>Screen text</th>
             <th>Comment</th>
+            <th>OCR result</th>
         </tr>
         {% for image in image_data %}
         <tr>
@@ -33,6 +34,7 @@
             </td>
             <td>{{ image.description}}</td>
             <td>{{ image.comment}}</td>
+            <td class="{{ 'red' if image.ocr_failed else '' }}">{{ image.ocr_result_str}}</td>
         </tr>
         {% endfor %}
     </table>

@@ -12,6 +12,7 @@ from common import (
     FIGMA_DIR,
     get_latest_test_report_url,
     get_logger,
+    get_ocr_results,
     get_screen_text_content,
 )
 
@@ -43,6 +44,8 @@ def get_relevant_screens(
     screens_content = get_screen_text_content()
     image_data: list[dict[str, str]] = []
 
+    ocr_results = get_ocr_results()
+
     for flow_name, flow_data in screens_content.items():
         if filter_flow and flow_name != filter_flow:
             continue  # filter by flow
@@ -53,12 +56,21 @@ def get_relevant_screens(
             comment = screen_info.get("comment", "")
             img_name = f"{flow_name}{index}"
             img_src = f"/static/{flow_name}/{img_name}.png"
+            ocr_result = ocr_results.get(flow_name, {}).get(img_name, 0)
+            ocr_result_str = f"{ocr_result} %"
+            ocr_failed = ocr_result < 20
+            if screen_info.get("ok_to_fail_ocr", False):
+                ocr_result_str = f"{ocr_result_str} (OK to fail)"
+                ocr_failed = False
+
             image_data.append(
                 {
                     "name": img_name,
                     "src": img_src,
                     "description": description,
                     "comment": comment,
+                    "ocr_result_str": ocr_result_str,
+                    "ocr_failed": ocr_failed,
                 }
             )
 
