@@ -886,7 +886,7 @@
             "description": "RECEIVE ADDRESS (MULTISIG) || {multisig_address} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_multisig_xpubs[InputScriptType.SPENDWITNESS-2-bc-e70b56ea",
             "screen_id": 1,
-            "comment": "MISSING in Figma",
+            "comment": ,
             "ok_to_fail_ocr": true
         },
         {
@@ -947,7 +947,7 @@
             "description": "Please enter your passphrase.",
             "test": "TR-device_tests-test_protection_levels.py::test_passphrase_cached",
             "screen_id": 1,
-            "comment": "Delete the button in Figma, it cannot be done (right now)"
+            "comment":
         },
         {
             "description": "HIDDEN WALLET || Next screen will show the passphrase. || <cancel> <CONTINUE>",
@@ -964,31 +964,31 @@
             "description": "PASSPHRASE SETTINGS || Turn off passphrase protection? || <cancel> <TURN OFF>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_settings_passphrase",
             "screen_id": 6,
-            "comment": "MISSING in Figma"
+            "comment": "needs changes"
         },
         {
             "description": "PASSPHRASE SOURCE || Do you really want to enter passphrase always on device? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_settings_passphrase_on_device",
             "screen_id": 3,
-            "comment": "MISSING in Figma"
+            "comment": "needs changes"
         },
         {
             "description": "HIDE PASSPHRASE || Hide passphrase coming from host? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-test_session_id_and_passphrase.py::test_hide_passphrase_from_host",
             "screen_id": 5,
-            "comment": "MISSING in Figma"
+            "comment": "needs changes"
         },
         {
             "description": "HIDDEN WALLET || Access hidden wallet? Passphrase provided by host will be used but will not be displayed... || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-test_session_id_and_passphrase.py::test_hide_passphrase_from_host",
             "screen_id": 8,
-            "comment": "MISSING in Figma"
+            "comment": "needs changes"
         },
         {
             "description": "HIDDEN WALLET || ...due to the device settings. || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-test_session_id_and_passphrase.py::test_hide_passphrase_from_host",
             "screen_id": 10,
-            "comment": "MISSING in Figma",
+            "comment": "needs changes",
             "ok_to_fail_ocr": true
         }
     ],
@@ -1085,7 +1085,7 @@
             "description": "Locktime is set but will have no effect. Continue anyway? || <CONTINUE>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_lock_time[1-4294967295]",
             "screen_id": 6,
-            "comment": "MISSING in Figma"
+            "comment":
         }
     ],
     "RBF": [
@@ -1148,7 +1148,7 @@
             "description": "SET U2F COUNTER || Set the U2F counter to {value}? || <cancel> <SET>",
             "test": "TR-device_tests-webauthn-test_u2f_counter.py::test_u2f_counter",
             "screen_id": 5,
-            "comment": "TODO: change SET text in Figma to Set"
+            "comment":
         },
         {
             "description": "LIST CREDENTIALS || Export information about the credentials stored on this device? || <cancel> <EXPORT>",
@@ -1307,13 +1307,13 @@
             "description": "WIPE DEVICE || Do you really want to wipe the device? || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-test_msg_wipedevice.py::test_wipe_device",
             "screen_id": 1,
-            "comment": "MISSING in Figma"
+            "comment": 
         },
         {
             "description": "WIPE DEVICE || All data will be erased. || <arrow_up> <HOLD TO CONFIRM>",
             "test": "TR-device_tests-test_msg_wipedevice.py::test_wipe_device",
             "screen_id": 3,
-            "comment": "MISSING in Figma"
+            "comment":
         }
     ],
     "Loaders": [
@@ -1416,7 +1416,7 @@
             "description": "CHANGE ROTATION || Do you want to change device rotation to west? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_settings_rotation",
             "screen_id": 4,
-            "comment": "MISSING in Figma"
+            "comment":
         }
     ],
     "DeviceName": [
@@ -1439,19 +1439,19 @@
             "description": "EXPERIMENTAL MODE || Enable experimental features? Only for... || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_experimental_features",
             "screen_id": 6,
-            "comment": "MISSING in Figma"
+            "comment":
         },
         {
             "description": "EXPERIMENTAL MODE || ...development and beta testing! || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_experimental_features",
             "screen_id": 8,
-            "comment": "MISSING in Figma"
+            "comment":
         },
         {
             "description": "EXPERIMENTAL MODE || [homescreen]",
             "test": "TR-device_tests-test_msg_applysettings.py::test_experimental_features",
             "screen_id": 9,
-            "comment": "MISSING in Figma",
+            "comment":,
             "ok_to_fail_ocr": true
         }
     ],
@@ -1460,19 +1460,19 @@
             "description": "SAFETY OVERRIDE || Trezor will allow you to approve some actions which might be unsafe. || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_safety_checks",
             "screen_id": 1,
-            "comment": "MISSING in Figma"
+            "comment":
         },
         {
             "description": "SAFETY OVERRIDE || Are you sure? || <arrow_up> <HOLD TO CONFIRM>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_safety_checks",
             "screen_id": 3,
-            "comment": "MISSING in Figma"
+            "comment":
         },
         {
             "description": "SAFETY CHECKS || Do you really want to enforce strict safety checks (recommended)? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_safety_checks",
             "screen_id": 8,
-            "comment": "MISSING in Figma"
+            "comment":
         }
     ]
 }
