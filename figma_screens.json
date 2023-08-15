@@ -886,7 +886,6 @@
             "description": "RECEIVE ADDRESS (MULTISIG) || {multisig_address} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_multisig_xpubs[InputScriptType.SPENDWITNESS-2-bc-e70b56ea",
             "screen_id": 1,
-            "comment": ,
             "ok_to_fail_ocr": true
         },
         {
@@ -946,8 +945,7 @@
         {
             "description": "Please enter your passphrase.",
             "test": "TR-device_tests-test_protection_levels.py::test_passphrase_cached",
-            "screen_id": 1,
-            "comment":
+            "screen_id": 1
         },
         {
             "description": "HIDDEN WALLET || Next screen will show the passphrase. || <cancel> <CONTINUE>",
@@ -1084,8 +1082,7 @@
         {
             "description": "Locktime is set but will have no effect. Continue anyway? || <CONTINUE>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_lock_time[1-4294967295]",
-            "screen_id": 6,
-            "comment":
+            "screen_id": 6
         }
     ],
     "RBF": [
@@ -1147,8 +1144,7 @@
         {
             "description": "SET U2F COUNTER || Set the U2F counter to {value}? || <cancel> <SET>",
             "test": "TR-device_tests-webauthn-test_u2f_counter.py::test_u2f_counter",
-            "screen_id": 5,
-            "comment":
+            "screen_id": 5
         },
         {
             "description": "LIST CREDENTIALS || Export information about the credentials stored on this device? || <cancel> <EXPORT>",
@@ -1306,14 +1302,12 @@
         {
             "description": "WIPE DEVICE || Do you really want to wipe the device? || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-test_msg_wipedevice.py::test_wipe_device",
-            "screen_id": 1,
-            "comment": 
+            "screen_id": 1
         },
         {
             "description": "WIPE DEVICE || All data will be erased. || <arrow_up> <HOLD TO CONFIRM>",
             "test": "TR-device_tests-test_msg_wipedevice.py::test_wipe_device",
-            "screen_id": 3,
-            "comment":
+            "screen_id": 3
         }
     ],
     "Loaders": [
@@ -1415,8 +1409,7 @@
         {
             "description": "CHANGE ROTATION || Do you want to change device rotation to west? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_settings_rotation",
-            "screen_id": 4,
-            "comment":
+            "screen_id": 4
         }
     ],
     "DeviceName": [
@@ -1438,20 +1431,17 @@
         {
             "description": "EXPERIMENTAL MODE || Enable experimental features? Only for... || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_experimental_features",
-            "screen_id": 6,
-            "comment":
+            "screen_id": 6
         },
         {
             "description": "EXPERIMENTAL MODE || ...development and beta testing! || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_experimental_features",
-            "screen_id": 8,
-            "comment":
+            "screen_id": 8
         },
         {
             "description": "EXPERIMENTAL MODE || [homescreen]",
             "test": "TR-device_tests-test_msg_applysettings.py::test_experimental_features",
             "screen_id": 9,
-            "comment":,
             "ok_to_fail_ocr": true
         }
     ],
@@ -1459,20 +1449,17 @@
         {
             "description": "SAFETY OVERRIDE || Trezor will allow you to approve some actions which might be unsafe. || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_safety_checks",
-            "screen_id": 1,
-            "comment":
+            "screen_id": 1
         },
         {
             "description": "SAFETY OVERRIDE || Are you sure? || <arrow_up> <HOLD TO CONFIRM>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_safety_checks",
-            "screen_id": 3,
-            "comment":
+            "screen_id": 3
         },
         {
             "description": "SAFETY CHECKS || Do you really want to enforce strict safety checks (recommended)? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_safety_checks",
-            "screen_id": 8,
-            "comment":
+            "screen_id": 8
         }
     ]
 }
