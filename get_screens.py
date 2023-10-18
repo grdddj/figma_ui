@@ -3,12 +3,15 @@ from __future__ import annotations
 import re
 import sys
 from functools import lru_cache
+from pathlib import Path
 from urllib.parse import urljoin
 
+import click
 import requests
 
 from common import (
-    FIGMA_DIR,
+    MODEL_DIR_MAPPING,
+    MODEL_FILE_MAPPING,
     get_latest_test_report_url,
     get_screen_text_content,
     save_job_id_mapping,
@@ -17,6 +20,7 @@ from gitlab import get_branch_job_ids
 
 OVERWRITE = False
 DEBUG = False
+DEFAULT_BRANCH = "main"
 
 
 @lru_cache(maxsize=None)
@@ -53,9 +57,9 @@ def find_img_source_by_id(html_text: str, img_id: str) -> str:
     return match.group(1)
 
 
-def download_img(flow_name: str, screen_name: str, img_url: str) -> None:
+def download_img(dir: Path, flow_name: str, screen_name: str, img_url: str) -> None:
     img_name = f"{screen_name}.png"
-    img_dir = FIGMA_DIR / flow_name
+    img_dir = dir / flow_name
     img_dir.mkdir(exist_ok=True)
     img_path = img_dir / img_name
     if img_path.exists() and not OVERWRITE:
@@ -64,40 +68,60 @@ def download_img(flow_name: str, screen_name: str, img_url: str) -> None:
     img_path.write_bytes(img_bytes)
 
 
-if __name__ == "__main__":
-    OVERWRITE = "--update" in sys.argv  # type: ignore
-    DEBUG = "--debug" in sys.argv  # type: ignore
+@click.command()
+# fmt: off
+@click.option("-d", "--debug", is_flag=True, help="Show debug logs")
+@click.option("-u", "--update", is_flag=True, help="Do not download already existing images")
+@click.option("-b", "--branch", default=DEFAULT_BRANCH, help="Which branch to use")
+@click.argument("model", type=click.Choice(list(MODEL_FILE_MAPPING.keys()), case_sensitive=False))
+# fmt: on
+def cli(debug: bool, update: bool, branch: str, model: str):
+    global OVERWRITE, DEBUG
 
-    branch = "main"
+    OVERWRITE = not update  # type: ignore
+    DEBUG = debug  # type: ignore
+
+    click.echo(f"Using branch {branch} and model {model}")
+
+    file = MODEL_FILE_MAPPING.get(model)
+    if not file:
+        raise ValueError(f"Model {model} not found")
+    dir = MODEL_DIR_MAPPING.get(model)
+    if not dir:
+        raise ValueError(f"Model {model} not found")
 
     jobs_id_mapping = get_branch_job_ids(branch)
     save_job_id_mapping(jobs_id_mapping)
 
     failed_to_download: list[str] = []
 
-    for flow_name, flow_screens in get_screen_text_content().items():
+    for flow_name, flow_screens in get_screen_text_content(file).items():
         # if flow_name != "Recovery":
         #     continue
-        print(f"Getting screens for flow {flow_name}")
+        click.echo(f"Getting screens for flow {flow_name}")
         for index, screen_info in enumerate(flow_screens, start=1):
             if "missing" in screen_info:
-                print(f"Skipping missing screen {screen_info['screen_id']}")
+                click.echo(f"Skipping missing screen {screen_info['screen_id']}")
                 continue
             screen_name = f"{flow_name}{index}"
             test_case = screen_info["test"]
             screen_id = screen_info["screen_id"]
-            print(f"Getting image {test_case}#{screen_id}")
+            click.echo(f"Getting image {test_case}#{screen_id}")
             try:
                 img_url = get_img_url_from_last_test(test_case, screen_id)
                 if DEBUG:
-                    print(f"Image URL: {img_url}")
-                download_img(flow_name, screen_name, img_url)
+                    click.echo(f"Image URL: {img_url}")
+                download_img(dir, flow_name, screen_name, img_url)
             except Exception as e:
-                print(f"Failed to download - {e}")
+                click.echo(f"Failed to download - {e}")
                 failed_to_download.append(f"{flow_name}#{screen_name}: {e}")
 
     if failed_to_download:
-        print("Failed to download:")
+        click.echo("Failed to download:")
         for error in failed_to_download:
-            print(error)
+            click.echo(error)
         sys.exit(1)
+
+
+if __name__ == "__main__":
+    cli()

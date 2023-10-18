@@ -4,11 +4,22 @@ from pathlib import Path
 from urllib.parse import quote
 
 HERE = Path(__file__).parent
-SCREENS_FILE = HERE / "figma_screens.json"
 JOB_ID_MAPPING_FILE = HERE / "job_id_mapping.json"
 FIGMA_DIR = HERE / "static"
 OCR_RESULTS_FILE = HERE / "ocr_results.json"
 
+MODEL_DIR_MAPPING = {
+    "tt": FIGMA_DIR / "tt",
+    "tr": FIGMA_DIR / "tr",
+}
+
+for dir in MODEL_DIR_MAPPING.values():
+    dir.mkdir(exist_ok=True)
+
+MODEL_FILE_MAPPING = {
+    "tt": HERE / "figma_screens_tt.json",
+    "tr": HERE / "figma_screens_tr.json",
+}
 
 TEST_CASE_MAPPING = {
     "TR-click_tests": "core click R test",
@@ -25,8 +36,8 @@ def get_ocr_results() -> dict[str, dict[str, int]]:
         return json.load(f)
 
 
-def get_screen_text_content() -> dict[str, list[dict[str, str]]]:
-    with open(SCREENS_FILE) as f:
+def get_screen_text_content(file: Path) -> dict[str, list[dict[str, str]]]:
+    with open(file) as f:
         return json.load(f)
 
 
