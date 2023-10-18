@@ -5,3 +5,4 @@ backup
 *.log
 *.out
 job_id_mapping.json
+ocr_results.json
