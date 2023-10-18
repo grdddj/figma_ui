@@ -1,0 +1,13 @@
+[Unit]
+Description=Figma UI
+After=network.target
+
+[Service]
+ExecStart=make run
+WorkingDirectory=__DIR__
+User=__USER__
+Group=__USER__
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

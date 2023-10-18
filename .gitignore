@@ -6,3 +6,4 @@ backup
 *.out
 job_id_mapping.json
 ocr_results.json
+figma_ui.service
