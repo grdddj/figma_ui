@@ -40,9 +40,9 @@ def get_dir_file_count(dir: Path) -> int:
 
 def get_relevant_screens(
     filter_flow: str | None = None, filter_text: str | None = None
-) -> list[dict[str, str]]:
+) -> list[dict[str, str | bool]]:
     screens_content = get_screen_text_content()
-    image_data: list[dict[str, str]] = []
+    image_data: list[dict[str, str | bool]] = []
 
     ocr_results = get_ocr_results()
 
@@ -63,8 +63,14 @@ def get_relevant_screens(
                 ocr_result_str = f"{ocr_result_str} (OK to fail)"
                 ocr_failed = False
 
+            test = screen_info["test"]
+            screen_id = screen_info["screen_id"]
+            test_link = get_latest_test_report_url(test)
+            test_link = f"{test_link}#{screen_id}"
+
             image_data.append(
                 {
+                    "test_link": test_link,
                     "name": img_name,
                     "src": img_src,
                     "description": description,

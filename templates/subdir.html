@@ -29,8 +29,11 @@
         {% for image in image_data %}
         <tr>
             <td>{{ image.name}}</td>
-            <td><img id="{{ image.name}}" style="margin: 0 30px 0 30px;" width="256" src="{{ image.src }}"
-                    alt="{{ image.name }}">
+            <td>
+                <a href="{{ image.test_link }}" target="_blank">
+                    <img id="{{ image.name}}" style="margin: 0 30px 0 30px;" width="256" src="{{ image.src }}"
+                        alt="{{ image.name }}">
+                </a>
             </td>
             <td>{{ image.description}}</td>
             <td>{{ image.comment}}</td>
