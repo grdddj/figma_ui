@@ -29,6 +29,7 @@ def _get_branch_obj(branch_name: str) -> AnyDict:
         branches = _get_gitlab_branches(page)
         for branch_obj in branches:
             if branch_obj["ref"]["name"] == branch_name:
+                # TODO: make sure the tests have finished! We cannot use the incomplete pipeline
                 return branch_obj
     raise ValueError(f"Branch {branch_name} not found")
 
