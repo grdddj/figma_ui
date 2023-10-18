@@ -16,6 +16,7 @@ from common import (
 from gitlab import get_branch_job_ids
 
 OVERWRITE = False
+DEBUG = False
 
 
 @lru_cache(maxsize=None)
@@ -33,6 +34,8 @@ def get_image_content(url: str) -> bytes:
 
 def get_img_url_from_last_test(test_case: str, id: str) -> str:
     url = get_latest_test_report_url(test_case)
+    if DEBUG:
+        print(f"Test URL: {url}")
 
     html = get_html_content(url)
 
@@ -62,8 +65,8 @@ def download_img(flow_name: str, screen_name: str, img_url: str) -> None:
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == "--update":
-        OVERWRITE = True  # type: ignore
+    OVERWRITE = "--update" in sys.argv  # type: ignore
+    DEBUG = "--debug" in sys.argv  # type: ignore
 
     branch = "main"
 
@@ -86,6 +89,8 @@ if __name__ == "__main__":
             print(f"Getting image {test_case}#{screen_id}")
             try:
                 img_url = get_img_url_from_last_test(test_case, screen_id)
+                if DEBUG:
+                    print(f"Image URL: {img_url}")
                 download_img(flow_name, screen_name, img_url)
             except Exception as e:
                 print(f"Failed to download - {e}")
