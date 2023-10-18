@@ -65,7 +65,7 @@ if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "--update":
         OVERWRITE = True  # type: ignore
 
-    branch = "master"
+    branch = "main"
 
     jobs_id_mapping = get_branch_job_ids(branch)
     save_job_id_mapping(jobs_id_mapping)
