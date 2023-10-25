@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ flow_name }} Images</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+
+<body>
+    <h1>{{ flow_name }}</h1>
+
+    <hr>
+
+    <table>
+        <tr>
+            <th>Id</th>
+            {% for model in image_data[0] %}
+            <th>Image</th>
+            <th>Text</th>
+            {% endfor %}
+        </tr>
+        {% for screen_tuple in image_data %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            {% for model in screen_tuple %}
+            <td>
+                {% if model is not none %}
+                <img style="margin: 0 30px 0 30px;" width="256" src="{{ model.src }}">
+                {% endif %}
+            </td>
+            <td>
+                {% if model is not none %}
+                {{ model.description}}
+                {% endif %}
+            </td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

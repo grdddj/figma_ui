@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>UI flows</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+
+<body>
+    {% for model, subdirs_and_filecounts in model_infos.items() %}
+    <h1>All screens {{ model.upper() }}</h1>
+    <a href="/all_screens/{{  model }}">
+        <button>See all screens</button>
+    </a>
+    <hr>
+    <h1>Flows {{ model.upper() }}</h1>
+    <ul>
+        {% for subdir, file_count in subdirs_and_filecounts %}
+        <li><a href="/flow/{{  model }}/{{  subdir }}" target="_blank">{{ subdir }} ({{ file_count }})</a></li>
+        {% endfor %}
+    </ul>
+    <hr>
+    {% endfor %}
+</body>
+
+</html>

@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 from contextlib import contextmanager
+from itertools import zip_longest
 from pathlib import Path
+from typing import Any
 
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import HTMLResponse
@@ -44,13 +46,13 @@ def get_relevant_screens(
     model: str,
     filter_flow: str | None = None,
     filter_text: str | None = None,
-) -> list[dict[str, str | bool]]:
+) -> list[dict[str, Any]]:
     file = MODEL_FILE_MAPPING.get(model)
     if not file:
         raise HTTPException(status_code=404, detail="Model not found")
 
     screens_content = get_screen_text_content(file)
-    image_data: list[dict[str, str | bool]] = []
+    image_data: list[dict[str, Any]] = []
 
     ocr_results = get_ocr_results()
 
@@ -113,20 +115,33 @@ def catch_log_raise_exception():
 
 
 @app.get("/", response_class=HTMLResponse)
-def read_root(request: Request):
+def root(request: Request):
     with catch_log_raise_exception():
         logger.info("Root")
 
-        model_infos: dict[str, list[tuple[str, int]]] = {}
-
-        for model, dir in MODEL_DIR_MAPPING.items():
-            subdirs = get_subdirs_names(dir)
-            subdirs_and_filecounts: list[tuple[str, int]] = [
-                (subdir, get_dir_file_count(dir / subdir)) for subdir in subdirs
-            ]
-            model_infos[model] = subdirs_and_filecounts
+        models = list(MODEL_DIR_MAPPING.keys())
         return templates.TemplateResponse(  # type: ignore
             "index.html",
+            {"request": request, "models": models},
+        )
+
+
+@app.get("/model/{model}", response_class=HTMLResponse)
+def model(model: str, request: Request):
+    with catch_log_raise_exception():
+        logger.info(f"Model: {model}")
+
+        model_infos: dict[str, list[tuple[str, int]]] = {}
+        dir = MODEL_DIR_MAPPING.get(model)
+        if not dir:
+            raise HTTPException(status_code=404, detail="Model not found")
+        subdirs = get_subdirs_names(dir)
+        subdirs_and_filecounts: list[tuple[str, int]] = [
+            (subdir, get_dir_file_count(dir / subdir)) for subdir in subdirs
+        ]
+        model_infos[model] = subdirs_and_filecounts
+        return templates.TemplateResponse(  # type: ignore
+            "model_menu.html",
             {"request": request, "model_infos": model_infos},
         )
 
@@ -159,7 +174,7 @@ def read_subdir(model: str, flow_name: str, request: Request):
         unique_tests_and_links = get_unique_tests_and_links(model, flow_name)
 
         return templates.TemplateResponse(  # type: ignore
-            "subdir.html",
+            "flow.html",
             {
                 "request": request,
                 "flow_name": flow_name,
@@ -169,11 +184,65 @@ def read_subdir(model: str, flow_name: str, request: Request):
         )
 
 
+@app.get("/compare/{flow_name}", response_class=HTMLResponse)
+def compare_subdir(flow_name: str, request: Request):
+    with catch_log_raise_exception():
+        logger.info(f"Compare, Flow: {flow_name}")
+        all_model_image_data: dict[str, list[dict[str, Any]]] = {}
+
+        for model, dir in MODEL_DIR_MAPPING.items():
+            if flow_name not in get_subdirs_names(dir):
+                continue
+
+            image_data = get_relevant_screens(model, filter_flow=flow_name)
+            all_model_image_data[model] = image_data
+
+        zipped_image_data = list(zip_longest(*all_model_image_data.values()))
+
+        return templates.TemplateResponse(  # type: ignore
+            "compare_flow.html",
+            {
+                "request": request,
+                "flow_name": flow_name,
+                "image_data": zipped_image_data,
+            },
+        )
+
+
+@app.get("/compare", response_class=HTMLResponse)
+def compare_menu(request: Request):
+    with catch_log_raise_exception():
+        logger.info(f"Compare")
+        all_model_flows: dict[str, set[str]] = {}
+
+        def find_common_elements(sets: list[set[str]]) -> set[str]:
+            result: set[str] = set()
+            for i, set1 in enumerate(sets):
+                for j, set2 in enumerate(sets):
+                    if i != j:
+                        result.update(set1.intersection(set2))
+            return result
+
+        for model, dir in MODEL_DIR_MAPPING.items():
+            model_flows = get_subdirs_names(dir)
+            all_model_flows[model] = set(model_flows)
+
+        common_flows = find_common_elements(list(all_model_flows.values()))
+
+        return templates.TemplateResponse(  # type: ignore
+            "compare_menu.html",
+            {
+                "request": request,
+                "flows": sorted(common_flows),
+            },
+        )
+
+
 @app.get("/text")
 def text_search(request: Request, text: str = ""):
     with catch_log_raise_exception():
         logger.info(f"Text search: {text}")
-        image_data: list[dict[str, str | bool]] = []
+        image_data: list[dict[str, Any]] = []
         for model in MODEL_DIR_MAPPING:
             model_data = get_relevant_screens(model, filter_text=text) if text else []
             image_data.extend(model_data)

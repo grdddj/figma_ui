@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>UI flows</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+
+<body>
+    <h1>Flows to compare</h1>
+    <div>
+        These flows are defined in at least two models:
+    </div>
+    <ul>
+        {% for flow in flows %}
+        <li><a href="/compare/{{  flow }}" target="_blank">{{ flow }}</a></li>
+        {% endfor %}
+    </ul>
+    <hr>
+</body>
+
+</html>

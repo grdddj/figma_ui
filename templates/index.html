@@ -11,25 +11,25 @@
     <form action="/text" method="get">
         <label for="text">Enter text:</label>
         <input type="text" id="text" name="text" value="{{ text }}" placeholder="Text to find on screen">
-        <button type="submit">Search</button>
+        <button type="submit">Search all models</button>
     </form>
-    <hr>
 
-    {% for model, subdirs_and_filecounts in model_infos.items() %}
-    <h1>All screens {{ model.upper() }}</h1>
-    <a href="./all_screens/{{  model }}">
-        <button>See all screens</button>
+    <hr>
+    <h1>Individual models</h1>
+
+    {% for model in models %}
+    <a href="/model/{{ model }}" target=" _blank">
+        <button>{{ model.upper() }} screens</button>
     </a>
-    <hr>
-    <h1>Flows {{ model.upper() }}</h1>
-    <ul>
-        {% for subdir, file_count in subdirs_and_filecounts %}
-        <li><a href="/flow/{{  model }}/{{  subdir }}" target="_blank">{{ subdir }} ({{ file_count }})</a></li>
-        {% endfor %}
-    </ul>
-    <hr>
-    <hr>
+    <br>
     {% endfor %}
+
+    <hr>
+    <h1>Comparison</h1>
+
+    <a href="/compare" target=" _blank">
+        <button>Compare screens</button>
+    </a>
 </body>
 
 </html>
