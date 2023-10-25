@@ -82,6 +82,7 @@ def get_relevant_screens(
                 {
                     "test_link": test_link,
                     "name": img_name,
+                    "compare_index": screen_info.get("compare_index"),
                     "src": img_src,
                     "description": description,
                     "comment": comment,
@@ -190,14 +191,36 @@ def compare_subdir(flow_name: str, request: Request):
         logger.info(f"Compare, Flow: {flow_name}")
         all_model_image_data: dict[str, list[dict[str, Any]]] = {}
 
+        biggest_compare_index = 0
         for model, dir in MODEL_DIR_MAPPING.items():
             if flow_name not in get_subdirs_names(dir):
                 continue
 
             image_data = get_relevant_screens(model, filter_flow=flow_name)
+            for obj in image_data:
+                biggest_compare_index = max(
+                    biggest_compare_index, obj.get("compare_index", 0)
+                )
             all_model_image_data[model] = image_data
 
-        zipped_image_data = list(zip_longest(*all_model_image_data.values()))
+        zipped_image_data: list[tuple[Any | None]] = []
+
+        for i in range(biggest_compare_index):
+            index_dict: dict[str, list[Any | None]] = {}
+            for model, model_values in all_model_image_data.items():
+                model_list = [
+                    obj for obj in model_values if obj.get("compare_index") == i
+                ]
+                index_dict[model] = model_list
+
+            longest_value = max(len(val) for val in index_dict.values())
+            for model_values in index_dict.values():
+                len_diff = longest_value - len(model_values)
+                if len_diff > 0:
+                    model_values.extend([None] * len_diff)
+
+            for el in zip_longest(*index_dict.values()):
+                zipped_image_data.append(el)
 
         return templates.TemplateResponse(  # type: ignore
             "compare_flow.html",
