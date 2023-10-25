@@ -10,11 +10,11 @@
     <h1>{{ flow_name }}</h1>
 
     <h3>Relevant tests</h3>
-    {% for test, link in unique_tests_and_links.items() %}
+    {%- for test, link in unique_tests_and_links.items() -%}
     <a href="{{ link }}" target="_blank">
         <p>{{ test}}</p>
     </a>
-    {% endfor %}
+    {%- endfor -%}
 
     <hr>
 
@@ -26,7 +26,7 @@
             <th>Comment</th>
             <!-- <th>OCR result</th> -->
         </tr>
-        {% for image in image_data %}
+        {%- for image in image_data -%}
         <tr>
             <td>{{ image.name}}</td>
             <td>
@@ -39,7 +39,7 @@
             <td>{{ image.comment}}</td>
             <!-- <td class="{{ 'red' if image.ocr_failed else '' }}">{{ image.ocr_result_str}}</td> -->
         </tr>
-        {% endfor %}
+        {%- endfor -%}
     </table>
 </body>
 

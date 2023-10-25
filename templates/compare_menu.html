@@ -12,9 +12,9 @@
         These flows are defined in at least two models:
     </div>
     <ul>
-        {% for flow in flows %}
+        {%- for flow in flows -%}
         <li><a href="/compare/{{  flow }}" target="_blank">{{ flow }}</a></li>
-        {% endfor %}
+        {%- endfor -%}
     </ul>
     <hr>
 </body>

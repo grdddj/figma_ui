@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    {% for model, subdirs_and_filecounts in model_infos.items() %}
+    {%- for model, subdirs_and_filecounts in model_infos.items() -%}
     <h1>All screens {{ model.upper() }}</h1>
     <a href="/all_screens/{{  model }}">
         <button>See all screens</button>
@@ -15,12 +15,12 @@
     <hr>
     <h1>Flows {{ model.upper() }}</h1>
     <ul>
-        {% for subdir, file_count in subdirs_and_filecounts %}
+        {%- for subdir, file_count in subdirs_and_filecounts -%}
         <li><a href="/flow/{{  model }}/{{  subdir }}" target="_blank">{{ subdir }} ({{ file_count }})</a></li>
-        {% endfor %}
+        {%- endfor -%}
     </ul>
     <hr>
-    {% endfor %}
+    {%- endfor -%}
 </body>
 
 </html>

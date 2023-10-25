@@ -23,7 +23,7 @@
             <th>Comment</th>
             <!-- <th>OCR result</th> -->
         </tr>
-        {% for image in image_data %}
+        {%- for image in image_data -%}
         <tr>
             <td>{{ image.name}}</td>
             <td>
@@ -36,7 +36,7 @@
             <td>{{ image.comment}}</td>
             <!-- <td class="{{ 'red' if image.ocr_failed else '' }}">{{ image.ocr_result_str}}</td> -->
         </tr>
-        {% endfor %}
+        {%- endfor -%}
     </table>
 </body>
 
