@@ -43,97 +43,115 @@
     ],
     "WalletCreation": [
         {
+            "compare_index": 0,
             "description": "BACKUP NEEDED || [homescreen]",
             "test": "TR-device_tests-reset_recovery-test_reset_backup.py::test_skip_backup_manual[BackupType.Bip39-backup_flow_bip39]",
             "screen_id": 12,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 1,
             "description": "CREATE WALLET || By continuing you agree to Trezor Company's terms and conditions. || <cancel> <arrow_down_wide>",
             "test": "TR-click_tests-test_reset_bip39.py::test_reset_bip39",
             "screen_id": 1
         },
         {
+            "compare_index": 1,
             "description": "CREATE WALLET || More info at trezor.io/tos || <arrow_up> <CREATE WALLET>",
             "test": "TR-click_tests-test_reset_bip39.py::test_reset_bip39",
             "screen_id": 3
         },
         {
+            "compare_index": 2,
             "description": "SUCCESS || New wallet created. It should be backed up now! || <SKIP> <arrow_down_wide>",
             "test": "TR-click_tests-test_reset_bip39.py::test_reset_bip39",
             "screen_id": 9
         },
         {
+            "compare_index": 2,
             "description": "BACK UP WALLET || You can use your backup to recover your wallet at any time. || <arrow_up> <BACK UP>",
             "test": "TR-click_tests-test_reset_bip39.py::test_reset_bip39",
             "screen_id": 11
         },
         {
+            "compare_index": 3,
             "description": "SKIP BACKUP || Are you sure you want to skip the backup? || <SKIP> <BACK UP>",
             "test": "TR-device_tests-reset_recovery-test_reset_backup.py::test_skip_backup_manual[BackupType.Bip39-backup_flow_bip39]",
             "screen_id": 11
         },
         {
+            "compare_index": 4,
             "description": "REMEMBER || Never make a digital copy of your backup or upload it online! || <OK, I UNDERSTAND>",
             "test": "TR-click_tests-test_reset_bip39.py::test_reset_bip39",
             "screen_id": 13
         },
         {
+            "compare_index": 5,
             "description": "STANDARD BACKUP || Write down all 12 words in order. || <SHOW WORDS>",
             "test": "TR-click_tests-test_reset_bip39.py::test_reset_bip39",
             "screen_id": 15
         },
         {
+            "compare_index": 6,
             "description": "[mnemonic_words] || <arrow_up> <arrow_down_wide>",
             "test": "TR-click_tests-test_reset_bip39.py::test_reset_bip39",
             "screen_id": 17,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 7,
             "description": "[mnemonic_words] || <arrow_up> <arrow_down_wide>",
             "test": "TR-click_tests-test_reset_bip39.py::test_reset_bip39",
             "screen_id": 21,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 8,
             "description": "[mnemonic_words] || <arrow_up> <arrow_down_wide>",
             "test": "TR-click_tests-test_reset_bip39.py::test_reset_bip39",
             "screen_id": 23,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 9,
             "description": "I wrote down all 12 words in order. || <arrow_up> <HOLD TO CONFIRM>",
             "test": "TR-click_tests-test_reset_bip39.py::test_reset_bip39",
             "screen_id": 25
         },
         {
+            "compare_index": 10,
             "description": "CHECK BACKUP || Select the correct word for each position. || <CONTINUE>",
             "test": "TR-click_tests-test_reset_bip39.py::test_reset_bip39",
             "screen_id": 26
         },
         {
+            "compare_index": 11,
             "description": "SELECT 3RD WORD || [word_choice] || <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_reset_bip39.py::test_reset_bip39",
             "screen_id": 32,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 12,
             "description": "SELECT 3RD WORD || [word_choice] || <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_reset_bip39.py::test_reset_bip39",
             "screen_id": 33,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 13,
             "description": "Wrong word selected! Please check again. || <CHECK AGAIN>",
             "test": "TR-device_tests-reset_recovery-test_reset_bip39_t2.py::test_reset_failed_check",
             "screen_id": 29
         },
         {
+            "compare_index": 14,
             "description": "SUCCESS || You have finished verifying your recovery seed. || <CONTINUE>",
             "test": "TR-click_tests-test_reset_bip39.py::test_reset_bip39",
             "screen_id": 47
         },
         {
+            "compare_index": 15,
             "description": "BACKUP IS DONE || Keep it safe! || <CONTINUE>",
             "test": "TR-click_tests-test_reset_bip39.py::test_reset_bip39",
             "screen_id": 49
@@ -141,114 +159,135 @@
     ],
     "WalletCreationShamir": [
         {
+            "compare_index": 0,
             "description": "CREATE WALLET (SHAMIR) || By continuing you agree to Trezor Company's terms and conditions. || <cancel> <arrow_down_wide>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
             "screen_id": 1
         },
         {
+            "compare_index": 0,
             "description": "CREATE WALLET (SHAMIR) || More info at trezor.io/tos || <arrow_up> <CREATE WALLET>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
             "screen_id": 3
         },
         {
+            "compare_index": 1,
             "description": "SUCCESS || New wallet created. It should be backed up now! || <SKIP> <arrow_down_wide>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
             "screen_id": 9
         },
         {
+            "compare_index": 1,
             "description": "BACK UP WALLET || You can use your backup to recover your wallet at any time. || <arrow_up> <BACK UP>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
             "screen_id": 11
         },
         {
+            "compare_index": 2,
             "description": "SKIP BACKUP || Are you sure you want to skip the backup? || <SKIP> <BACK UP>",
             "test": "TR-device_tests-reset_recovery-test_reset_backup.py::test_skip_backup_manual[BackupType.Bip39-backup_flow_bip39]",
             "screen_id": 11
         },
         {
+            "compare_index": 3,
             "description": "Number of shares. Set threshold. Write down and check all shares. || <cancel> <CONTINUE>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
             "screen_id": 13,
             "comment": "FIX 'treshold' in Figma in at least 4 screens"
         },
         {
+            "compare_index": 4,
             "description": "NUMBER OF SHARES || = total number of unique word lists used for wallet backup. || <CONTINUE>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
             "screen_id": 15,
             "comment": "should the title be CAPITAL or not?"
         },
         {
+            "compare_index": 5,
             "description": "NUMBER OF SHARES || [number_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
             "screen_id": 17,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 6,
             "description": "Number of shares. Set threshold. Write down and check all shares. || <cancel> <CONTINUE>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
             "screen_id": 27
         },
         {
+            "compare_index": 7,
             "description": "THRESHOLD || = minimum number of unique word lists used for recovery. || <CONTINUE>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
             "screen_id": 29,
             "comment": "CAPITAL title or not?"
         },
         {
+            "compare_index": 8,
             "description": "THRESHOLD || [number_choice] || <SELECT>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
             "screen_id": 30,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 9,
             "description": "Number of shares. Set threshold. Write down and check all shares. || <cancel> <CONTINUE>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
             "screen_id": 31
         },
         {
+            "compare_index": 10,
             "description": "REMEMBER || Never make a digital copy of your backup or upload it online! || <OK, I UNDERSTAND>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
             "screen_id": 35
         },
         {
+            "compare_index": 11,
             "description": "SHARE #1 || Write down all 20 words in order. || <SHOW WORDS>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
             "screen_id": 37
         },
         {
+            "compare_index": 12,
             "description": "[mnemonic_words] || <arrow_up> <arrow_down_wide>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
             "screen_id": 39,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 13,
             "description": "I wrote down all 20 words in order. || <arrow_up> <HOLD TO CONFIRM>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
             "screen_id": 53,
             "comment": "Missing 'from share #1'"
         },
         {
+            "compare_index": 14,
             "description": "CHECK SHARE #1 || Select the correct word for each position. || <CONTINUE>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
             "screen_id": 54
         },
         {
+            "compare_index": 15,
             "description": "SELECT 3RD WORD [word_choice] || <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
             "screen_id": 56,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 16,
             "description": "Recovery share #1 checked successfully. Continue with share #2. || <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_basic.py::test_reset_device_slip39_basic",
             "screen_id": 36
         },
         {
+            "compare_index": 17,
             "description": "SUCCESS || You have finished verifying your recovery shares. || <CONTINUE>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
             "screen_id": 68
         },
         {
+            "compare_index": 18,
             "description": "BACKUP IS DONE || Keep it safe! || <CONTINUE>",
             "test": "TR-click_tests-test_reset_slip39_basic.py::test_reset_slip39_basic[1of1]",
             "screen_id": 70
@@ -256,12 +295,14 @@
     ],
     "WalletCreationSuperShamir": [
         {
+            "compare_index": 0,
             "description": "Number of groups. Number of shares. Set sizes and thresholds. || <cancel> <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
             "screen_id": 7,
             "comment": "MISSING in Figma"
         },
         {
+            "compare_index": 1,
             "description": "NUMBER OF GROUPS. [number_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
             "screen_id": 8,
@@ -269,12 +310,14 @@
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 2,
             "description": "Number of groups. Number of shares. Set sizes and thresholds. || <cancel> <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
             "screen_id": 9,
             "comment": "MISSING in Figma"
         },
         {
+            "compare_index": 3,
             "description": "GROUP THRESHOLD || [number_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
             "screen_id": 10,
@@ -282,12 +325,14 @@
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 4,
             "description": "Number of groups. Number of shares. Set sizes and thresholds. || <cancel> <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
             "screen_id": 11,
             "comment": "MISSING in Figma"
         },
         {
+            "compare_index": 5,
             "description": "# SHARES - GROUP 1 || [number_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
             "screen_id": 13,
@@ -295,6 +340,7 @@
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 6,
             "description": "THRESHOLD - GROUP 1 || [number_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
             "screen_id": 15,
@@ -302,23 +348,27 @@
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 7,
             "description": "GROUP 1 - SHARE 1 || Write down all 20 words in order. || <SHOW WORDS>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
             "screen_id": 33
         },
         {
+            "compare_index": 8,
             "description": "GROUP 1 - SHARE 1 || Select the correct word for each position. || <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
             "screen_id": 49,
             "comment": "MISSING in Figma"
         },
         {
+            "compare_index": 9,
             "description": "Group 1 - Share 1 checked successfully. Continue with the next share. || <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
             "screen_id": 54,
             "comment": "MISSING in Figma"
         },
         {
+            "compare_index": 10,
             "description": "SUCCESS || You have finished verifying your recovery shares for group 1. || <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_reset_slip39_advanced.py::test_reset_device_slip39_advanced",
             "screen_id": 142,
@@ -327,50 +377,59 @@
     ],
     "PIN": [
         {
+            "compare_index": 0,
             "description": "PIN SETTINGS || Turn on PIN protection? || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-test_msg_changepin_t2.py::test_set_pin",
             "screen_id": 1
         },
         {
+            "compare_index": 0,
             "description": "PIN will be required to access this device. || <arrow_up> <TURN ON>",
             "test": "TR-device_tests-test_msg_changepin_t2.py::test_set_pin",
             "screen_id": 3,
             "comment": "TODO: not showing PIN SETTINGS header - should we?"
         },
         {
+            "compare_index": 1,
             "description": "PIN SETTINGS || PIN should be 4-50 digits long. || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-test_msg_changepin_t2.py::test_set_pin",
             "screen_id": 4
         },
         {
+            "compare_index": 1,
             "description": "Position of the cursor will change between entries for enhanced security. || <arrow_up> <CONTINUE>",
             "test": "TR-device_tests-test_msg_changepin_t2.py::test_set_pin",
             "screen_id": 6,
             "comment": "TODO: not showing PIN SETTINGS header - should we?"
         },
         {
+            "compare_index": 2,
             "description": "ENTER NEW PIN || [pin_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-test_msg_changepin_t2.py::test_set_pin",
             "screen_id": 7,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 2,
             "description": "ENTER PIN || [pin_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_pin.py::test_pin_short",
             "screen_id": 22,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 3,
             "description": "WRONG PIN || 15 tries left [pin_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-test_pin.py::test_exponential_backoff_t2",
             "screen_id": 5
         },
         {
+            "compare_index": 4,
             "description": "CHECK PIN || Please re-enter PIN to confirm. || <CONTINUE>",
             "test": "TR-device_tests-test_msg_changepin_t2.py::test_set_pin",
             "screen_id": 8
         },
         {
+            "compare_index": 5,
             "description": "RE-ENTER NEW PIN || [pin_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-test_msg_changepin_t2.py::test_set_pin",
             "screen_id": 9,
@@ -378,38 +437,45 @@
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 6,
             "description": "Entered PINs do not match! Please check again. || <CHECK AGAIN>",
             "test": "TR-device_tests-test_msg_changepin_t2.py::test_set_failed",
             "screen_id": 8,
             "comment": "Remove the newline between paragraphs?"
         },
         {
+            "compare_index": 7,
             "description": "SUCCESS || PIN protection turned on. || <CONTINUE>",
             "test": "TR-device_tests-test_msg_changepin_t2.py::test_set_pin",
             "screen_id": 15
         },
         {
+            "compare_index": 8,
             "description": "SUCCESS || PIN protection turned off. || <CONTINUE>",
             "test": "TR-device_tests-test_msg_changepin_t2.py::test_remove_pin",
             "screen_id": 14
         },
         {
+            "compare_index": 9,
             "description": "PIN SETTINGS || Are you sure you want to turn off PIN protection? || <cancel> <TURN OFF>",
             "test": "TR-device_tests-test_msg_changepin_t2.py::test_remove_pin",
             "screen_id": 7
         },
         {
+            "compare_index": 10,
             "description": "PIN SETTINGS || Change PIN? || <cancel> <CHANGE>",
             "test": "TR-device_tests-test_msg_changepin_t2.py::test_change_failed",
             "screen_id": 7
         },
         {
+            "compare_index": 11,
             "description": "Wrong PIN || The PIN you have entered is not valid. || <TRY AGAIN>",
             "test": "TR-device_tests-test_msg_changepin_t2.py::test_change_invalid_current",
             "screen_id": 12,
             "comment": "MISSING in Figma"
         },
         {
+            "compare_index": 12,
             "description": "Invalid PIN || The new PIN must be different from your wipe code. || <TRY AGAIN>",
             "test": "TR-device_tests-test_msg_change_wipe_code_t2.py::test_set_remove_wipe_code",
             "screen_id": 32
@@ -417,61 +483,72 @@
     ],
     "WipeCode": [
         {
+            "compare_index": 0,
             "description": "WIPE CODE SETTINGS || Turn on wipe code protection? || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-test_msg_change_wipe_code_t2.py::test_set_remove_wipe_code",
             "screen_id": 6
         },
         {
+            "compare_index": 0,
             "description": "Wipe code can be used to erase all data from this device. || <arrow_up> <TURN ON>",
             "test": "TR-device_tests-test_msg_change_wipe_code_t2.py::test_set_remove_wipe_code",
             "screen_id": 8,
             "comment": "DIFF text than in Figma"
         },
         {
+            "compare_index": 1,
             "description": "ENTER NEW WIPE CODE || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-test_msg_change_wipe_code_t2.py::test_set_remove_wipe_code",
             "screen_id": 13,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 2,
             "description": "CHECK WIPE CODE || Please re-enter wipe code to confirm. || <CONTINUE>",
             "test": "TR-device_tests-test_msg_change_wipe_code_t2.py::test_set_remove_wipe_code",
             "screen_id": 14
         },
         {
+            "compare_index": 3,
             "description": "RE-ENTER WIPE CODE || [wipe_code_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-test_msg_change_wipe_code_t2.py::test_set_remove_wipe_code",
             "screen_id": 15,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 4,
             "description": "SUCCESS || Wipe code enabled. || <CONTINUE>",
             "test": "TR-device_tests-test_msg_change_wipe_code_t2.py::test_set_remove_wipe_code",
             "screen_id": 19,
             "comment": "DIFF from Figma: turn on vs enabled"
         },
         {
+            "compare_index": 5,
             "description": "WIPE CODE SETTINGS || Change wipe code? || <cancel> <CHANGE>",
             "test": "TR-device_tests-test_msg_change_wipe_code_t2.py::test_set_remove_wipe_code",
             "screen_id": 34
         },
         {
+            "compare_index": 6,
             "description": "SUCCESS || Wipe code changed. || <CONTINUE>",
             "test": "TR-device_tests-test_msg_change_wipe_code_t2.py::test_set_remove_wipe_code",
             "screen_id": 45
         },
         {
+            "compare_index": 7,
             "description": "WIPE CODE SETTINGS || Turn off wipe code protection? || <cancel> <TURN OFF>",
             "test": "TR-device_tests-test_msg_change_wipe_code_t2.py::test_set_remove_wipe_code",
             "screen_id": 60
         },
         {
+            "compare_index": 8,
             "description": "SUCCESS || Wipe code disabled. || <CONTINUE>",
             "test": "TR-device_tests-test_msg_change_wipe_code_t2.py::test_set_remove_wipe_code",
             "screen_id": 65,
             "comment": "DIFF from Figma: turn on vs enabled"
         },
         {
+            "compare_index": 9,
             "description": "INVALID WIPE CODE || The wipe code must be different from your PIN. Please try again. || <TRY AGAIN>",
             "test": "TR-device_tests-test_msg_change_wipe_code_t2.py::test_set_wipe_code_to_pin",
             "screen_id": 14,
@@ -480,53 +557,63 @@
     ],
     "BackupCheck": [
         {
+            "compare_index": 0,
             "description": "BACKUP CHECK || Check your backup? || <cancel> <CHECK>",
             "test": "TR-device_tests-reset_recovery-test_recovery_bip39_dryrun.py::test_dry_run",
             "screen_id": 1
         },
         {
+            "compare_index": 1,
             "description": "BACKUP CHECK || Select the number of words in your backup. || <cancel> <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_recovery_bip39_dryrun.py::test_dry_run",
             "screen_id": 5
         },
         {
+            "compare_index": 2,
             "description": "BACKUP CHECK || Enter your backup. (12 words) || <cancel> <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_recovery_bip39_dryrun.py::test_dry_run",
             "screen_id": 7
         },
         {
+            "compare_index": 3,
             "description": "SUCCESS || The entered recovery seed is valid and matches the one in the device. || <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_recovery_bip39_dryrun.py::test_dry_run",
             "screen_id": 20
         },
         {
+            "compare_index": 4,
             "description": "The entered recovery seed is valid but does not match the one in the device. || <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_recovery_bip39_dryrun.py::test_seed_mismatch",
             "screen_id": 20,
             "comment": "MISSING in Figma"
         },
         {
+            "compare_index": 5,
             "description": "Invalid recovery seed entered. Please try again. || <TRY AGAIN>",
             "test": "TR-device_tests-reset_recovery-test_recovery_bip39_dryrun.py::test_invalid_seed_core",
             "screen_id": 20
         },
         {
+            "compare_index": 6,
             "description": "CANCEL BACKUP CHECK || Do you really want to cancel the backup check? || <cancel> <CANCEL>",
             "test": "TR-device_tests-reset_recovery-test_recovery_bip39_dryrun.py::test_invalid_seed_core",
             "screen_id": 28,
             "missing": "TODO: missing screen - is not in tests"
         },
         {
+            "compare_index": 7,
             "description": "BACKUP CHECK || 1 of 2 shares entered successfully. 1 more share needed. || <cancel> <ENTER SHARE>",
             "test": "TR-device_tests-reset_recovery-test_recovery_slip39_basic_dryrun.py::test_2of3_dryrun",
             "screen_id": 28
         },
         {
+            "compare_index": 8,
             "description": "SUCCESS || The entered recovery shares are valid and match what is currently in the device. || <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_recovery_slip39_basic_dryrun.py::test_2of3_dryrun",
             "screen_id": 49
         },
         {
+            "compare_index": 9,
             "description": "The entered recovery shares are valid but do not match what is currently in the device. || <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_recovery_slip39_advanced_dryrun.py::test_2of3_invalid_seed_dryrun",
             "screen_id": 94,
@@ -535,87 +622,103 @@
     ],
     "Recovery": [
         {
+            "compare_index": 0,
             "description": "RECOVER WALLET || By continuing you agree to Trezor Company's terms and conditions. || <cancel> <arrow_down_wide>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
             "screen_id": 1
         },
         {
+            "compare_index": 0,
             "description": "RECOVER WALLET || More info at trezor.io/tos. || <arrow_up> <RECOVER WALLET>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
             "screen_id": 3
         },
         {
+            "compare_index": 1,
             "description": "RECOVER WALLET || Select the number of words in your backup. || <cancel> <CONTINUE>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
             "screen_id": 8
         },
         {
+            "compare_index": 1,
             "description": "NUMBER OF WORDS || [number_choice] || <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
             "screen_id": 10,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 2,
             "description": "RECOVER WALLET || Enter your backup. (12 words) || <cancel> <arrow_down_wide>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
             "screen_id": 12
         },
         {
+            "compare_index": 2,
             "description": "RECOVER WALLET || You'll only have to select the first 2-3 letters for each word. || <arrow_up> <arrow_down_wide>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
             "screen_id": 14
         },
         {
+            "compare_index": 2,
             "description": "RECOVER WALLET || Position of the cursor will change between entries for enhanced security. || <arrow_up> <CONTINUE>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
             "screen_id": 16
         },
         {
+            "compare_index": 3,
             "description": "WORD 1 OF 12 || [letter_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
             "screen_id": 18,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 3,
             "description": "WORD 1 OF 12 || [letter_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
             "screen_id": 52,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 3,
             "description": "WORD 1 OF 12 || [letter_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
             "screen_id": 53,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 3,
             "description": "WORD 1 OF 12 || [letter_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
             "screen_id": 99,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 3,
             "description": "WORD 1 OF 12 || [letter_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
             "screen_id": 101,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 4,
             "description": "Invalid recovery seed entered. Please try again. || <TRY AGAIN>",
             "test": "TR-device_tests-reset_recovery-test_recovery_bip39_dryrun.py::test_invalid_seed_core",
             "screen_id": 20
         },
         {
+            "compare_index": 5,
             "description": "SUCCESS || Wallet recovered successfully. || <CONTINUE>",
             "test": "TR-click_tests-test_recovery.py::test_recovery_bip39",
             "screen_id": 721
         },
         {
+            "compare_index": 6,
             "description": "CANCEL RECOVERY || Are you sure you want to cancel the recovery process? || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-reset_recovery-test_recovery_slip39_basic.py::test_abort",
             "screen_id": 8
         },
         {
+            "compare_index": 6,
             "description": "CANCEL RECOVERY || All progress will be lost. || <arrow_up> <CANCEL>",
             "test": "TR-device_tests-reset_recovery-test_recovery_slip39_basic.py::test_abort",
             "screen_id": 10,
@@ -624,68 +727,81 @@
     ],
     "RecoveryShamir": [
         {
+            "compare_index": 0,
             "description": "RECOVER WALLET || By continuing you agree to Trezor Company's terms and conditions. || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
             "screen_id": 218
         },
         {
+            "compare_index": 0,
             "description": "RECOVER WALLET || More info at trezor.io/tos. || <arrow_up> <RECOVER WALLET>",
             "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
             "screen_id": 220
         },
         {
+            "compare_index": 1,
             "description": "RECOVER WALLET || Select the number of words in your backup. || <cancel> <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
             "screen_id": 224
         },
         {
+            "compare_index": 1,
             "description": "NUMBER OF WORDS || [number_choice] || <SELECT> <arrow_right>",
             "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
             "screen_id": 225,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 2,
             "description": "RECOVER WALLET || Enter any share. (20 words) || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
             "screen_id": 226
         },
         {
+            "compare_index": 2,
             "description": "RECOVER WALLET || You'll only have to select the first 2-3 letters for each word. || <arrow_up> <arrow_down_wide>",
             "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
             "screen_id": 228
         },
         {
+            "compare_index": 2,
             "description": "RECOVER WALLET || Position of the cursor will change between entries for enhanced security. || <arrow_up> <ENTER SHARE>",
             "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
             "screen_id": 230
         },
         {
+            "compare_index": 3,
             "description": "WORD 1 OF 20 || [letter_choice] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
             "screen_id": 231,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 4,
             "description": "RECOVER WALLET || 1 of 3 shares entered successfully. 2 more shares needed. || <cancel> <ENTER SHARE>",
             "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
             "screen_id": 251
         },
         {
+            "compare_index": 5,
             "description": "RECOVER WALLET || 2 of 3 shares entered successfully. 1 more share needed. || <cancel> <ENTER SHARE>",
             "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
             "screen_id": 272
         },
         {
+            "compare_index": 6,
             "description": "SUCCESS || Wallet recovered successfully. || <CONTINUE>",
             "test": "TR-device_tests-reset_recovery-test_reset_recovery_slip39_basic.py::test_reset_recovery",
             "screen_id": 293
         },
         {
+            "compare_index": 7,
             "description": "Share already entered Please enter a different share. || <TRY AGAIN>",
             "test": "TR-device_tests-reset_recovery-test_recovery_slip39_basic.py::test_same_share",
             "screen_id": 39
         },
         {
+            "compare_index": 8,
             "description": "You have entered a share from another Shamir Backup. || <TRY AGAIN>",
             "test": "TR-device_tests-reset_recovery-test_recovery_slip39_basic.py::test_wrong_nth_word[0]",
             "screen_id": 36
@@ -693,85 +809,100 @@
     ],
     "SendBTC": [
         {
+            "compare_index": 0,
             "description": "RECIPIENT #1 || {address} || <cancel> <CONTINUE>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_one_three_fee[True]",
             "screen_id": 2,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 1,
             "description": "AMOUNT #1 || {amount} || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_one_three_fee[True]",
             "screen_id": 3,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 2,
             "description": "RECIPIENT #2 || {account_name} {address} || <cancel> <CONTINUE>",
             "test": "TR-device_tests-bitcoin-test_signtx_segwit.py::test_attack_change_input_address",
             "screen_id": 5,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 3,
             "description": "AMOUNT #2 || {account_id} {amount} || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signtx_segwit.py::test_attack_change_input_address",
             "screen_id": 5,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 4,
             "description": "Total amount: {amount} Including fee: {amount} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_one_three_fee[True]",
             "screen_id": 8
         },
         {
+            "compare_index": 5,
             "description": "FEE INFORMATION || Fee rate: {fee_rate} || <arrow_left> <arrow_right>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_one_three_fee[True]",
             "screen_id": 10
         },
         {
+            "compare_index": 5,
             "description": "SENDING FROM || Account: {account_name} || <arrow_left>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_one_three_fee[True]",
             "screen_id": 12
         },
         {
+            "compare_index": 7,
             "description": "SENDING FROM || Account: Multiple accounts || <arrow_left>",
             "test": "TR-device_tests-bitcoin-test_signtx_segwit.py::test_attack_mixed_inputs",
             "screen_id": 13
         },
         {
+            "compare_index": 8,
             "description": "A lot of change outputs. {x} outputs || <CONTINUE>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_lots_of_change",
             "screen_id": 5,
             "comment": "MISSING in Figma"
         },
         {
+            "compare_index": 9,
             "description": "Unusually high fee. {amount} || <CONTINUE>",
             "test": "TR-device_tests-bitcoin-test_signtx_segwit.py::test_attack_mixed_inputs",
             "screen_id": 7,
             "comment": "DIFF - missing Continue anyway?"
         },
         {
+            "compare_index": 10,
             "description": "The transaction contains unverified external inputs. Continue anyway? || <CONTINUE>",
             "test": "TR-device_tests-bitcoin-test_signtx_external.py::test_p2tr_external_unverified",
             "screen_id": 11
         },
         {
+            "compare_index": 11,
             "description": "UNKNOWN PATH || {path} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_multisig.py::test_attack_change_input",
             "screen_id": 2,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 12,
             "description": "JOINT TRANSACTION || You are contributing: {amount} || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signtx_external.py::test_p2tr_external_presigned",
             "screen_id": 5,
             "comment": "MISSING in Figma"
         },
         {
+            "compare_index": 12,
             "description": "JOINT TRANSACTION || To the total amount: {amount} || <arrow_up> <HOLD TO CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signtx_external.py::test_p2tr_external_presigned",
             "screen_id": 7,
             "comment": "MISSING in Figma"
         },
         {
+            "compare_index": 13,
             "description": "CONFIRM SENDING || {amount} to {recipient} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signtx_payreq.py::test_payment_request[out01]",
             "screen_id": 2,
@@ -779,11 +910,13 @@
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 14,
             "description": "[loader] Loading transaction...",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_one_three_fee[True]",
             "screen_id": 7
         },
         {
+            "compare_index": 15,
             "description": "[loader] Signing transaction...",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_one_three_fee[True]",
             "screen_id": 13
@@ -791,63 +924,74 @@
     ],
     "SendETH": [
         {
+            "compare_index": 0,
             "description": "RECIPIENT || {eth_address} || <cancel> <CONTINUE>",
             "test": "TR-device_tests-ethereum-test_signtx.py::test_signtx[True-Ethereum]",
             "screen_id": 2,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 1,
             "description": "Amount: {eth_amount} Maximum fee: {eth_amount} || <arrow_up> <CONFIRM> <i>",
             "test": "TR-device_tests-ethereum-test_signtx.py::test_signtx[True-Ethereum]",
             "screen_id": 4,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 2,
             "description": "FEE INFORMATION || Gas limit: {eth_gas_limit} units || <arrow_left> <arrow_right>",
             "test": "TR-device_tests-ethereum-test_signtx.py::test_signtx[True-Ethereum]",
             "screen_id": 6
         },
         {
+            "compare_index": 2,
             "description": "FEE INFORMATION || Gas price: {eth_gas_price} || <arrow_left>",
             "test": "TR-device_tests-ethereum-test_signtx.py::test_signtx[True-Ethereum]",
             "screen_id": 8
         },
         {
+            "compare_index": 3,
             "description": "RECIPIENT || new contract? || <cancel> <CONTINUE>",
             "test": "TR-device_tests-ethereum-test_signtx.py::test_signtx[True-newcontract]",
             "screen_id": 3
         },
         {
+            "compare_index": 4,
             "description": "Amount: {eth_amount} Maximum fee: {eth_amount} || <arrow_up> <arrow_down_wide>",
             "test": "TR-device_tests-ethereum-test_signtx.py::test_signtx[True-newcontract]",
             "screen_id": 5,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 4,
             "description": "{eth_amount} || <arrow_up> <CONFIRM> <i>",
             "test": "TR-device_tests-ethereum-test_signtx.py::test_signtx[True-newcontract]",
             "screen_id": 7,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 5,
             "description": "CONFIRM DATA || Size: {data_size} bytes {data} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-ethereum-test_signtx.py::test_signtx_data_pagination[input_flow_data_scroll_down]",
             "screen_id": 1,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 6,
             "description": "CONFIRM DATA || Size: {data_size} bytes {data} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-ethereum-test_signtx.py::test_signtx_data_pagination[input_flow_data_scroll_down]",
             "screen_id": 2,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 7,
             "description": "CONFIRM DATA || {data} || <arrow_up> <arrow_down_wide>",
             "test": "TR-device_tests-ethereum-test_signtx.py::test_signtx_data_pagination[input_flow_data_scroll_down]",
             "screen_id": 4,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 8,
             "description": "CONFIRM DATA || {data} || <arrow_up> <GO BACK>",
             "test": "TR-device_tests-ethereum-test_signtx.py::test_signtx_data_pagination[input_flow_data_scroll_down]",
             "screen_id": 12,
@@ -856,36 +1000,42 @@
     ],
     "Receive": [
         {
+            "compare_index": 0,
             "description": "RECEIVE ADDRESS || {taproot_address} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_cancel[m-86h-0h-12h-0-0-InputScriptType.SPENDTAP-4c5b2b38",
             "screen_id": 1,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 1,
             "description": "RECEIVE ADDRESS || {segwit_address} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_cancel[m-84h-0h-12h-0-0-InputScriptType.SPENDWIT-d6991e22",
             "screen_id": 1,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 2,
             "description": "ADDRESS MISMATCH? || Please contact Trezor support at trezor.io/support || <arrow_left> <QUIT>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_cancel[m-84h-0h-12h-0-0-InputScriptType.SPENDWIT-d6991e22",
             "screen_id": 11,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 3,
             "description": "{QR_code_taproot_address} || <arrow_left> <arrow_right>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_cancel[m-86h-0h-12h-0-0-InputScriptType.SPENDTAP-4c5b2b38",
             "screen_id": 3,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 3,
             "description": "{QR_code_segwit_address} || <arrow_left> <arrow_right>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_cancel[m-84h-0h-12h-0-0-InputScriptType.SPENDWIT-d6991e22",
             "screen_id": 3,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 4,
             "description": "Account: {account} Derivation path: {derivation_path} || <arrow_left>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_cancel[m-84h-0h-12h-0-0-InputScriptType.SPENDWIT-d6991e22",
             "screen_id": 5,
@@ -893,18 +1043,21 @@
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 5,
             "description": "Receiving to a multisig address. Continue anyway? || <CONTINUE>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_multisig_xpubs[InputScriptType.SPENDWITNESS-2-bc-e70b56ea",
             "screen_id": 1,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 6,
             "description": "RECEIVE ADDRESS (MULTISIG) || {multisig_address} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_multisig_xpubs[InputScriptType.SPENDWITNESS-2-bc-e70b56ea",
             "screen_id": 3,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 7,
             "description": "Account: Multisig {x} of {y} Derivation path: {derivation_path} || <arrow_left> <arrow_right>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_multisig_xpubs[InputScriptType.SPENDWITNESS-2-bc-e70b56ea",
             "screen_id": 7,
@@ -912,18 +1065,21 @@
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 8,
             "description": "MULTISIG XPUB #1 (YOURS) || {xpub} || <arrow_left> <SHOW ALL> <arrow_right>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_multisig_xpubs[InputScriptType.SPENDWITNESS-2-bc-e70b56ea",
             "screen_id": 9,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 8,
             "description": "MULTISIG XPUB #1 (YOURS) || {xpub} || <arrow_up_wide>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_multisig_xpubs[InputScriptType.SPENDWITNESS-2-bc-e70b56ea",
             "screen_id": 12,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 9,
             "description": "MULTISIG XPUB #2 (COSIGNER) || {xpub} || <arrow_left> <SHOW ALL> <arrow_right>",
             "test": "TR-device_tests-bitcoin-test_getaddress_show.py::test_show_multisig_xpubs[InputScriptType.SPENDWITNESS-2-bc-e70b56ea",
             "screen_id": 16,
@@ -933,11 +1089,13 @@
     ],
     "Passphrase": [
         {
+            "compare_index": 0,
             "description": "PASSPHRASE SETTINGS || Turn on passphrase protection? || <cancel> <TURN ON>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_settings_passphrase",
             "screen_id": 5
         },
         {
+            "compare_index": 1,
             "description": "ENTER PASSPHRASE || [passphrase_keyboard] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_passphrase_tr.py::test_passphrase_input[abc 123-mvqzZUb9NaUc62Buk9WCP4L7hunsXFyamT]",
             "screen_id": 2,
@@ -945,6 +1103,7 @@
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 1,
             "description": "ENTER PASSPHRASE || [passphrase_keyboard] || <arrow_left> <SELECT> <arrow_right>",
             "test": "TR-click_tests-test_passphrase_tr.py::test_passphrase_input[abc 123-mvqzZUb9NaUc62Buk9WCP4L7hunsXFyamT]",
             "screen_id": 30,
@@ -952,6 +1111,7 @@
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 1,
             "description": "ENTER PASSPHRASE || [passphrase_keyboard] || <arrow_left> <RETURN> <arrow_right>",
             "test": "TR-click_tests-test_passphrase_tr.py::test_passphrase_input[abc 123-mvqzZUb9NaUc62Buk9WCP4L7hunsXFyamT]",
             "screen_id": 37,
@@ -959,45 +1119,53 @@
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 2,
             "description": "Please enter your passphrase.",
             "test": "TR-device_tests-test_protection_levels.py::test_passphrase_cached",
             "screen_id": 1
         },
         {
+            "compare_index": 3,
             "description": "HIDDEN WALLET || Next screen will show the passphrase. || <cancel> <CONTINUE>",
             "test": "TR-device_tests-test_session_id_and_passphrase.py::test_hide_passphrase_from_host",
             "screen_id": 14
         },
         {
+            "compare_index": 4,
             "description": "CONFIRM PASSPHRASE || {passphrase} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-test_session_id_and_passphrase.py::test_hide_passphrase_from_host",
             "screen_id": 15,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 5,
             "description": "PASSPHRASE SETTINGS || Turn off passphrase protection? || <cancel> <TURN OFF>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_settings_passphrase",
             "screen_id": 7
         },
         {
+            "compare_index": 6,
             "description": "PASSPHRASE SOURCE || Do you really want to enter passphrase always on device? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_settings_passphrase_on_device",
             "screen_id": 3,
             "comment": "needs changes"
         },
         {
+            "compare_index": 7,
             "description": "HIDE PASSPHRASE || Hide passphrase coming from host? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-test_session_id_and_passphrase.py::test_hide_passphrase_from_host",
             "screen_id": 5,
             "comment": "needs changes"
         },
         {
+            "compare_index": 8,
             "description": "HIDDEN WALLET || Access hidden wallet? Passphrase provided by host will be used but will not be displayed... || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-test_session_id_and_passphrase.py::test_hide_passphrase_from_host",
             "screen_id": 8,
             "comment": "needs changes"
         },
         {
+            "compare_index": 8,
             "description": "HIDDEN WALLET || ...due to the device settings. || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-test_session_id_and_passphrase.py::test_hide_passphrase_from_host",
             "screen_id": 10,
@@ -1007,33 +1175,39 @@
     ],
     "CoinJoin": [
         {
+            "compare_index": 0,
             "description": "COINJOIN || Access your coinjoin account? || <cancel> <ACCESS>",
             "test": "TR-device_tests-bitcoin-test_authorize_coinjoin.py::test_get_address",
             "screen_id": 1
         },
         {
+            "compare_index": 1,
             "description": "AUTHORIZE COINJOIN || Max rounds {max_rounds} Max mining fee {max_fee} || <HOLD TO CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_authorize_coinjoin.py::test_cancel_authorization",
             "screen_id": 1
         },
         {
+            "compare_index": 2,
             "description": "COINJOIN AUTHORIZED || [homescreen]",
             "test": "TR-device_tests-bitcoin-test_authorize_coinjoin.py::test_cancel_authorization",
             "screen_id": 2,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 3,
             "description": "COINJOIN IN PROGRESS || [loader] Waiting for others Do not disconnect your Trezor!",
             "test": "TR-device_tests-test_busy_state.py::test_busy_expiry",
             "screen_id": 1,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 4,
             "description": "[loader] Loading transaction...  Do not disconnect your Trezor!",
             "test": "TR-device_tests-bitcoin-test_authorize_coinjoin.py::test_sign_tx[True]",
             "screen_id": 8
         },
         {
+            "compare_index": 5,
             "description": "[loader] Signing transaction...  Do not disconnect your Trezor!",
             "test": "TR-device_tests-bitcoin-test_authorize_coinjoin.py::test_sign_tx[True]",
             "screen_id": 9
@@ -1041,40 +1215,47 @@
     ],
     "Homescreen": [
         {
+            "compare_index": 0,
             "description": "[homescreen_default]",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_good",
             "screen_id": 8,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 1,
             "description": "[notification_banner] [homescreen_default]",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_with_notification",
             "screen_id": 0,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 2,
             "description": "Click to unlock [lockscreen]",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_good",
             "screen_id": 0
         },
         {
+            "compare_index": 3,
             "description": "[homescreen_custom]",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_good",
             "screen_id": 6,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 4,
             "description": "[notification_banner] [homescreen_custom]",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_with_notification",
             "screen_id": 2,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 5,
             "description": "CHANGE HOMESCREEN? || <cancel> <CHANGE>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_good",
             "screen_id": 5
         },
         {
+            "compare_index": 6,
             "description": "CHANGE HOMESCREEN? || <cancel> <CHANGE>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_homescreen_tr_toif_good",
             "screen_id": 7
@@ -1082,17 +1263,20 @@
     ],
     "Locktime": [
         {
+            "compare_index": 0,
             "description": "CONFIRM LOCKTIME || Locktime is set to blockheight: {block_height} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_lock_time_blockheight",
             "screen_id": 5,
             "comment": "MISSING in Figma"
         },
         {
+            "compare_index": 1,
             "description": "CONFIRM LOCKTIME || Locktime is set to: {date} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_lock_time_datetime[2048-08-16 22:14:00]",
             "screen_id": 5
         },
         {
+            "compare_index": 2,
             "description": "Locktime is set but will have no effect. Continue anyway? || <CONTINUE>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_lock_time[1-4294967295]",
             "screen_id": 5
@@ -1100,18 +1284,21 @@
     ],
     "RBF": [
         {
+            "compare_index": 0,
             "description": "UPDATE TRANSACTION || Transaction ID: {tx_id} || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
             "screen_id": 2,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 0,
             "description": "UPDATE TRANSACTION || {tx_id} || <arrow_up> <CONTINUE>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
             "screen_id": 4,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 1,
             "description": "MODIFY AMOUNT || Address: {address} || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
             "screen_id": 7,
@@ -1119,16 +1306,19 @@
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 1,
             "description": "MODIFY AMOUNT || Decrease amount by: {amount} || <arrow_up> <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
             "screen_id": 9
         },
         {
+            "compare_index": 1,
             "description": "MODIFY AMOUNT || New amount: {amount} || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
             "screen_id": 11
         },
         {
+            "compare_index": 2,
             "description": "MODIFY FEE || Increase fee {fee} || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
             "screen_id": 14,
@@ -1136,12 +1326,14 @@
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 2,
             "description": "MODIFY FEE || Transaction fee: {fee} || <arrow_up> <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
             "screen_id": 16,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 2,
             "description": "MODIFY FEE || Fee rate: {fee_rate} || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-bitcoin-test_signtx.py::test_information_replacement",
             "screen_id": 18,
@@ -1150,21 +1342,25 @@
     ],
     "FIDO": [
         {
+            "compare_index": 0,
             "description": "GET U2F COUNTER || Increase and retrieve the U2F counter? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-webauthn-test_u2f_counter.py::test_u2f_counter",
             "screen_id": 1
         },
         {
+            "compare_index": 1,
             "description": "SET U2F COUNTER || Set the U2F counter to {value}? || <cancel> <SET>",
             "test": "TR-device_tests-webauthn-test_u2f_counter.py::test_u2f_counter",
             "screen_id": 5
         },
         {
+            "compare_index": 2,
             "description": "LIST CREDENTIALS || Export information about the credentials stored on this device? || <cancel> <EXPORT>",
             "test": "TR-device_tests-webauthn-test_msg_webauthn.py::test_add_remove",
             "screen_id": 1
         },
         {
+            "compare_index": 3,
             "description": "IMPORT CREDENTIAL || {fido_credentials} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-webauthn-test_msg_webauthn.py::test_add_remove",
             "screen_id": 3,
@@ -1172,6 +1368,7 @@
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 4,
             "description": "The credential you are trying to import does not belong to this authenticator. || <TRY AGAIN>",
             "test": "TR-device_tests-webauthn-test_msg_webauthn.py::test_add_remove",
             "screen_id": 11
@@ -1179,48 +1376,56 @@
     ],
     "SignMessage": [
         {
+            "compare_index": 0,
             "description": "SIGNING ADDRESS || {address} || <cancel> <CONTINUE>",
             "test": "TR-device_tests-bitcoin-test_signmessage.py::test_signmessage_pagination[normal_text]",
             "screen_id": 1,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 1,
             "description": "CONFIRM MESSAGE || {message} || <arrow_left> <arrow_down_wide>",
             "test": "TR-device_tests-bitcoin-test_signmessage.py::test_signmessage_pagination[normal_text]",
             "screen_id": 2,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 2,
             "description": "CONFIRM MESSAGE || Size: {size} bytes {message} || <arrow_up> <CONFIRM> <i>",
             "test": "TR-device_tests-bitcoin-test_signmessage.py::test_signmessage_pagination[normal_text]",
             "screen_id": 4,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 3,
             "description": "SIGNING ADDRESS || {address} || <cancel> <CONTINUE>",
             "test": "TR-device_tests-ethereum-test_sign_verify_message.py::test_signmessage[parameters0-result0]",
             "screen_id": 2,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 4,
             "description": "CONFIRM MESSAGE || {message} || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-ethereum-test_sign_verify_message.py::test_signmessage[parameters0-result0]",
             "screen_id": 3,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 5,
             "description": "SIGNING ADDRESS || {address} || <cancel> <CONTINUE>",
             "test": "TR-device_tests-ethereum-test_sign_verify_message.py::test_verify[parameters0-result0]",
             "screen_id": 1,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 6,
             "description": "CONFIRM MESSAGE || {message} || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-ethereum-test_sign_verify_message.py::test_verify[parameters0-result0]",
             "screen_id": 2,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 7,
             "description": "SUCCESS || The signature is valid. || <CONTINUE>",
             "test": "TR-device_tests-ethereum-test_sign_verify_message.py::test_verify[parameters0-result0]",
             "screen_id": 3,
@@ -1229,12 +1434,14 @@
     ],
     "ETH_EIP712": [
         {
+            "compare_index": 1,
             "description": "CONFIRM DOMAIN || Name and version {name} {version} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data_show_more_button",
             "screen_id": 1,
             "comment": "MISSING in Figma"
         },
         {
+            "compare_index": 2,
             "description": "CONFIRM MESSAGE || {message_struct} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data_show_more_button",
             "screen_id": 2,
@@ -1242,6 +1449,7 @@
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 3,
             "description": "CONFIRM MESSAGE || {message_struct} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data[injective_testcase]",
             "screen_id": 3,
@@ -1249,12 +1457,14 @@
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 4,
             "description": "CONFIRM MESSAGE || No message field || <cancel> <CONFIRM>",
             "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data[full_domain_empty_message]",
             "screen_id": 3,
             "comment": "MISSING in Figma"
         },
         {
+            "compare_index": 5,
             "description": "{struct_details} || <cancel> <CONFIRM> <i>",
             "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data_show_more_button",
             "screen_id": 4,
@@ -1262,6 +1472,7 @@
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 6,
             "description": "{string_details} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data_show_more_button",
             "screen_id": 6,
@@ -1269,6 +1480,7 @@
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 7,
             "description": "CONFIRM TYPED DATA || Really sign EIP-712 typed data? || <cancel> <HOLD TO CONFIRM>",
             "test": "TR-device_tests-ethereum-test_sign_typed_data.py::test_ethereum_sign_typed_data_show_more_button",
             "screen_id": 7,
@@ -1277,11 +1489,13 @@
     ],
     "WipeDevice": [
         {
+            "compare_index": 0,
             "description": "WIPE DEVICE || Do you really want to wipe the device? || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-test_msg_wipedevice.py::test_wipe_device",
             "screen_id": 1
         },
         {
+            "compare_index": 0,
             "description": "WIPE DEVICE || All data will be erased. || <arrow_up> <HOLD TO CONFIRM>",
             "test": "TR-device_tests-test_msg_wipedevice.py::test_wipe_device",
             "screen_id": 3
@@ -1289,18 +1503,21 @@
     ],
     "Loaders": [
         {
+            "compare_index": 0,
             "description": "PROCESSING || [loader] {x} seconds left",
             "test": "TR-device_tests-test_msg_wipedevice.py::test_wipe_device",
             "screen_id": 4,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 1,
             "description": "PROCESSING || [loader] 1 second left",
             "test": "TR-device_tests-test_msg_wipedevice.py::test_wipe_device",
             "screen_id": 5,
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 2,
             "description": "PROCESSING || [loader] Done",
             "test": "TR-device_tests-test_msg_wipedevice.py::test_wipe_device",
             "screen_id": 6,
@@ -1309,12 +1526,14 @@
     ],
     "Entropy": [
         {
+            "compare_index": 0,
             "description": "CONFIRM ENTROPY || Do you really want to send entropy? Continue only if you... || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-misc-test_msg_getentropy.py::test_entropy[1]",
             "screen_id": 1,
             "comment": "MISSING in Figma"
         },
         {
+            "compare_index": 0,
             "description": "CONFIRM ENTROPY || ...know what you are doing! || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-misc-test_msg_getentropy.py::test_entropy[1]",
             "screen_id": 3,
@@ -1323,6 +1542,7 @@
     ],
     "CoSi": [
         {
+            "compare_index": 0,
             "description": "COSI KEYS || {key_name} {path} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-misc-test_cosi.py::test_cosi_sign1",
             "screen_id": 1,
@@ -1330,6 +1550,7 @@
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 1,
             "description": "COSI DATA || {data} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-misc-test_cosi.py::test_cosi_sign1",
             "screen_id": 2,
@@ -1339,6 +1560,7 @@
     ],
     "SignIndentity": [
         {
+            "compare_index": 0,
             "description": "SIGN HTTPS || {date} {identity} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-misc-test_msg_signidentity.py::test_sign",
             "screen_id": 1,
@@ -1346,6 +1568,7 @@
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 1,
             "description": "SIGN FTP || {date} {identity} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-misc-test_msg_signidentity.py::test_sign",
             "screen_id": 3,
@@ -1353,6 +1576,7 @@
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 2,
             "description": "SIGN SSH || {date} {identity} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-misc-test_msg_signidentity.py::test_sign",
             "screen_id": 5,
@@ -1360,6 +1584,7 @@
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 3,
             "description": "SIGN GPG || {date} {identity} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-misc-test_msg_signidentity.py::test_sign",
             "screen_id": 9,
@@ -1367,6 +1592,7 @@
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 4,
             "description": "SIGN SINGIFY || {date} {identity} || <cancel> <CONFIRM>",
             "test": "TR-device_tests-misc-test_msg_signidentity.py::test_sign",
             "screen_id": 11,
@@ -1376,12 +1602,14 @@
     ],
     "LoadDevice": [
         {
+            "compare_index": 0,
             "description": "LOADING SEED || Loading private seed is not recommended. || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-test_msg_loaddevice.py::test_load_device_1",
             "screen_id": 1,
             "comment": "MISSING in Figma"
         },
         {
+            "compare_index": 0,
             "description": "LOADING SEED || Continue only if you know what you are doing! || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-test_msg_loaddevice.py::test_load_device_1",
             "screen_id": 3,
@@ -1390,6 +1618,7 @@
     ],
     "Rotation": [
         {
+            "compare_index": 0,
             "description": "CHANGE ROTATION || Do you want to change device rotation to west? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_settings_rotation",
             "screen_id": 5
@@ -1397,6 +1626,7 @@
     ],
     "DeviceName": [
         {
+            "compare_index": 0,
             "description": "DEVICE NAME || Change device name to <new_label>? || <cancel> <CHANGE>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_apply_settings",
             "screen_id": 5,
@@ -1405,6 +1635,7 @@
     ],
     "Autolock": [
         {
+            "compare_index": 0,
             "description": "AUTO-LOCK DELAY || Auto-lock your Trezor after 2 minutes of inactivity? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-test_autolock.py::test_apply_auto_lock_delay_valid[123]",
             "screen_id": 5
@@ -1412,16 +1643,19 @@
     ],
     "ExperimentalFeatures": [
         {
+            "compare_index": 0,
             "description": "EXPERIMENTAL MODE || Enable experimental features? Only for... || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_experimental_features",
             "screen_id": 7
         },
         {
+            "compare_index": 0,
             "description": "EXPERIMENTAL MODE || ...development and beta testing! || <arrow_up> <CONFIRM>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_experimental_features",
             "screen_id": 9
         },
         {
+            "compare_index": 1,
             "description": "EXPERIMENTAL MODE || [homescreen]",
             "test": "TR-device_tests-test_msg_applysettings.py::test_experimental_features",
             "screen_id": 10,
@@ -1430,16 +1664,19 @@
     ],
     "SafetyChecks": [
         {
+            "compare_index": 0,
             "description": "SAFETY OVERRIDE || Trezor will allow you to approve some actions which might be unsafe. || <cancel> <arrow_down_wide>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_safety_checks",
             "screen_id": 1
         },
         {
+            "compare_index": 0,
             "description": "SAFETY OVERRIDE || Are you sure? || <arrow_up> <HOLD TO CONFIRM>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_safety_checks",
             "screen_id": 3
         },
         {
+            "compare_index": 1,
             "description": "SAFETY CHECKS || Do you really want to enforce strict safety checks (recommended)? || <cancel> <CONFIRM>",
             "test": "TR-device_tests-test_msg_applysettings.py::test_safety_checks",
             "screen_id": 8
