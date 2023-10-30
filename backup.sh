@@ -13,7 +13,8 @@ mkdir -p "$new_dir"
 
 cp -r "$data_dir/." "$new_dir"
 
-cp figma_screens.json "$new_dir"
+cp figma_screens_tr.json "$new_dir"
+cp figma_screens_tt.json "$new_dir"
 
 # find $data_dir -type f -name "*.png" -exec rm -f {} \;
 # find $data_dir -type f -name "*.png"
