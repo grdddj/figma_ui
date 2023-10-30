@@ -191,21 +191,19 @@ def compare_subdir(flow_name: str, request: Request):
         logger.info(f"Compare, Flow: {flow_name}")
         all_model_image_data: dict[str, list[dict[str, Any]]] = {}
 
-        biggest_compare_index = 0
+        all_unique_indexes: set[int] = set()
         for model, dir in MODEL_DIR_MAPPING.items():
             if flow_name not in get_subdirs_names(dir):
                 continue
 
             image_data = get_relevant_screens(model, filter_flow=flow_name)
             for obj in image_data:
-                biggest_compare_index = max(
-                    biggest_compare_index, obj.get("compare_index", 0)
-                )
+                all_unique_indexes.add(obj.get("compare_index", 0))
             all_model_image_data[model] = image_data
 
         zipped_image_data: list[tuple[Any | None]] = []
 
-        for i in range(biggest_compare_index):
+        for i in sorted(all_unique_indexes):
             index_dict: dict[str, list[Any | None]] = {}
             for model, model_values in all_model_image_data.items():
                 model_list = [
