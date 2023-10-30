@@ -1138,7 +1138,7 @@
         },
         {
             "compare_index": 5,
-            "description": "SIGNING ADDRESS || {address} || <cancel> <CONTINUE>",
+            "description": "VERIFY ADDRESS || {address} || <cancel> <CONTINUE>",
             "test": "TT-device_tests-ethereum-test_sign_verify_message.py::test_verify[parameters0-result0]",
             "screen_id": 1,
             "ok_to_fail_ocr": true
