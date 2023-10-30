@@ -73,15 +73,19 @@ def download_img(dir: Path, flow_name: str, screen_name: str, img_url: str) -> N
 @click.option("-d", "--debug", is_flag=True, help="Show debug logs")
 @click.option("-u", "--update", is_flag=True, help="Do not download already existing images")
 @click.option("-b", "--branch", default=DEFAULT_BRANCH, help="Which branch to use")
+@click.option("-f", "--flows-to-update", multiple=True, help="Which flows to update")
 @click.argument("model", type=click.Choice(list(MODEL_FILE_MAPPING.keys()), case_sensitive=False))
 # fmt: on
-def cli(debug: bool, update: bool, branch: str, model: str):
+def cli(debug: bool, update: bool, branch: str, model: str, flows_to_update: list[str]):
     global OVERWRITE, DEBUG
 
     OVERWRITE = not update  # type: ignore
     DEBUG = debug  # type: ignore
 
     click.echo(f"Using branch {branch} and model {model}")
+
+    if flows_to_update:
+        click.echo(f"Updating only flows {flows_to_update}")
 
     file = MODEL_FILE_MAPPING.get(model)
     if not file:
@@ -90,14 +94,18 @@ def cli(debug: bool, update: bool, branch: str, model: str):
     if not dir:
         raise ValueError(f"Model {model} not found")
 
+    all_flows = get_screen_text_content(file)
+    for flow_to_update in flows_to_update:
+        if flow_to_update not in all_flows:
+            raise ValueError(f"Flow {flow_to_update} not found")
+
     jobs_id_mapping = get_branch_job_ids(branch)
     save_job_id_mapping(jobs_id_mapping)
 
     failed_to_download: list[str] = []
-
-    for flow_name, flow_screens in get_screen_text_content(file).items():
-        # if flow_name != "Recovery":
-        #     continue
+    for flow_name, flow_screens in all_flows.items():
+        if flows_to_update and flow_name not in flows_to_update:
+            continue
         click.echo(f"Getting screens for flow {flow_name}")
         for index, screen_info in enumerate(flow_screens, start=1):
             if "missing" in screen_info:
