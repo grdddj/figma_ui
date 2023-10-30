@@ -1397,6 +1397,13 @@
             "ok_to_fail_ocr": true
         },
         {
+            "compare_index": 2,
+            "description": "CONFIRM MESSAGE || {message} || <arrow_up> <GO BACK>",
+            "test": "TR-device_tests-bitcoin-test_signmessage.py::test_signmessage_pagination[normal_text]",
+            "screen_id": 18,
+            "ok_to_fail_ocr": true
+        },
+        {
             "compare_index": 3,
             "description": "SIGNING ADDRESS || {address} || <cancel> <CONTINUE>",
             "test": "TR-device_tests-ethereum-test_sign_verify_message.py::test_signmessage[parameters0-result0]",

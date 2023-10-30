@@ -1102,59 +1102,52 @@
     ],
     "SignMessage": [
         {
-            "compare_index": 999,
+            "compare_index": 0,
             "description": "SIGNING ADDRESS || {address} || <cancel> <CONTINUE>",
             "test": "TT-device_tests-bitcoin-test_signmessage.py::test_signmessage_pagination[normal_text]",
             "screen_id": 1,
-            "comment": "DIFF from Figma - TODO: change it",
             "ok_to_fail_ocr": true
         },
         {
-            "compare_index": 999,
-            "description": "CONFIRM MESSAGE || {message} || <arrow_left> <arrow_down>",
+            "compare_index": 1,
+            "description": "CONFIRM MESSAGE || {message} || <cancel> <arrow_down>",
             "test": "TT-device_tests-bitcoin-test_signmessage.py::test_signmessage_pagination[normal_text]",
             "screen_id": 2,
-            "comment": "DIFF from Figma - TODO: change it",
             "ok_to_fail_ocr": true
         },
         {
-            "compare_index": 999,
-            "description": "CONFIRM MESSAGE || Size: {size} bytes {message} || <arrow_up> <CONFIRM> <i>",
+            "compare_index": 1,
+            "description": "CONFIRM MESSAGE || {message} || <arrow_up> <HOLD TO CONFIRM>",
             "test": "TT-device_tests-bitcoin-test_signmessage.py::test_signmessage_pagination[normal_text]",
-            "screen_id": 4,
-            "comment": "DIFF from Figma - TODO: change it",
+            "screen_id": 6,
             "ok_to_fail_ocr": true
         },
         {
-            "compare_index": 999,
+            "compare_index": 3,
             "description": "SIGNING ADDRESS || {address} || <cancel> <CONTINUE>",
             "test": "TT-device_tests-ethereum-test_sign_verify_message.py::test_signmessage[parameters0-result0]",
             "screen_id": 2,
-            "comment": "DIFF from Figma - TODO: change it",
             "ok_to_fail_ocr": true
         },
         {
-            "compare_index": 999,
-            "description": "CONFIRM MESSAGE || {message} || <arrow_up> <CONFIRM>",
+            "compare_index": 4,
+            "description": "CONFIRM MESSAGE || {message} || <arrow_up> <HOLD TO CONFIRM>",
             "test": "TT-device_tests-ethereum-test_sign_verify_message.py::test_signmessage[parameters0-result0]",
             "screen_id": 3,
-            "comment": "DIFF from Figma - TODO: change it",
             "ok_to_fail_ocr": true
         },
         {
-            "compare_index": 999,
+            "compare_index": 5,
             "description": "SIGNING ADDRESS || {address} || <cancel> <CONTINUE>",
             "test": "TT-device_tests-ethereum-test_sign_verify_message.py::test_verify[parameters0-result0]",
             "screen_id": 1,
-            "comment": "DIFF from Figma - TODO: change it",
             "ok_to_fail_ocr": true
         },
         {
-            "compare_index": 999,
+            "compare_index": 6,
             "description": "CONFIRM MESSAGE || {message} || <arrow_up> <CONFIRM>",
             "test": "TT-device_tests-ethereum-test_sign_verify_message.py::test_verify[parameters0-result0]",
             "screen_id": 2,
-            "comment": "DIFF from Figma - TODO: change it",
             "ok_to_fail_ocr": true
         },
         {
