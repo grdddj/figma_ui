@@ -45,4 +45,3 @@ style:
 update:
 	./backup.sh
 	python3 get_screens.py
-	python3 text_from_image.py
