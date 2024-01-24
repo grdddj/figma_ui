@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Translations</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+
+<body>
+    <h1>Translations</h1>
+
+    <a href="https://raw.githubusercontent.com/trezor/trezor-firmware/grdddj/fw_translations/core/embed/rust/src/ui/translations/en.json"
+        target="_blank">English</a>
+    <a href="https://raw.githubusercontent.com/trezor/trezor-firmware/grdddj/fw_translations/core/embed/rust/src/ui/translations/de.json"
+        target="_blank">German</a>
+    <a href="https://raw.githubusercontent.com/trezor/trezor-firmware/grdddj/fw_translations/core/embed/rust/src/ui/translations/es.json"
+        target="_blank">Spanish</a>
+    <a href="https://raw.githubusercontent.com/trezor/trezor-firmware/grdddj/fw_translations/core/embed/rust/src/ui/translations/fr.json"
+        target="_blank">French</a>
+    <a href="https://raw.githubusercontent.com/trezor/trezor-firmware/grdddj/fw_translations/core/embed/rust/src/ui/translations/cs.json"
+        target="_blank">Czech</a>
+
+    <hr>
+
+    <div class="textarea-form">
+        <form method="post" id="jsonForm">
+            <label for="text">Paste JSON:</label>
+            <textarea type="text" id="text" name="text" placeholder="Translation JSON">{{ text }}</textarea>
+            <button type="submit">Check</button>
+        </form>
+    </div>
+
+    <hr>
+    <br>
+
+    {%- if error -%}
+    <div class="red">
+        {{ error }}
+    </div>
+
+    <hr>
+    <br>
+    {%- endif -%}
+
+    {%- if translations_check -%}
+    <hr>
+    <table>
+        <tr>
+            <th>Key</th>
+            <th>Lines</th>
+            <th>Value</th>
+            <th>Lines_en</th>
+        </tr>
+        {%- for result in translations_check -%}
+        <tr>
+            <td>{{ result.key}}</td>
+            <td>{{ result.lines|length }} / {{ result.lines_en|length }} </td>
+            <td>
+                <pre style="font-size: 16px;">{{ result.lines_str()}}</pre>
+            </td>
+            <td>
+                <pre style="font-size: 16px;">{{ result.lines_en_str()}}</pre>
+            </td>
+        </tr>
+        {%- endfor -%}
+    </table>
+    {%- endif -%}
+
+    <script>
+        document.getElementById('jsonForm').onsubmit = function (event) {
+            var text = document.getElementById('text').value;
+            try {
+                JSON.parse(text);
+            } catch (e) {
+                alert('Invalid JSON');
+                event.preventDefault(); // Prevent form submission
+            }
+        };
+    </script>
+</body>
+
+</html>

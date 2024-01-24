@@ -4,8 +4,9 @@ from contextlib import contextmanager
 from itertools import zip_longest
 from pathlib import Path
 from typing import Any
+import json
 
-from fastapi import FastAPI, HTTPException, Request
+from fastapi import FastAPI, HTTPException, Request, Form
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -19,6 +20,7 @@ from common import (
     get_ocr_results,
     get_screen_text_content,
 )
+from validate_strings import check_translations, TooLong
 
 HERE = Path(__file__).parent
 
@@ -273,5 +275,48 @@ def text_search(request: Request, text: str = ""):
                 "request": request,
                 "text": text,
                 "image_data": image_data,
+            },
+        )
+
+
+@app.get("/translations")
+def translations_get(request: Request):
+    with catch_log_raise_exception():
+        logger.info("Translations HTML")
+        return templates.TemplateResponse(  # type: ignore
+            "translations.html",
+            {
+                "request": request,
+                "text": "",
+                "error": "",
+                "translations_check": [],
+            },
+        )
+
+
+@app.post("/translations")
+def translations_post(request: Request, text: str = Form(...)):
+    with catch_log_raise_exception():
+        logger.info(f"Translations: {text}")
+        translations_check: list[TooLong] = []
+        error = ""
+        if text:
+            try:
+                payload: dict[str, Any] = json.loads(text)
+                if "translations" in payload:
+                    payload = payload["translations"]
+                if "tutorial" in payload:
+                    raise RuntimeError("OLD FORMAT - please use new one")
+                translations_check = check_translations(payload)
+            except Exception as e:
+                logger.exception(f"Error: {e}")
+                error = str(e)
+        return templates.TemplateResponse(  # type: ignore
+            "translations.html",
+            {
+                "request": request,
+                "text": text,
+                "error": error,
+                "translations_check": translations_check,
             },
         )
