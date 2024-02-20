@@ -40,6 +40,7 @@ altcoins = [
 
 
 SCREEN_TEXT_WIDTHS = {"TT": 240 - 12, "TS3": 128}
+MAX_BUTTON_WIDTH = {"TT": 162, "TS3": 88}
 
 FONT_MAPPING = {
     "TT": {
@@ -64,8 +65,11 @@ FONTS: dict[str, dict[str, dict[str, int]]] = json.loads(FONTS_FILE.read_text())
 
 
 def will_fit(text: str, type: str, device: str, lines: int) -> bool:
-    needed_lines = get_needed_lines(text, type, device)
-    return needed_lines <= lines
+    if type == "button":
+        return get_text_width(text, type, device) <= MAX_BUTTON_WIDTH[device]
+    else:
+        needed_lines = get_needed_lines(text, type, device)
+        return needed_lines <= lines
 
 
 def get_needed_lines(text: str, type: str, device: str) -> int:
