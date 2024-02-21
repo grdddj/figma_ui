@@ -168,14 +168,15 @@ def check_translations(translation_content: dict[str, str]) -> list[TooLong]:
                 continue
 
             if not will_fit(v, type, model, lines):
+                en_value = en_content.get(k, "MISSING")
                 too_long = TooLong(
                     model=model,
                     type=type,
                     key=k,
                     value=v,
                     lines=assemble_lines(v, type, model),
-                    en=en_content[k],
-                    lines_en=assemble_lines(en_content[k], type, model),
+                    en=en_value,
+                    lines_en=assemble_lines(en_value, type, model),
                 )
                 wrong[k] = too_long
 
